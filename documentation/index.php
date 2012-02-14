@@ -34,6 +34,8 @@ $html  = <<<EOHTML
   <a href="$wiki">wiki space</a>.
 </p>
 
+</div>
+
 <div id="rightcolumn">
 $incubation
 </div>
