@@ -21,7 +21,7 @@ $html  = <<<EOHTML
 <h3 id="apidocs">API Documentation</h3>
 <p>
   For technical details regarding usage of the API, please consult the
-  generated <a href="$apidocs">API docs</a> of the various classes.
+  generated <a href="$apidocs">API docs</a> (coming soon) of the various classes.
 </p>
 <p>
   These API docs are also available from the Central Repository such that IDEs with Maven integration can present
