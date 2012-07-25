@@ -2,43 +2,43 @@
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan"
         xmlns:html="http://www.w3.org/1999/xhtml" name="Project Name">
-  <p:release projectid="technology.sisu" version="0.1.0" />
+  <release projectid="technology.sisu" version="0.1.0" />
 
-  <p:introduction>
+  <introduction>
     <p>
       The Sisu project provides a dynamic dependency injection framework that can interact with OSGi services and Eclipse extensions.
     </p>
-  </p:introduction>
+  </introduction>
 
-  <p:release_deliverables>
+  <release_deliverables>
     <p>
       The initial contribution is currently being prepared.
     </p>
-  </p:release_deliverables>
+  </release_deliverables>
 
-  <p:release_milestones>
-    <p:preamble>
+  <release_milestones>
+    <preamble>
       <p>
         Release milestones will be published as committer time allows.
       </p>
-    </p:preamble>
-    <p:milestone date="??/??/2012" milestone="M1">
+    </preamble>
+    <milestone date="??/??/2012" milestone="M1">
       <div>0.1.0.M1</div>
-    </p:milestone>
-  </p:release_milestones>
+    </milestone>
+  </release_milestones>
 
-  <p:target_environments>
+  <target_environments>
     <p>
       Sisu consists of pure Java code and is expected to run on any JVM that supports Java SE 5 or newer.
     </p>
-    <p:internationalization>
+    <internationalization>
       <p>
         None of the Sisu deliverables are internationalized, any log and exception messages use English.
       </p>
-    </p:internationalization>
-  </p:target_environments>
+    </internationalization>
+  </target_environments>
 
-  <p:compatibility_with_previous_releases>
+  <compatibility_with_previous_releases>
     <h3>Compatibility with Sonatype Sisu</h3>
     <p>
       <strong>API Contract Compatibility:</strong>
@@ -57,13 +57,13 @@
       typical clients mainly need to update their imports and make minor code changes to successfully build against the
       new Sisu API.
     </p>
-  </p:compatibility_with_previous_releases>
+  </compatibility_with_previous_releases>
 
-  <p:themes_and_priorities>
-    <p:preamble>
-    </p:preamble>
-    <p:theme name="Clean up API">
-      <p:description>
+  <themes_and_priorities>
+    <preamble>
+    </preamble>
+    <theme name="Clean up API">
+      <description>
         <p>
           With the move of the code into the
           <code>org.eclipse.sisu</code>
@@ -71,8 +71,8 @@
           Additionally, the API has been refactored in some places to ease future evolution and to improve its
           usability.
         </p>
-      </p:description>
-    </p:theme>
-  </p:themes_and_priorities>
+      </description>
+    </theme>
+  </themes_and_priorities>
 
-</p:plan>
+</plan>
