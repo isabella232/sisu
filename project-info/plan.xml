@@ -5,22 +5,22 @@
   <release projectid="technology.sisu" version="0.1.0" />
 
   <introduction>
-    <p>
+    <html:div>
       The Sisu project provides a dynamic dependency injection framework that can interact with OSGi services and Eclipse extensions.
-    </p>
+    </html:div>
   </introduction>
 
   <release_deliverables>
-    <p>
+    <html:div>
       The initial contribution is currently being prepared.
-    </p>
+    </html:div>
   </release_deliverables>
 
   <release_milestones>
     <preamble>
-      <p>
+      <html:div>
         Release milestones will be published as committer time allows.
-      </p>
+      </html:div>
     </preamble>
     <milestone date="??/??/2012" milestone="M1">
       <div>0.1.0.M1</div>
@@ -28,26 +28,26 @@
   </release_milestones>
 
   <target_environments>
-    <p>
+    <html:div>
       Sisu consists of pure Java code and is expected to run on any JVM that supports Java SE 5 or newer.
-    </p>
+    </html:div>
     <internationalization>
-      <p>
+      <html:div>
         None of the Sisu deliverables are internationalized, any log and exception messages use English.
-      </p>
+      </html:div>
     </internationalization>
   </target_environments>
 
   <compatibility_with_previous_releases>
     <h3>Compatibility with Sonatype Sisu</h3>
-    <p>
+    <html:div>
       <strong>API Contract Compatibility:</strong>
       To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be
       moved into the
       <code>org.eclipse.sisu</code>
       namespace. An external compatibility layer is being considered for users of Sonatype Sisu.
-    </p>
-    <p>
+    </html:div>
+    <html:div>
       <strong>Source Compatibility:</strong>
       To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be
       moved into the
@@ -56,7 +56,7 @@
       expected that
       typical clients mainly need to update their imports and make minor code changes to successfully build against the
       new Sisu API.
-    </p>
+    </html:div>
   </compatibility_with_previous_releases>
 
   <themes_and_priorities>
@@ -64,13 +64,13 @@
     </preamble>
     <theme name="Clean up API">
       <description>
-        <p>
+        <html:div>
           With the move of the code into the
           <code>org.eclipse.sisu</code>
           namespace being a breaking change anyways, this provided an opportunity to remove deprecated code.
           Additionally, the API has been refactored in some places to ease future evolution and to improve its
           usability.
-        </p>
+        </html:div>
       </description>
     </theme>
   </themes_and_priorities>
