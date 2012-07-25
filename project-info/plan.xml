@@ -1,53 +1,52 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
-<plan plan-format="1.0" xmlns="http://www.eclipse.org/project/plan"
-        xmlns:html="http://www.w3.org/1999/xhtml" name="Project Name">
-  <release projectid="technology.sisu" version="0.1.0" />
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
+<?xml-stylesheet type="text/xsl" href="project-plan-renderer.xsl"?>
+<p:plan xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml">
+  <p:release projectid="technology.sisu" version="0.1.0" />
 
-  <introduction>
-    <html:div>
+  <p:introduction>
+    <p>
       The Sisu project provides a dynamic dependency injection framework that can interact with OSGi services and Eclipse extensions.
-    </html:div>
-  </introduction>
+    </p>
+  </p:introduction>
 
-  <release_deliverables>
-    <html:div>
+  <p:release_deliverables>
+    <p>
       The initial contribution is currently being prepared.
-    </html:div>
-  </release_deliverables>
+    </p>
+  </p:release_deliverables>
 
-  <release_milestones>
-    <preamble>
-      <html:div>
+  <p:release_milestones>
+    <p:preamble>
+      <p>
         Release milestones will be published as committer time allows.
-      </html:div>
-    </preamble>
-    <milestone date="??/??/2012" milestone="M1">
+      </p>
+    </p:preamble>
+    <p:milestone date="??/??/2012" milestone="M1">
       <div>0.1.0.M1</div>
-    </milestone>
-  </release_milestones>
+    </p:milestone>
+  </p:release_milestones>
 
-  <target_environments>
-    <html:div>
+  <p:target_environments>
+    <p>
       Sisu consists of pure Java code and is expected to run on any JVM that supports Java SE 5 or newer.
-    </html:div>
-    <internationalization>
-      <html:div>
+    </p>
+    <p:internationalization>
+      <p>
         None of the Sisu deliverables are internationalized, any log and exception messages use English.
-      </html:div>
-    </internationalization>
-  </target_environments>
+      </p>
+    </p:internationalization>
+  </p:target_environments>
 
-  <compatibility_with_previous_releases>
+  <p:compatibility_with_previous_releases>
     <h3>Compatibility with Sonatype Sisu</h3>
-    <html:div>
+    <p>
       <strong>API Contract Compatibility:</strong>
       To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be
       moved into the
       <code>org.eclipse.sisu</code>
       namespace. An external compatibility layer is being considered for users of Sonatype Sisu.
-    </html:div>
-    <html:div>
+    </p>
+    <p>
       <strong>Source Compatibility:</strong>
       To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be
       moved into the
@@ -56,23 +55,25 @@
       expected that
       typical clients mainly need to update their imports and make minor code changes to successfully build against the
       new Sisu API.
-    </html:div>
-  </compatibility_with_previous_releases>
+    </p>
+  </p:compatibility_with_previous_releases>
 
-  <themes_and_priorities>
-    <preamble>
-    </preamble>
-    <theme name="Clean up API">
-      <description>
-        <html:div>
+  <p:themes_and_priorities>
+    <p:preamble>
+    </p:preamble>
+    <p:theme name="Clean up API">
+      <p:description>
+        <p>
           With the move of the code into the
           <code>org.eclipse.sisu</code>
           namespace being a breaking change anyways, this provided an opportunity to remove deprecated code.
           Additionally, the API has been refactored in some places to ease future evolution and to improve its
           usability.
-        </html:div>
-      </description>
-    </theme>
-  </themes_and_priorities>
+        </p>
+      </p:description>
+    </p:theme>
+  </p:themes_and_priorities>
 
-</plan>
+  <p:appendix />
+
+</p:plan>
