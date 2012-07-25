@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes" ?> 
-<?xml-stylesheet type="text/xsl" href="project-plan-render.xsl"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml" name="Sisu">
   <p:release projectid="technology.sisu" version="0.1.0" />
 
@@ -21,7 +21,7 @@
         Release milestones will be published as committer time allows.
       </p>
     </p:preamble>
-    <p:milestone date="??/12/2012" milestone="M1">
+    <p:milestone date="??/??/2012" milestone="M1">
       <div>0.1.0.M1</div>
     </p:milestone>
   </p:release_milestones>
