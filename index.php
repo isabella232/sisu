@@ -10,8 +10,8 @@
  *    
  *******************************************************************************/
 
-$html  = <<<EOHTML
-<div id="maincontent">
+$html = <<<EOHTML
+
 <!--
 <div id="bigbuttons">
 	<h3>Primary Links</h3>
@@ -46,11 +46,11 @@ $incubation
 </div>
 -->
 </div>
-</div>
+
 EOHTML;
-
+<!--
 $App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="style.css"/>' . "\n\t");
-
+-->
 # Generate the web page
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
