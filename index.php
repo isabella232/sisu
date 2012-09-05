@@ -11,6 +11,7 @@
  *******************************************************************************/
 
 $html  = <<<EOHTML
+<!--
 <div id="bigbuttons">
 	<h3>Primary Links</h3>
 	<ul>
@@ -20,7 +21,7 @@ $html  = <<<EOHTML
 		<li><a id="buttonInvolved" href="developers/" title="Getting Involved">VCS, Workspace Setup, Wiki, Committers</a></li>
 	</ul>
 </div>
-
+-->
 <div id="midcolumn">
 <h2>$pageTitle</h2>
 <p>
@@ -30,7 +31,7 @@ $html  = <<<EOHTML
 
 <div id="rightcolumn">
 $incubation
-
+<!--
 <div class="sideitem">
 <h6>Resources</h6>
 <ul>
@@ -42,6 +43,7 @@ $incubation
   <li><a href="http://www.eclipse.org/legal/epl-v10.html">License</a></li>
 </ul>
 </div>
+-->
 </div>
 
 EOHTML;
