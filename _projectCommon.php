@@ -47,10 +47,10 @@ $pageTitle 		= $projectName;
 $Nav->setLinkList(array());
 
 # Break the navigation into sections
-$Nav->addNavSeparator($projectName, $projectUrl);
-$Nav->addCustomNav("About", "/projects/project.php?id=$projectId", "_self", 3);
-$Nav->addCustomNav("Downloads", $projectUrl . "download/", "_self", 3);
+$Nav->addNavSeparator("$projectName Home", $projectUrl);
+$Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self", 3);
 $Nav->addCustomNav("Documentation", $projectUrl . "documentation/", "_self", 3);
+$Nav->addCustomNav("Downloads", $projectUrl . "download/", "_self", 3);
 $Nav->addCustomNav("Support", $projectUrl . "support/", "_self", 3);
 $Nav->addCustomNav("Developers", $projectUrl . "developers/", "_self", 3);
 
