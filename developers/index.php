@@ -39,8 +39,8 @@ $html  = <<<EOHTML
   <li><a href="http://maven.apache.org/developers/maven-idea-codestyle.xml">IntelliJ IDEA 4.5+ formatter settings</a></li>
 </ul>
 <p>
-  Building the sources requires <a href="http://maven.apache.org/">Apache Maven 2.2.1 or newer</a> and a Java Developer
-  Kit for Java 5 or higher.
+  Building the sources requires <a href="http://maven.apache.org/">Apache Maven 3.0 or newer</a> and a Java Developer
+  Kit for Java 6 or higher (needed to compile the optional annotation processing support).
 </p>
 
 <h3 id="iplog">Intellectual Property Log</h3>
