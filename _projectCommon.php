@@ -56,12 +56,12 @@ $Nav->addCustomNav("Developers", $projectUrl . "developers/", "_self", 3);
 
 # top navigation bar
 # To override and replace the navigation with your own, uncomment the line below.
-$Menu->setMenuItemList(array());
-$Menu->addMenuItem("Home", $projectUrl, "_self");
-$Menu->addMenuItem("Downloads", $projectUrl . "download/", "_self");
-$Menu->addMenuItem("Documentation", $projectUrl . "documentation/", "_self");
-$Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
-$Menu->addMenuItem("Developers", $projectUrl . "developers/", "_self");
+# $Menu->setMenuItemList(array());
+# $Menu->addMenuItem("Home", $projectUrl, "_self");
+# $Menu->addMenuItem("Downloads", $projectUrl . "download/", "_self");
+# $Menu->addMenuItem("Documentation", $projectUrl . "documentation/", "_self");
+# $Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
+# $Menu->addMenuItem("Developers", $projectUrl . "developers/", "_self");
 
 # To define additional CSS or other pre-body headers
 # FIXME: Both CSS files cause the rightcolumn to be improperly placed/rendered
