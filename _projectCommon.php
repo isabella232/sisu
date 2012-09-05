@@ -48,11 +48,11 @@ $Nav->setLinkList(array());
 
 # Break the navigation into sections
 $Nav->addNavSeparator("$projectName Home", $projectUrl);
-$Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self", 3);
 $Nav->addCustomNav("Documentation", $projectUrl . "documentation/", "_self", 3);
 $Nav->addCustomNav("Downloads", $projectUrl . "download/", "_self", 3);
 $Nav->addCustomNav("Support", $projectUrl . "support/", "_self", 3);
 $Nav->addCustomNav("Developers", $projectUrl . "developers/", "_self", 3);
+$Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self", 3);
 
 # top navigation bar
 # To override and replace the navigation with your own, uncomment the line below.
