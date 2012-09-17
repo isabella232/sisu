@@ -22,14 +22,14 @@
 
   <p:release_deliverables>
     <p>
-      Sisu JARs will be made available in the Eclipse download area and published to the <a href="http://search.maven.org/">Maven Central Repository</a>. The project also plans to provide a P2 update site using Eclipse/Tycho, but that is unlikely to happen for the first couple of releases.
+      Sisu JARs will be made available in the Eclipse download area and published to the <a href="http://search.maven.org/">Maven Central Repository</a>. The project also plans to provide a P2 update site using Eclipse/Tycho, but that is unlikely to happen until after the first couple of milestones.
     </p>
   </p:release_deliverables>
 
   <p:release_milestones>
     <p:preamble>
       <p>
-        Milestone releases will be published as committer time allows.
+        Milestones will be published as committer time allows.
       </p>
     </p:preamble>
     <p:milestone date="??/10/2012" milestone="M0">
