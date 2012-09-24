@@ -32,11 +32,11 @@
         Milestones will be published as committer time allows.
       </p>
     </p:preamble>
-    <p:milestone date="??/10/2012" milestone="M0">
+    <p:milestone date="24/09/2012" milestone="M0">
       <div>0.0.0.M0 -- initial contribution before API cleanup</div>
     </p:milestone>
-    <p:milestone date="??/??/2013" milestone="M1">
-      <div>0.1.0.M1 -- API cleanup, no major functional changes</div>
+    <p:milestone date="??/??/2013" milestone="M?">
+      <div>0.1.0.M? -- API cleanup, no major functional changes</div>
     </p:milestone>
   </p:release_milestones>
 
