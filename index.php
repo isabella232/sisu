@@ -1,6 +1,6 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
+<?php
 /*******************************************************************************
- * Copyright (c) 2011, 2012 
+ * Copyright (c) 2009 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
@@ -10,18 +10,20 @@
  *    
  *******************************************************************************/
 
-$html = <<<EOHTML
-<div id="midcolumn">
-  <h2>$pageTitle</h2>
-  <p>
-    $projectDescription
-  </p>
-</div>
-<div id="rightcolumn">
-  $incubation
-</div>
-EOHTML;
+	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());
+	
+	$localVersion = false;
+	
+	# Define these here, or in _projectCommon.php for site-wide values
+	$pageKeywords	= "eclipse, project";
+	$pageAuthor		= "Your name";
+	$pageTitle 		= "My project home";
+	
+	
+	// 	# Paste your HTML content between the EOHTML markers!
+	$html = file_get_contents('pages/_index.html');
 
-# Generate the web page
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+	# Generate the web page
+	$App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
+
 ?>
