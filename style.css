@@ -135,7 +135,7 @@ a strong {
 #buttonDownload {
    background:transparent url("images/buttons.png") no-repeat 0 0;
    top: 0px;
-   left: 0px;
+   left: 280px;
 }
 
 #buttonDownload:hover {
@@ -148,7 +148,7 @@ a strong {
 
 #buttonDocumentation {
    background:transparent url("images/buttons.png") no-repeat 0 -77px;
-   top: 87px;
+   top: 0px;
    left: 0px;
 }
 
@@ -162,7 +162,7 @@ a strong {
 
 #buttonSupport {
    background:transparent url("images/buttons.png") no-repeat 0 -77px;
-   top: 0px;
+   top: 87px;
    left: 280px;
 }
 
@@ -177,7 +177,7 @@ a strong {
 #buttonInvolved {
    background:transparent url("images/buttons.png") no-repeat 0 -77px;
    top: 87px;
-   left: 280px;
+   left: 0px;
 }
 
 #buttonInvolved:hover {
