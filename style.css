@@ -188,3 +188,17 @@ a strong {
    background:transparent url("images/bannerNewAndNoteworthy08M4.png") no-repeat 0 0;
    margin-top: 10px;
 }
+
+span.sisu{position:relative;top:-120px;left:80px;}
+.sisu div{position:absolute;}
+.sisu-dot{width:12px;height:12px;-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px}
+.sisu-0{width:268px;height:88px;border:2px solid #000;}
+.sisu-1{left:25px;top:25px;background:#000;}
+.sisu-2{width:60px;height:2px;left:30px;top:30px;background:#000;}
+.sisu-3{width:60px;height:2px;top:60px;background:#000;}
+.sisu-4{left:55px;top:55px;background:#000;}
+.sisu-5{width:2px;height:90px;left:90px;background:#000;}
+.sisu-6{width:2px;height:90px;left:120px;background:#000;}
+.sisu-7{width:2px;height:60px;left:120px;background:#000;}
+.sisu-8{left:115px;top:55px;background:#000;}
+
