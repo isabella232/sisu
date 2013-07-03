@@ -25,16 +25,16 @@
 	# $Nav->setLinkList(array());
 	
 	# Break the navigation into sections
-	$Nav->addNavSeparator("MyProject", 	"/default");
+	$Nav->addNavSeparator("Sisu", 	"/sisu");
 	$Nav->addCustomNav("Download", "/project/download.php", "_self", 3);
 	$Nav->addCustomNav("Documentation", "/project/documentation.php", "_blank", 3);
 	$Nav->addCustomNav("Support", "/project/support.php", "_blank", 3);
 	$Nav->addCustomNav("Getting Involved", "/project/developers", "_blank", 3);
 
 	# Define keywords, author and title here, or in each PHP page specifically
-	$pageKeywords	= "xtext, dsl, modeling, domain specific language, textual";
-	$pageAuthor		= "Your name";
-	# $pageTitle 		= "Xtext";
+	$pageKeywords	= "sisu, dependency injection, inject, ioc, jsr330";
+	$pageAuthor	= "Stuart McCulloch";
+	# $pageTitle 	= "Sisu";
 
 
 	# top navigation bar
@@ -47,10 +47,10 @@
 	# $Menu->addMenuItem("Developers", "/project/developers", "_self");
 	
 	# To define additional CSS or other pre-body headers
-	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/default/style.css"/>');
+	$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/sisu/style.css"/>');
 	
 	# To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
-	$App->Promotion = TRUE;
+	$App->Promotion = FALSE;
 	
 	# If you have Google Analytics code, use it here
 	# $App->SetGoogleAnalyticsTrackingCode("YOUR_CODE");
