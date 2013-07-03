@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
+<p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml" name="Sisu">
+  <p:release projectid="technology.sisu" version="0.1.0" />
+
+  <p:introduction>
+    <p>
+      The Sisu project provides a dynamic dependency injection framework that can interact with OSGi services and Eclipse extensions.
+    </p>
+    <p>
+      The project is currently divided into two codebases:
+    </p>
+    <ul>
+      <li>
+        Sisu Inject -- Enhanced JSR330 container, builds on top of Google-Guice.
+      </li>
+      <li>
+        Sisu Plexus -- Cleanroom Plexus container, builds on top of Sisu-Inject.
+      </li>
+    </ul>
+  </p:introduction>
+
+  <p:release_deliverables>
+    <p>
+      Sisu JARs will be made available in the Eclipse download area and published to the <a href="http://search.maven.org/">Maven Central Repository</a>. The project also plans to provide a P2 update site using Eclipse/Tycho, but that is unlikely to happen until after the first couple of milestones.
+    </p>
+  </p:release_deliverables>
+
+  <p:release_milestones>
+    <p:preamble>
+      <p>
+        Milestones will be published as committer time allows.
+      </p>
+    </p:preamble>
+    <p:milestone date="24/09/2012" milestone="M0">
+      <div>0.0.0.M0 -- initial contribution before API cleanup</div>
+    </p:milestone>
+    <p:milestone date="??/??/2013" milestone="M?">
+      <div>0.1.0.M? -- API cleanup, no major functional changes</div>
+    </p:milestone>
+  </p:release_milestones>
+
+  <p:target_environments>
+    <p>
+      Sisu consists of pure Java code and is expected to run on any JVM that supports Java SE 5 or newer.
+    </p>
+    <p:internationalization>
+      <p>
+        None of the Sisu deliverables are internationalized, any log and exception messages use English.
+      </p>
+    </p:internationalization>
+  </p:target_environments>
+
+  <p:compatibility_with_previous_releases>
+    <h3>Compatibility with Sonatype Sisu</h3>
+    <p>
+      <strong>API Contract Compatibility:</strong>
+      To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be moved into the <code>org.eclipse.sisu</code> namespace. An external compatibility layer is being considered for users of Sonatype Sisu.
+    </p>
+    <p>
+      <strong>Source Compatibility:</strong>
+      To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be moved into the <code>org.eclipse.sisu</code> namespace. While the API will undergo some refactoring and cleanup during the move to Eclipse, it is expected that only clients that use the Sisu extensions to JSR330 will need to update their imports and make minor code changes to successfully build against the new API.
+    </p>
+  </p:compatibility_with_previous_releases>
+
+  <p:themes_and_priorities>
+    <p:preamble>
+    </p:preamble>
+    <p:theme name="Clean up API">
+      <p:description>
+        <p>
+          The refactoring of code into the <code>org.eclipse.sisu</code> namespace provides an opportunity to remove deprecated code and clean up the API to ease future evolution and to improve usability.
+        </p>
+      </p:description>
+    </p:theme>
+  </p:themes_and_priorities>
+
+  <p:appendix />
+
+</p:plan>
