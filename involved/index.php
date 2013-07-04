@@ -108,5 +108,6 @@ $committers
 EOHTML;
 
 # Generate the web page
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $projectUrl . 'section.css"/>');
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
