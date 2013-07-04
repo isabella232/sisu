@@ -64,7 +64,6 @@ $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self",
 # $Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
 
 # To define additional CSS or other pre-body headers
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $projectUrl . 'style.css"/>');
 
 # To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 $App->Promotion = FALSE;
