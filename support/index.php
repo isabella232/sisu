@@ -19,9 +19,9 @@ $html  = <<<EOHTML
 
 <h3 id="bugs">Bug Tracker</h3>
 <p>
-  If you encounter a bug or have a feature request, please fill a sufficiently detailed issue in our
+  If you encounter a bug or have a feature request, please enter a sufficiently detailed issue in our
   <a href="$issueTracker">bug tracker</a>.
-  Ideally your description and attached logs of the issue should be enough for us to recreate it locally.
+  We especially appreciate issues that come with suggested patches or enough information to be recreated locally.
 </p>
 <p>
   Please also take time to check if your issue has already been
