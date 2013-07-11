@@ -15,7 +15,9 @@ $pageTitle = $pageTitle . " / Downloads";
 $html  = <<<EOHTML
 <div id="midcolumn">
 
-<p>All downloads are provided under the terms and conditions of the <a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a> unless otherwise specified.</p>
+<p><i>The following downloads are provided under the terms and conditions of the
+<br><a href="/legal/epl/notice.php">Eclipse Foundation Software User Agreement</a>
+unless otherwise specified.</i></p>
 
 <h3 id="dist">Distribution</h3>
 <p>Coming soon...</p>
@@ -24,7 +26,7 @@ $html  = <<<EOHTML
 <p>Coming soon...</p>
 
 <h3 id="maven">Maven Artifacts</h3>
-<p>$milestone is available from the<a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>.</p>
+<p>$milestone is available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>.</p>
 
 </div>
 

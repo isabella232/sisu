@@ -10,31 +10,31 @@
  *    
  *******************************************************************************/
 
-$pageTitle 		= $pageTitle . " - Support";
+$pageTitle = $pageTitle . " / Support";
 
-$mailingList  = "sisu-users";
 $issueTracker = normalizeHttpUrl($project->getBugzillaUrl()); 
 
 $html  = <<<EOHTML
 <div id="midcolumn">
-<h2>$pageTitle</h2>
 
-<h3 id="mail">Mailing List</h3>
+<h3 id="mail">Mailing Lists</h3>
 <p>
-  If you have a question that the existing documentation does not answer, feel free to contact our
-  <a href="http://dev.eclipse.org/mailman/listinfo/$mailingList">user mailing list</a>.
+  If you have a question about using Sisu that the existing documentation does not answer, we'd like to hear from you on
+  the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-users/">user mailing list</a>. Questions about the internal
+  design should be directed to the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-dev/">developer mailing list</a>.
 </p>
 <p>
-  Before posting your question, please also 
-  <a href="http://dev.eclipse.org/mhonarc/lists/$mailingList/">search the mailing list archive</a>
-  to see whether your question has been brought up before and was already answered.
+  Before posting your question, please also search the mailing list archives
+  [<a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">users</a>
+  |<a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">dev</a>]
+  in case your question has been brought up before and was already answered.
 </p>
 
 <h3 id="issues">Issue Tracker</h3>
 <p>
   If you encountered a bug or have a feature request, please fill a sufficiently detailed issue in our
   <a href="$issueTracker">issue tracker</a>.
-  Ideally, your description and attached logs should enable us to reproduce your issue.
+  Ideally, your description and attached logs should enable us to recreate your issue.
 </p>
 <p>
   Please also take the time to check whether your issue has already been filled by someone else. 

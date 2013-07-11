@@ -10,7 +10,7 @@
  *    
  *******************************************************************************/
 
-$pageTitle 		= $pageTitle . " - Developers";
+$pageTitle = $pageTitle . " / Getting Involved";
 
 $mailingLists = $summary->getMailingListsHtml();
 $committers = $summary->getCommittersSideItem();
