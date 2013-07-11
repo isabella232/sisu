@@ -33,16 +33,16 @@ $html = <<<EOHTML
 <ul>
   <li><a id="buttonDocumentation" href="docs/" title="Documentation">
   <div class="buttonIcon"></div><h4>Documentation</h4>
-  <p>Tutorials, Javadoc, Reference Documentation</p></a></li>
+  <p>Tutorials,&nbsp;Javadoc,</p><p>Design&nbsp;documents</p></a></li>
   <li><a id="buttonDownload" href="download/" title="Download">
   <div class="buttonIcon"></div><h4>Download</h4>
-  <p>Distribution, Update Site</p></a></li>
+  <p>Distribution,</p><p>Update&nbsp;site</p></a></li>
   <li><a id="buttonInvolved" href="involved/" title="Getting Involved">
   <div class="buttonIcon"></div><h4>Getting Involved</h4>
-  <p>Sources, Workspace Setup, Wiki, Committers</p></a></li>
+  <p>Sources,&nbsp;Wiki,</p><p>Workspace&nbsp;setup</p></a></li>
   <li><a id="buttonSupport" href="support/" title="Support">
   <div class="buttonIcon"></div><h4>Support</h4>
-  <p>Bug Tracker, Mailing Lists, Newsgroup</p></a></li>
+  <p>Bug&nbsp;tracker,</p><p>Mailing&nbsp;lists</p></a></li>
 </ul>
 </div>
 <div id="midcolumn">
