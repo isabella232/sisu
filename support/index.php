@@ -24,9 +24,9 @@ $html  = <<<EOHTML
   design of Sisu should be directed to the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-dev/">developer mailing list</a>.
 </p>
 <p>
-  Before posting your question, please search the archives
-  [ <a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">users</a>
-  | <a href="http://dev.eclipse.org/mhonarc/lists/sisu-dev/">dev</a> ]
+  Before posting your question, please search the list archives
+  (<a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">users</a>
+  / <a href="http://dev.eclipse.org/mhonarc/lists/sisu-dev/">dev</a>)
   in case your question has been brought up before and was already answered.
 </p>
 
@@ -37,7 +37,9 @@ $html  = <<<EOHTML
   Ideally, your description and attached logs should be enough to recreate your issue.
 </p>
 <p>
-  Please also take time to check if your issue has already been raised by someone else. 
+  Please also take time to check if your issue has already been
+  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Technology&product=Sisu">logged</a>
+  by someone else. 
 </p>
 </div>
 
