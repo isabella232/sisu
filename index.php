@@ -33,7 +33,7 @@ $html = <<<EOHTML
 <ul>
   <li><a id="buttonDocumentation" href="docs/" title="Documentation">
   <div class="buttonIcon"></div><h4>Documentation</h4>
-  <p>Tutorials, Javadoc, Design&nbsp;documents</p></a></li>
+  <p>Tutorials, Javadoc,</p><p>Design documents</p></a></li>
   <li><a id="buttonDownload" href="download/" title="Download">
   <div class="buttonIcon"></div><h4>Download</h4>
   <p>Distribution, Update site</p></a></li>
