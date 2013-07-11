@@ -17,6 +17,18 @@ $issueTracker = normalizeHttpUrl($project->getBugzillaUrl());
 $html  = <<<EOHTML
 <div id="midcolumn">
 
+<h3 id="bugs">Bug Tracker</h3>
+<p>
+  If you encountered a bug or have a feature request, please fill a sufficiently detailed issue in our
+  <a href="$issueTracker">bug tracker</a>.
+  Ideally your description and attached logs of the issue should be enough for us to recreate it locally.
+</p>
+<p>
+  Please also take time to check if your issue has already been
+  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Technology&product=Sisu">logged</a>
+  by someone else. 
+</p>
+
 <h3 id="mail">Mailing Lists</h3>
 <p>
   If you have a question about using Sisu that the existing documentation does not answer, we'd like to hear from you on
@@ -24,23 +36,12 @@ $html  = <<<EOHTML
   design of Sisu should be directed to the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-dev/">developer mailing list</a>.
 </p>
 <p>
-  Before posting your question, please search the list archives
-  (<a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">users</a>
-  / <a href="http://dev.eclipse.org/mhonarc/lists/sisu-dev/">dev</a>)
-  in case your question has been brought up before and was already answered.
+  Before posting your question, please search the
+  <a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">user</a>
+  or <a href="http://dev.eclipse.org/mhonarc/lists/sisu-dev/">developer</a>
+  list archives in case your question has been brought up before and was already answered.
 </p>
 
-<h3 id="issues">Issue Tracker</h3>
-<p>
-  If you encountered a bug or have a feature request, please fill a sufficiently detailed issue in our
-  <a href="$issueTracker">issue tracker</a>.
-  Ideally, your description and attached logs should be enough to recreate your issue.
-</p>
-<p>
-  Please also take time to check if your issue has already been
-  <a href="https://bugs.eclipse.org/bugs/buglist.cgi?classification=Technology&product=Sisu">logged</a>
-  by someone else. 
-</p>
 </div>
 
 <div id="rightcolumn">
