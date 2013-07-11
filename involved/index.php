@@ -67,7 +67,8 @@ $mailingLists
 <p>
   We use <a href="$ci">Eclipse's Hudson instance</a> for our continuous integration
   builds. Hudson is configured to periodically poll our Git repositories for changes and automatically starts a new
-  build when required.
+  build when required. We also have a daily <a href="https://hudson.eclipse.org/sandbox/job/sisu-sonar/">Sonar job</a>
+  to track <a href="https://dev.eclipse.org/sonar/dashboard/index/org.eclipse.sisu:sisu-inject">code quality</a>.
 </p>
 <p>
   Besides cross-platform testing, CI is also used to automatically deploy snapshot/nightly builds. Those builds are
