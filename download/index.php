@@ -26,7 +26,7 @@ unless otherwise specified.</i></p>
 <p>Coming soon...</p>
 
 <h3 id="maven">Maven Artifacts</h3>
-<p>$milestone is available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>.</p>
+<p>$milestone is also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>.</p>
 
 </div>
 

@@ -30,8 +30,7 @@ $html  = <<<EOHTML
   attach it to an entry in our issue tracker.
 </p>
 <p>
-  When editing sources files, please respect our existing code style. Corresponding formatter settings for some IDEs
-  can be imported from the following resources:  
+  When editing sources files, please respect our existing code style. Formatter styles for some IDEs are available below:
 </p>
 <ul>
   <li><a href="http://maven.apache.org/developers/maven-eclipse-codestyle.xml">Eclipse 3.2+ formatter settings</a></li>
@@ -39,7 +38,7 @@ $html  = <<<EOHTML
 </ul>
 <p>
   Building the sources requires <a href="http://maven.apache.org/">Apache Maven 3.0 or newer</a> and a Java Developer
-  Kit for Java 6 or higher (needed to compile the optional annotation processing support).
+  Kit for Java 6 or higher (this is needed to compile the optional annotation processing support).
 </p>
 
 <h3 id="iplog">Intellectual Property Log</h3>
@@ -47,16 +46,16 @@ $html  = <<<EOHTML
   All Eclipse projects are required to maintain an
   <a href="http://wiki.eclipse.org/Development_Resources/IP_Log">IP log</a> for the employed intellectual property.
   Committers should especially pay attention to the
-  <a href="http://wiki.eclipse.org/Development_Resources/IP_Log#Contributions">IP due diligence process</a>.
+  <a href="http://wiki.eclipse.org/Development_Resources/IP_Log#Contributions">IP due diligence process</a>
+  when handling external contributions.
 </p>
 <p>
-  We use the <a href="http://wiki.eclipse.org/Development_Resources/Automatic_IP_Log">automatic IP log tool</a> to
-  track code contributions and third-party dependencies. See
-  <a href="$iplog">$projectName's tentative IP log</a> for
-  approved dependencies. 
+  We use the <a href="http://wiki.eclipse.org/Development_Resources/Automatic_IP_Log">automatic IP log tool</a>
+  to track code contributions and third-party dependencies. See <a href="$iplog">$projectName's tentative IP log</a>
+  for the list of currently approved dependencies. 
 </p>
 
-<h3 id="issues">Issue Tracker</h3>
+<h3 id="issues">Bug Tracker</h3>
 <p>
   The project uses Bugzilla to manage <a href="$issueTracker">bugs and feature requests</a>.
 </p>

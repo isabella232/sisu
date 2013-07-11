@@ -19,7 +19,7 @@ $html  = <<<EOHTML
 
 <h3 id="bugs">Bug Tracker</h3>
 <p>
-  If you encountered a bug or have a feature request, please fill a sufficiently detailed issue in our
+  If you encounter a bug or have a feature request, please fill a sufficiently detailed issue in our
   <a href="$issueTracker">bug tracker</a>.
   Ideally your description and attached logs of the issue should be enough for us to recreate it locally.
 </p>
@@ -39,7 +39,7 @@ $html  = <<<EOHTML
   Before posting your question, please search the
   <a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">user</a>
   or <a href="http://dev.eclipse.org/mhonarc/lists/sisu-dev/">developer</a>
-  list archives in case your question has been brought up before and was already answered.
+  archives in case your question has been brought up before and was already answered.
 </p>
 
 </div>
