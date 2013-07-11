@@ -15,7 +15,7 @@ $pageTitle = $pageTitle . " / Documentation";
 $html  = <<<EOHTML
 <div id="midcolumn">
 
-<h3 id="tutorials">Tutorials</h3>
+<h3 id="demo">Tutorials</h3>
 <p>Coming soon...</p>
 
 <h3 id="api">$milestone API</h3>
@@ -24,7 +24,7 @@ $html  = <<<EOHTML
 <li><a href="api/org.eclipse.sisu.mojos/">Sisu-Mojos</a></li>
 <li><a href="api/org.eclipse.sisu.plexus/">Sisu-Plexus</a></li>
 </ul>
-<p>Also available from the Central Repository for IDEs with Maven integration.</p>
+<p><i>also available from the Central Repository for IDEs with Maven integration.</i></p>
 
 <h3 id="design">Design</h3>
 <p>Coming soon...</p>
