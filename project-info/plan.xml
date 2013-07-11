@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <?xml-stylesheet type="text/xsl" href="http://www.eclipse.org/projects/project-plan.xsl"?>
 <p:plan plan-format="1.0" xmlns:p="http://www.eclipse.org/project/plan" xmlns="http://www.w3.org/1999/xhtml" name="Sisu">
-  <p:release projectid="technology.sisu" version="0.1.0" />
+  <p:release projectid="technology.sisu" version="0.0.0" />
 
   <p:introduction>
     <p>
       The Sisu project provides a dynamic dependency injection framework that can interact with OSGi services and Eclipse extensions.
     </p>
     <p>
-      The project is currently divided into two codebases:
+      The project is currently divided into three codebases:
     </p>
     <ul>
       <li>
-        Sisu Inject -- Enhanced JSR330 container, builds on top of Google-Guice.
+        Sisu Inject -- Modular JSR330 container, builds on top of Google-Guice.
+      </li>
+      <li>
+        Sisu Mojos -- Maven tooling for Sisu, builds on top of Sisu-Inject.
       </li>
       <li>
         Sisu Plexus -- Cleanroom Plexus container, builds on top of Sisu-Inject.
@@ -22,7 +25,7 @@
 
   <p:release_deliverables>
     <p>
-      Sisu JARs will be made available in the Eclipse download area and published to the <a href="http://search.maven.org/">Maven Central Repository</a>. The project also plans to provide a P2 update site using Eclipse/Tycho, but that is unlikely to happen until after the first couple of milestones.
+      Sisu artifacts will be made available in the Eclipse download area and published to the <a href="http://search.maven.org/">Central Repository</a>. The project also plans to provide a P2 update site using Eclipse/Tycho.
     </p>
   </p:release_deliverables>
 
@@ -33,10 +36,22 @@
       </p>
     </p:preamble>
     <p:milestone date="24/09/2012" milestone="M0">
-      <div>0.0.0.M0 -- initial contribution before API cleanup</div>
+      <div>0.0.0.M0 -- initial contribution</div>
     </p:milestone>
-    <p:milestone date="??/??/2013" milestone="M?">
-      <div>0.1.0.M? -- API cleanup, no major functional changes</div>
+    <p:milestone date="16/10/2012" milestone="M1">
+      <div>0.0.0.M1 -- additional plexus support</div>
+    </p:milestone>
+    <p:milestone date="08/03/2013" milestone="M2">
+      <div>0.0.0.M2 -- plexus configurator work</div>
+    </p:milestone>
+    <p:milestone date="23/03/2013" milestone="M2a">
+      <div>0.0.0.M2a -- minor regression fixes</div>
+    </p:milestone>
+    <p:milestone date="05/06/2013" milestone="M3">
+      <div>0.0.0.M3 -- API refactoring and cleanup</div>
+    </p:milestone>
+    <p:milestone date="11/07/2013" milestone="M4">
+      <div>0.0.0.M4 -- sisu extension support</div>
     </p:milestone>
   </p:release_milestones>
 
@@ -55,11 +70,11 @@
     <h3>Compatibility with Sonatype Sisu</h3>
     <p>
       <strong>API Contract Compatibility:</strong>
-      To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be moved into the <code>org.eclipse.sisu</code> namespace. An external compatibility layer is being considered for users of Sonatype Sisu.
+      To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be moved into the <code>org.eclipse.sisu</code> namespace. An external compatibility wrapper is available for users of Sonatype Sisu.
     </p>
     <p>
       <strong>Source Compatibility:</strong>
-      To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be moved into the <code>org.eclipse.sisu</code> namespace. While the API will undergo some refactoring and cleanup during the move to Eclipse, it is expected that only clients that use the Sisu extensions to JSR330 will need to update their imports and make minor code changes to successfully build against the new API.
+      To comply with Eclipse Foundation requirements, all Sisu Java types/packages will be moved into the <code>org.eclipse.sisu</code> namespace. While the API will undergo some refactoring and cleanup during the move to Eclipse, only clients that use the Sisu extensions to JSR330 will need to update their imports and make minor code changes to successfully build against the new API.
     </p>
   </p:compatibility_with_previous_releases>
 
