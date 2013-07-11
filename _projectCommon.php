@@ -24,10 +24,10 @@ $issueTracker = normalizeHttpUrl($project->getBugzillaUrl());
 $wiki = normalizeHttpUrl($project->getWikiUrl());
 $sources = "http://git.eclipse.org/c/sisu/";
 $ci = "https://hudson.eclipse.org/hudson/";
-$apidocs = "http://download.eclipse.org/sisu/org.eclipse.sisu.inject/current/apidocs/";
 $about = "/projects/project.php?id=$projectId";
 $iplog = "/projects/ip_log.php?projectid=$projectId";
 $incubation = $summary->getIncubationSideItem();
+$milestone = "0.0.0.M4";
 
 # Set the theme for your project's web pages.
 # See http://eclipse.org/phoenix/

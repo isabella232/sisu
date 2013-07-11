@@ -10,29 +10,24 @@
  *    
  *******************************************************************************/
 
-$pageTitle 		= $pageTitle . " - Documentation";
-
-$gitRepos = $project->getSourceRepositories(); 
+$pageTitle = $pageTitle . " / Documentation";
 
 $html  = <<<EOHTML
 <div id="midcolumn">
-<h2>$pageTitle</h2>
 
-<h3 id="apidocs">API Documentation</h3>
-<p>
-  For technical details regarding usage of the API, please consult the
-  generated <a href="$apidocs">API docs</a> (coming soon) of the various classes.
-</p>
-<p>
-  These API docs are also available from the Central Repository such that IDEs with Maven integration can present
-  you with that information automatically when you edit your code. 
-</p>
+<h3 id="tutorials">Tutorials</h3>
+<p>Coming soon...</p>
 
-<h3 id="wiki">Wiki</h3>
-<p>
-  More high-level and task-focused documentation regarding $projectName's usage can be found in our
-  <a href="$wiki">wiki space</a>.
-</p>
+<h3 id="api">$milestone API</h3>
+<ul>
+<li><a href="api/org.eclipse.sisu.inject/">Sisu-Inject</a></li>
+<li><a href="api/org.eclipse.sisu.mojos/">Sisu-Mojos</a></li>
+<li><a href="api/org.eclipse.sisu.plexus/">Sisu-Plexus</a></li>
+</ul>
+<p>Also available from the Central Repository for IDEs with Maven integration.</p>
+
+<h3 id="design">Design</h3>
+<p>Coming soon...</p>
 
 </div>
 
