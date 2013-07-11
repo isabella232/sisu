@@ -55,6 +55,11 @@ $html  = <<<EOHTML
   for the list of currently approved dependencies. 
 </p>
 
+<h3 id="wiki">Wiki</h3>
+<p>
+  Information about building, testing and debugging $projectName can be found in our <a href="$wiki">wiki space</a>.
+</p>
+
 <h3 id="issues">Bug Tracker</h3>
 <p>
   The project uses Bugzilla to manage <a href="$issueTracker">bugs and feature requests</a>.
