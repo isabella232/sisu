@@ -1,0 +1,8 @@
+org.eclipse.sisu
+org.eclipse.sisu.bean
+org.eclipse.sisu.inject
+org.eclipse.sisu.launch
+org.eclipse.sisu.space
+org.eclipse.sisu.wire
+org.sonatype.inject
+
