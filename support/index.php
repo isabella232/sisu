@@ -21,12 +21,12 @@ $html  = <<<EOHTML
 <p>
   If you have a question about using Sisu that the existing documentation does not answer, we'd like to hear from you on
   the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-users/">user mailing list</a>. Questions about the internal
-  design should be directed to the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-dev/">developer mailing list</a>.
+  design of Sisu should be directed to the <a href="http://dev.eclipse.org/mailman/listinfo/sisu-dev/">developer mailing list</a>.
 </p>
 <p>
-  Before posting your question, please also search the mailing list archives
-  [<a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">users</a>
-  |<a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">dev</a>]
+  Before posting your question, please search the archives
+  [ <a href="http://dev.eclipse.org/mhonarc/lists/sisu-users/">users</a>
+  | <a href="http://dev.eclipse.org/mhonarc/lists/sisu-dev/">dev</a> ]
   in case your question has been brought up before and was already answered.
 </p>
 
@@ -34,10 +34,10 @@ $html  = <<<EOHTML
 <p>
   If you encountered a bug or have a feature request, please fill a sufficiently detailed issue in our
   <a href="$issueTracker">issue tracker</a>.
-  Ideally, your description and attached logs should enable us to recreate your issue.
+  Ideally, your description and attached logs should be enough to recreate your issue.
 </p>
 <p>
-  Please also take the time to check whether your issue has already been filled by someone else. 
+  Please also take time to check if your issue has already been raised by someone else. 
 </p>
 </div>
 

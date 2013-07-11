@@ -17,7 +17,6 @@ $committers = $summary->getCommittersSideItem();
 
 $html  = <<<EOHTML
 <div id="midcolumn">
-<h2>$pageTitle</h2>
 
 <h3 id="sources">Source Code</h3>
 <p>
