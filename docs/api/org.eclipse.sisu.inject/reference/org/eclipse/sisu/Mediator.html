@@ -285,11 +285,14 @@
 
 
 <h2>Class Overview</h2>
-<p>Implement this interface to Watch for Qualified bean implementations of T.
+<p>Watches for Qualified bean implementations of T. Implement this interface when you have one
+ or more beans of type W watching out for other beans of type T. Sisu will use the given mediator to translate
+ <code><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a></code> events to whatever the watchers expect. Mediator implementations must have a public default
+ (no-arg) constructor. They are neither injected nor injectable, acting instead as stateless translators between
+ injected beans.
  <p>
- The <code><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a></code> is responsible for translating updates to whatever the watchers expect. Mediation only occurs
- when there are updates to qualified bindings and at least <i>one</i> live watcher instance. So if no-one requests or
- injects an instance of the watcher then the mediator will not be called.
+ Important: mediation only occurs when bindings change and there is at least <i>one</i> live watcher instance. If
+ no-one requests or injects an instance of W the mediator will <i>not</i> be called.
  
  <pre>
  &#064;Named
@@ -355,14 +358,18 @@
  }
  </pre>
  
- As soon as MyTabbedPane is instantiated Sisu uses the declared SwingTabMediator to send all known JPanels annotated
- with @Tab to the watching MyTabbedPane. Sisu will continue to send updates, which add or remove tabs as appropriate,
- until the MyTabbedPane instance becomes unreachable. Note how MyTabbedPane doesn't need to know about Sisu APIs and
- vice-versa, SwingTabMediator takes care of the necessary interaction.
-</p>
+ In this example as soon as MyTabbedPane is injected, Sisu will use SwingTabMediator to deliver all known JPanels
+ annotated with @Tab to the watching MyTabbedPane. Sisu will continue to send updates, which add or remove tabs as
+ appropriate, until the MyTabbedPane instance becomes unreachable. MyTabbedPane doesn't need to know anything about
+ Sisu APIs and vice-versa because SwingTabMediator takes care of the necessary translation.</p>
 
 
 
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code></li>
+      </ul>
+  </div>
 
 
 </div><!-- jd-descr -->

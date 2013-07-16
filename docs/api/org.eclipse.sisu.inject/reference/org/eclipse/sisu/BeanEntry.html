@@ -353,11 +353,23 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Represents a Qualified bean implementation of T.
-</p>
+<p>Represents a Qualified bean implementation of T. Use this when you want to know more about bean
+ implementations, especially if you want to avoid creating an actual instance during the process.
+ <p>
+ Available for injection as a List or Iterable sequence:
+ 
+ <pre>
+ &#064;Inject
+ List&lt;BeanEntry&lt;Named, Command&gt;&gt; commands;
+ </pre></p>
 
 
 
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code></li>
+      </ul>
+  </div>
 
 
 </div><!-- jd-descr -->
@@ -516,7 +528,7 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../org/eclipse/sisu/BeanEntry.html#getSource()">getSource</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Returns an arbitrary object that describes where this bean was configured.</div>
+        <div class="jd-descrdiv">Returns an arbitrary object that indicates where this bean was configured.</div>
   
   </td></tr>
 
@@ -729,8 +741,12 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Returns a human-readable description of the bean; see @<code><a href="../../../org/eclipse/sisu/Description.html">Description</a></code>.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Human-readable description
-</li></ul>
+      <ul class="nolist"><li>Human-readable description</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../org/eclipse/sisu/Description.html">Description</a></code></li>
+      </ul>
   </div>
 
     </div>
@@ -873,8 +889,12 @@ From interface
   <div class="jd-tagdata jd-tagdescr"><p>Returns the bean's rank; higher ranked beans override lower ranked beans.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Assigned rank
-</li></ul>
+      <ul class="nolist"><li>Assigned rank</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code></li>
+      </ul>
   </div>
 
     </div>
@@ -906,15 +926,11 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Returns an arbitrary object that describes where this bean was configured.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Returns an arbitrary object that indicates where this bean was configured.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Source location</li></ul>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">See Also</h5>
-      <ul class="nolist"><li><code><a href="../../../http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html#toString()">toString()</a></code></li>
-      </ul>
+      <ul class="nolist"><li>Source location
+</li></ul>
   </div>
 
     </div>

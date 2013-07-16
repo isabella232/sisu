@@ -343,6 +343,10 @@ Summary:
 <div class="jd-descr">
 
 
+<h2>Class Overview</h2>
+<p>SPI mechanism for discovering Module and Strategy extensions.
+</p>
+
 
 
 
@@ -421,7 +425,7 @@ Summary:
           final
           <a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">SpaceModule.Strategy</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#DEFAULT">DEFAULT</a></td>
-          <td class="jd-descrcol" width="100%"></td>
+          <td class="jd-descrcol" width="100%">Default visitor strategy; scan and bind implementations with Qualifiers.</td>
       </tr>
       
     
@@ -456,7 +460,7 @@ Summary:
           final
           <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#DEFAULT">DEFAULT</a></td>
-          <td class="jd-descrcol" width="100%"></td>
+          <td class="jd-descrcol" width="100%">Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.</td>
       </tr>
       
     
@@ -493,6 +497,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#global(org.eclipse.sisu.space.ClassSpace)">global</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
         
+        <div class="jd-descrdiv">Returns global <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the surrounding class space.</div>
+  
   </td></tr>
 
 
@@ -509,6 +515,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder, java.lang.Class<T>, T)">install</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; contextType, T context)</nobr>
         
+        <div class="jd-descrdiv">Loads <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Module.html">Module</a></code> extensions from "META-INF/services/com.google.inject.Module"; implementations may either
+ have a public constructor that takes a single context argument or a public default (no-argument) constructor.</div>
+  
   </td></tr>
 
 
@@ -525,6 +534,9 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder)">install</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Loads <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Module.html">Module</a></code> extensions from "META-INF/services/com.google.inject.Module"; implementations must have a
+ public default (no-argument) constructor.</div>
+  
   </td></tr>
 
 
@@ -541,6 +553,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#local(org.eclipse.sisu.space.ClassSpace)">local</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
         
+        <div class="jd-descrdiv">Returns local <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the containing class space.</div>
+  
   </td></tr>
 
 
@@ -557,6 +571,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Delegates to visitors registered under "META-INF/services/org.eclipse.sisu.space.SpaceVisitor"; first one wins.</div>
+  
   </td></tr>
 
 
@@ -573,6 +589,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Delegates to wiring registered under "META-INF/services/org.eclipse.sisu.wire.Wiring"; first one wins.</div>
+  
   </td></tr>
 
 
@@ -825,6 +843,8 @@ From interface
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
+  
   </td></tr>
 
 
@@ -867,6 +887,8 @@ From interface
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
+  
   </td></tr>
 
 
@@ -943,7 +965,21 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Returns global <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the surrounding class space.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>space</td>
+          <td>The class space</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Global extensions
+</li></ul>
+  </div>
 
     </div>
 </div>
@@ -974,7 +1010,26 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Loads <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Module.html">Module</a></code> extensions from "META-INF/services/com.google.inject.Module"; implementations may either
+ have a public constructor that takes a single context argument or a public default (no-argument) constructor.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>binder</td>
+          <td>The current binder</td>
+        </tr>
+        <tr>
+          <th>contextType</td>
+          <td>Optional context type</td>
+        </tr>
+        <tr>
+          <th>context</td>
+          <td>Optional context instance
+</td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>
@@ -1005,7 +1060,18 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Loads <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Module.html">Module</a></code> extensions from "META-INF/services/com.google.inject.Module"; implementations must have a
+ public default (no-argument) constructor.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>binder</td>
+          <td>The current binder
+</td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>
@@ -1036,7 +1102,21 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Returns local <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the containing class space.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>space</td>
+          <td>The class space</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Local extensions
+</li></ul>
+  </div>
 
     </div>
 </div>
@@ -1067,7 +1147,21 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Delegates to visitors registered under "META-INF/services/org.eclipse.sisu.space.SpaceVisitor"; first one wins.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>binder</td>
+          <td>The binder</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Extended visitor
+</li></ul>
+  </div>
 
     </div>
 </div>
@@ -1098,7 +1192,21 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Delegates to wiring registered under "META-INF/services/org.eclipse.sisu.wire.Wiring"; first one wins.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>binder</td>
+          <td>The binder</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Extended wiring
+</li></ul>
+  </div>
 
     </div>
 </div>

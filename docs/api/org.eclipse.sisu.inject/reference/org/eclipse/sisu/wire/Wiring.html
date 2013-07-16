@@ -323,7 +323,7 @@ Summary:
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/wire/LocatorWiring.html">LocatorWiring</a></td>
-              <td class="jd-descrcol" width="100%">Adds <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>-backed bindings for non-local bean dependencies.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">Adds <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>-backed bindings for unresolved bean dependencies.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -335,7 +335,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Supplies bindings for given dependency Keys.
+<p>Something that can supply bindings for unresolved dependency Keys.
 </p>
 
 
@@ -408,6 +408,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/Wiring.html#wire(com.google.inject.Key<?>)">wire</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Key.html">Key</a>&lt;?&gt; key)</nobr>
         
+        <div class="jd-descrdiv">Attempts to satisfy the given dependency by applying a local binding.</div>
+  
   </td></tr>
 
 
@@ -484,7 +486,21 @@ Summary:
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Attempts to satisfy the given dependency by applying a local binding.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>key</td>
+          <td>The dependency key</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li><code>true</code> if the wiring succeeded; otherwise <code>false</code>
+</li></ul>
+  </div>
 
     </div>
 </div>

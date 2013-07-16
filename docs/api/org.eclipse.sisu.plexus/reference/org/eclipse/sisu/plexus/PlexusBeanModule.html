@@ -329,15 +329,15 @@ Summary:
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/ComponentDescriptorBeanModule.html">ComponentDescriptorBeanModule</a></td>
-              <td class="jd-descrcol" width="100%">&nbsp;</td>
+              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that binds Plexus components according to their ComponentDescriptors.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusAnnotatedBeanModule.html">PlexusAnnotatedBeanModule</a></td>
-              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that registers Plexus beans by scanning classes for runtime annotations.&nbsp;</td>
+              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that binds Plexus components by scanning classes for runtime annotations.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusXmlBeanModule.html">PlexusXmlBeanModule</a></td>
-              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that collects <code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanMetadata.html">PlexusBeanMetadata</a></code> by scanning XML resources.&nbsp;</td>
+              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that binds Plexus components by scanning XML resources.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -347,6 +347,10 @@ Summary:
 
 <div class="jd-descr">
 
+
+<h2>Class Overview</h2>
+<p>Module-like interface for contributing Plexus bindings with additional metadata.
+</p>
 
 
 
@@ -418,6 +422,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html#configure(com.google.inject.Binder)">configure</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Contributes bindings and returns any associated <code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanSource.html">PlexusBeanSource</a></code> metadata.</div>
+  
   </td></tr>
 
 
@@ -494,7 +500,12 @@ Summary:
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Contributes bindings and returns any associated <code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanSource.html">PlexusBeanSource</a></code> metadata.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../../null#configure(com.google.inject.Binder)">configure(Binder)</a></code></li>
+      </ul>
+  </div>
 
     </div>
 </div>

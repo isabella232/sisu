@@ -326,7 +326,7 @@ Summary:
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></td>
-              <td class="jd-descrcol" width="100%">&nbsp;</td>
+              <td class="jd-descrcol" width="100%">SPI mechanism for discovering Module and Strategy extensions.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -336,6 +336,10 @@ Summary:
 
 <div class="jd-descr">
 
+
+<h2>Class Overview</h2>
+<p>Wiring strategy.
+</p>
 
 
 
@@ -392,7 +396,7 @@ Summary:
           final
           <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></nobr></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#DEFAULT">DEFAULT</a></td>
-          <td class="jd-descrcol" width="100%"></td>
+          <td class="jd-descrcol" width="100%">Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.</td>
       </tr>
       
     
@@ -427,6 +431,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
+        <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
+  
   </td></tr>
 
 
@@ -490,7 +496,8 @@ Summary:
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.
+</p></div>
 
     
     </div>
@@ -540,7 +547,21 @@ Summary:
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/svn/trunk/javadoc/com/google/inject/Binder.html">Binder</a></code>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>binder</td>
+          <td>The binder</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Selected wiring
+</li></ul>
+  </div>
 
     </div>
 </div>
