@@ -127,7 +127,7 @@
 </parameter>
 <parameter name="propertyName" type="java.lang.String">
 </parameter>
-<parameter name="implType" type="java.lang.Class&lt;?&gt;">
+<parameter name="valueType" type="java.lang.Class&lt;?&gt;">
 </parameter>
 <parameter name="configuration" type="org.codehaus.plexus.configuration.PlexusConfiguration">
 </parameter>
@@ -312,7 +312,7 @@
 </parameter>
 <parameter name="variables" type="java.util.Map&lt;?, ?&gt;">
 </parameter>
-<parameter name="scanning" type="org.eclipse.sisu.BeanScanning">
+<parameter name="scanning" type="org.eclipse.sisu.space.BeanScanning">
 </parameter>
 </constructor>
 <method name="configure"

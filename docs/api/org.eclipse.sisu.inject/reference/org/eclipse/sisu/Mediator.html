@@ -167,8 +167,8 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</li>
-          <li class="selected api apilevel-"><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;</li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</li>
+          <li class="selected api apilevel-"><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;</li>
       </ul>
     </li>
               
@@ -182,11 +182,6 @@
       </ul>
     </li>
               
-    <li><h2>Enums</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a></li>
-      </ul>
-    </li>
               
               
             </ul><br/>
@@ -269,7 +264,7 @@
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.Mediator&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">java.lang.annotation.Annotation</a>,&nbsp;T,&nbsp;W&gt;</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.Mediator&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">java.lang.annotation.Annotation</a>,&nbsp;T,&nbsp;W&gt;</td>
     </tr>
     
 
@@ -285,14 +280,40 @@
 
 
 <h2>Class Overview</h2>
-<p>Watches for Qualified bean implementations of T. Implement this interface when you have one
- or more beans of type W watching out for other beans of type T. Sisu will use the given mediator to translate
- <code><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a></code> events to whatever the watchers expect. Mediator implementations must have a public default
- (no-arg) constructor. They are neither injected nor injectable, acting instead as stateless translators between
- injected beans.
+<p>Watches for Qualified bean implementations of T:<br>
+ <br>
+ 
+ <pre>
+ // add @Named for automatic registration
+ public class MyMediator
+     implements Mediator&lt;Named, MyType, MyWatcher&gt;
+ {
+     public void add( BeanEntry&lt;Named, MyType&gt; entry, MyWatcher watcher )
+         throws Exception
+     {
+         // translate event to whatever the watcher expects
+     }
+ 
+     public void remove( BeanEntry&lt;Named, MyType&gt; entry, MyWatcher watcher )
+         throws Exception
+     {
+         // translate event to whatever the watcher expects
+     }
+ }
+ </pre>
+ 
+ Mediator implementations must have a public no-arg constructor; they are neither injected nor injectable, acting
+ instead as stateless translators.
  <p>
- Important: mediation only occurs when bindings change and there is at least <i>one</i> live watcher instance. If
- no-one requests or injects an instance of W the mediator will <i>not</i> be called.
+ <p>
+ IMPORTANT: mediation occurs when bindings change and there is at least <b>one</b> live watcher. If no-one requests or
+ injects an instance of the watcher type then the mediator will <b>not</b> be called.
+ <p>
+ <p>
+ In the following example as soon as MyTabbedPane is injected, Sisu will use the SwingTabMediator to deliver all known
+ JPanels annotated with @Tab to the watching MyTabbedPane. Sisu will continue to send updates, which add or remove
+ tabs as appropriate, until the MyTabbedPane instance becomes unreachable. MyTabbedPane doesn't need to know anything
+ about Sisu APIs and vice-versa because SwingTabMediator takes care of the necessary translation.
  
  <pre>
  &#064;Named
@@ -356,12 +377,7 @@
          } );
      }
  }
- </pre>
- 
- In this example as soon as MyTabbedPane is injected, Sisu will use SwingTabMediator to deliver all known JPanels
- annotated with @Tab to the watching MyTabbedPane. Sisu will continue to send updates, which add or remove tabs as
- appropriate, until the MyTabbedPane instance becomes unreachable. MyTabbedPane doesn't need to know anything about
- Sisu APIs and vice-versa because SwingTabMediator takes care of the necessary translation.</p>
+ </pre></p>
 
 
 
@@ -553,7 +569,7 @@
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a></td>
+            <th><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a></td>
             <td></td>
         </tr>
       </table>
@@ -607,7 +623,7 @@
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a></td>
+            <th><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Exception.html">Exception</a></td>
             <td></td>
         </tr>
       </table>

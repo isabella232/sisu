@@ -88,39 +88,6 @@
 >
 </method>
 </interface>
-<class name="BeanScanning"
- extends="java.lang.Enum"
- abstract="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<method name="valueOf"
- return="org.eclipse.sisu.BeanScanning"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="name" type="java.lang.String">
-</parameter>
-</method>
-<method name="values"
- return="org.eclipse.sisu.BeanScanning[]"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-</class>
 <class name="Description"
  extends="java.lang.Object"
  abstract="true"
@@ -1767,7 +1734,7 @@
 </parameter>
 </method>
 <method name="scanning"
- return="org.eclipse.sisu.BeanScanning"
+ return="org.eclipse.sisu.space.BeanScanning"
  abstract="false"
  native="false"
  synchronized="false"
@@ -1929,7 +1896,7 @@
 </parameter>
 </method>
 <method name="scanning"
- return="org.eclipse.sisu.BeanScanning"
+ return="org.eclipse.sisu.space.BeanScanning"
  abstract="false"
  native="false"
  synchronized="false"
@@ -2018,7 +1985,7 @@
 </parameter>
 </method>
 <method name="selectScanning"
- return="org.eclipse.sisu.BeanScanning"
+ return="org.eclipse.sisu.space.BeanScanning"
  abstract="false"
  native="false"
  synchronized="false"
@@ -2040,7 +2007,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="scanning" type="org.eclipse.sisu.BeanScanning">
+<parameter name="scanning" type="org.eclipse.sisu.space.BeanScanning">
 </parameter>
 <parameter name="bindings" type="com.google.inject.Module...">
 </parameter>
@@ -2189,6 +2156,39 @@
 </parameter>
 </method>
 </interface>
+<class name="BeanScanning"
+ extends="java.lang.Enum"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="valueOf"
+ return="org.eclipse.sisu.space.BeanScanning"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="name" type="java.lang.String">
+</parameter>
+</method>
+<method name="values"
+ return="org.eclipse.sisu.space.BeanScanning[]"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
 <class name="BundleClassSpace"
  extends="java.lang.Object"
  abstract="false"
@@ -3129,7 +3129,7 @@
 >
 <parameter name="space" type="org.eclipse.sisu.space.ClassSpace">
 </parameter>
-<parameter name="scanning" type="org.eclipse.sisu.BeanScanning">
+<parameter name="scanning" type="org.eclipse.sisu.space.BeanScanning">
 </parameter>
 </constructor>
 <method name="configure"
@@ -3277,6 +3277,19 @@
 <parameter name="visitor" type="org.eclipse.sisu.space.ClassVisitor">
 </parameter>
 <parameter name="url" type="java.net.URL">
+</parameter>
+</method>
+<method name="jvmDescriptor"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clazz" type="java.lang.Class&lt;? extends java.lang.annotation.Annotation&gt;">
 </parameter>
 </method>
 </class>

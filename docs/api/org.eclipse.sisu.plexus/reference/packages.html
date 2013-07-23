@@ -194,7 +194,26 @@
 <div id="jd-content">
 
 <div class="jd-descr">
-<p></p>
+<h1>Overview</h1>
+Implements Plexus semantics on top of Sisu and Google-Guice.
+<p><p>
+Legacy applications can use the Plexus container API as usual:
+<p><pre>
+ContainerConfiguration config = new DefaultContainerConfiguration();
+// ... configure ...
+PlexusContainer container = null;
+try {
+  container = new DefaultPlexusContainer( config );
+  // ... execute/wait ...
+} finally {
+  if ( container != null ) {
+    container.dispose();
+  }
+}</pre>
+Sisu applications that want to re-use Plexus components can use the <code><a href="./org/eclipse/sisu/plexus/PlexusSpaceModule.html">PlexusSpaceModule</a></code> wrapper:
+<p><pre>
+binder.install( new PlexusSpaceModule( space ) );</pre>
+<h2>Packages</h2>
 </div>
 
 
@@ -203,7 +222,7 @@
     <tr class="alt-color api apilevel-" >
         <td class="jd-linkcol">
   <a href="./org/eclipse/sisu/plexus/package-summary.html">org.eclipse.sisu.plexus</a></td>
-        <td class="jd-descrcol" width="100%">Implements Plexus semantics on top of Google-Guice.</td>
+        <td class="jd-descrcol" width="100%">Sisu-Plexus backend implementation.</td>
     </tr>
 
 

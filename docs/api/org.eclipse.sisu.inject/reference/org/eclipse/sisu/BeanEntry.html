@@ -167,8 +167,8 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;</li>
+          <li class="selected api apilevel-"><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;</li>
       </ul>
     </li>
               
@@ -182,11 +182,6 @@
       </ul>
     </li>
               
-    <li><h2>Enums</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a></li>
-      </ul>
-    </li>
               
               
             </ul><br/>
@@ -286,7 +281,7 @@ Summary:
   
       implements 
       
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.Entry.html">Map.Entry</a>&lt;K,&nbsp;V&gt; 
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/Map.Entry.html">Map.Entry</a>&lt;K,&nbsp;V&gt; 
       
   
   
@@ -302,7 +297,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.BeanEntry&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">java.lang.annotation.Annotation</a>,&nbsp;T&gt;</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.BeanEntry&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">java.lang.annotation.Annotation</a>,&nbsp;T&gt;</td>
     </tr>
     
 
@@ -327,7 +322,7 @@ Summary:
               >
           
             
-              <a href="../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;
+              <a href="../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;
             
           
       </div>
@@ -336,7 +331,7 @@ Summary:
               >
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</td>
+              <td class="jd-linkcol"><a href="../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</td>
               <td class="jd-descrcol" width="100%">
       <em>
   This interface is deprecated.
@@ -353,15 +348,15 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Represents a Qualified bean implementation of T. Use this when you want to know more about bean
- implementations, especially if you want to avoid creating an actual instance during the process.
- <p>
- Available for injection as a List or Iterable sequence:
+<p>Describes Qualified bean implementations of T:<br>
+ <br>
  
  <pre>
  &#064;Inject
- List&lt;BeanEntry&lt;Named, Command&gt;&gt; commands;
- </pre></p>
+ Iterable&lt;BeanEntry&lt;Named, Command&gt;&gt; commands;
+ </pre>
+ 
+ Use this when you want to know more about available beans; especially if you want to avoid creating instances.</p>
 
 
 
@@ -433,7 +428,7 @@ Summary:
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../org/eclipse/sisu/BeanEntry.html#getDescription()">getDescription</a></span>()</nobr>
@@ -451,7 +446,7 @@ Summary:
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../org/eclipse/sisu/BeanEntry.html#getImplementationClass()">getImplementationClass</a></span>()</nobr>
@@ -523,7 +518,7 @@ Summary:
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../org/eclipse/sisu/BeanEntry.html#getSource()">getSource</a></span>()</nobr>
@@ -574,7 +569,7 @@ Summary:
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/util/Map.Entry.html">java.util.Map.Entry</a>
+  <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/Map.Entry.html">java.util.Map.Entry</a>
 
 <div id="inherited-methods-java.util.Map.Entry">
   <div id="inherited-methods-java.util.Map.Entry-list"
@@ -596,7 +591,7 @@ From interface
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
         
   </td></tr>
 
@@ -723,7 +718,7 @@ From interface
          
         abstract 
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
       <span class="sympad">getDescription</span>
       <span class="normal">()</span>
@@ -763,7 +758,7 @@ From interface
          
         abstract 
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt;
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt;
       </span>
       <span class="sympad">getImplementationClass</span>
       <span class="normal">()</span>
@@ -911,7 +906,7 @@ From interface
          
         abstract 
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
       </span>
       <span class="sympad">getSource</span>
       <span class="normal">()</span>

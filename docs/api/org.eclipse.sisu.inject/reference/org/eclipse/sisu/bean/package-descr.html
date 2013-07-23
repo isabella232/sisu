@@ -251,7 +251,21 @@
 
 <div id="jd-content" class="api apilevel-">
 <div class="jd-descr">
-<p>Customizable injection of bean properties.
+<p>Customizable injection of bean properties, based on <a href="http://code.google.com/p/google-guice/wiki/CustomInjections">http://code.google.com/p/google-guice/wiki/CustomInjections</a>.
+ <p><p>
+ For example:
+ 
+ <pre>
+ new AbstractModule() {
+   &#064;Override protected void configure() {
+     bindListener( Matchers.any(), new BeanListener( new MyBeanBinder() ) );
+   }
+ }</pre>
+ <code>MyBeanBinder</code> will be asked to supply a <code><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></code> for each bean type, say Foo.
+ <p><p>
+ That <code>PropertyBinder</code> will be asked to supply a <code><a href="../../../../org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></code> for each property (field or setter) in Foo.
+ <p><p>
+ Those <code>PropertyBinding</code>s are then used to automatically configure any injected instances of Foo.
 </p>
 </div>
 

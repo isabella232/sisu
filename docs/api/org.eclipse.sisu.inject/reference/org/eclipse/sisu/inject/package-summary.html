@@ -251,6 +251,41 @@
 
   <div class="jd-descr">
     Dynamic bean lookup across multiple injectors.
+ <p><p>
+ The <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code> lets you lookup and keep watch for bean implementations;
+ it does this by processing binding information from one or more <code>BindingPublisher</code>s, such as injectors.
+ <p><p>
+ You can add or remove <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s using the <code><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></code>
+ view; any existing watchers or returned collections are updated to reflect the latest binding information.
+ <p><p>
+ <code><a href="../../../../org/eclipse/sisu/inject/DefaultBeanLocator.html">DefaultBeanLocator</a></code> will automatically add any injectors it's bound in by virtue
+ of an injected setter. This makes it easy to share across multiple injectors with a simple instance binding: 
+ 
+ <pre>
+ Module locatorModule = new AbstractModule() {
+   private final DefaultBeanLocator locator = new DefaultBeanLocator();
+   
+   &#064;Override protected void configure() {
+     bind( DefaultBeanLocator.class ).toInstance( locator );
+   }
+ };
+ 
+ Injector injectorA = Guice.createInjector( new WireModule( locatorModule, spaceModuleA ) );   // adds injectorA to locator
+ Injector injectorB = Guice.createInjector( new WireModule( locatorModule, spaceModuleB ) );   // adds injectorB to locator</pre>
+ 
+ If you want to use a <code>DefaultBeanLocator</code> in a given injector, but don't want that injector
+ added automatically, wrap the locator inside a provider to hide the injected setter from Guice:
+ <p><p>
+ <pre>
+ bind( DefaultBeanLocator.class ).toProvider( Providers.of( locator ) );</pre>
+ 
+ By default all bindings in an injector are separated into two partitions (default vs non-default)
+ and ranked according to their sequence number. This is so bindings from multiple injectors can be
+ interleaved to keep default components prioritized before non-default, while still maintaining an
+ overall ordering between injectors. To override the default bind your own <code><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code>:
+ <p><p>
+ <pre>
+ bind( RankingFunction.class ).to( MyRankingFunction.class );</pre>
 
   </div>
 
@@ -323,7 +358,11 @@
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Legacy.html">Legacy</a>&lt;S&gt;</td>
-              <td class="jd-descrcol" width="100%">Dynamic support for legacy types.&nbsp;</td>
+              <td class="jd-descrcol" width="100%">
+      <em>
+  This class is deprecated.
+      Limited support for migrating legacy types.
+</em>&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Logs.html">Logs</a></td>

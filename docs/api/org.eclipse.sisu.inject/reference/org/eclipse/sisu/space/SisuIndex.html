@@ -196,6 +196,11 @@
     </li>
               
               
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -305,7 +310,7 @@ Summary:
 
 
   
-    extends <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a><br/>
+    extends <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a><br/>
   
   
   
@@ -330,7 +335,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
     </tr>
     
 
@@ -355,10 +360,16 @@ Summary:
 
 <h2>Class Overview</h2>
 <p>Command-line utility that generates a qualified class index for a space-separated list of JARs.
-</p>
+ <p>
+ The index consists of qualified class names listed in <code>META-INF/sisu/javax.inject.Named</code>.</p>
 
 
 
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><a href="http://eclipse.org/sisu/docs/api/org.eclipse.sisu.mojos/">sisu-maven-plugin</a></li>
+      </ul>
+  </div>
 
 
 </div><!-- jd-descr -->
@@ -421,7 +432,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#SisuIndex(java.io.File)">SisuIndex</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/File.html">File</a> targetDirectory)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#SisuIndex(java.io.File)">SisuIndex</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/File.html">File</a> targetDirectory)</nobr>
         
   </td></tr>
 
@@ -450,7 +461,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#hear(java.lang.Class<?>, java.lang.Object)">hear</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#hear(java.lang.Class<?>, java.lang.Object)">hear</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
         
         <div class="jd-descrdiv">Invoked when the <code><a href="../../../../org/eclipse/sisu/space/QualifiedTypeVisitor.html">QualifiedTypeVisitor</a></code> finds a qualified type.</div>
   
@@ -484,7 +495,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#main(java.lang.String[])">main</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> args)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#main(java.lang.String[])">main</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> args)</nobr>
         
   </td></tr>
 
@@ -511,7 +522,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#addClassToIndex(java.lang.Object, java.lang.Object)">addClassToIndex</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> anno, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> clazz)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#addClassToIndex(java.lang.Object, java.lang.Object)">addClassToIndex</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> anno, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> clazz)</nobr>
         
         <div class="jd-descrdiv">Adds a new annotated class entry to the index.</div>
   
@@ -544,10 +555,10 @@ Summary:
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/Reader.html">Reader</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Reader.html">Reader</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getReader(java.lang.String)">getReader</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getReader(java.lang.String)">getReader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</nobr>
         
         <div class="jd-descrdiv">Creates a new reader for the given input path.</div>
   
@@ -562,10 +573,10 @@ Summary:
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/Writer.html">Writer</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Writer.html">Writer</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getWriter(java.lang.String)">getWriter</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getWriter(java.lang.String)">getWriter</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</nobr>
         
         <div class="jd-descrdiv">Creates a new writer for the given output path.</div>
   
@@ -583,7 +594,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#info(java.lang.String)">info</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#info(java.lang.String)">info</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
         
         <div class="jd-descrdiv">Reports an informational message.</div>
   
@@ -601,7 +612,7 @@ Summary:
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#warn(java.lang.String)">warn</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#warn(java.lang.String)">warn</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
         
         <div class="jd-descrdiv">Reports a warning message.</div>
   
@@ -629,7 +640,7 @@ Summary:
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+  <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
 
 <div id="inherited-methods-java.lang.Object">
   <div id="inherited-methods-java.lang.Object-list"
@@ -648,7 +659,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">clone</span>()</nobr>
@@ -667,7 +678,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
         
   </td></tr>
 
@@ -696,7 +707,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">getClass</span>()</nobr>
@@ -760,7 +771,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">toString</span>()</nobr>
@@ -853,7 +864,7 @@ From interface
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/QualifiedTypeListener.html#hear(java.lang.Class<?>, java.lang.Object)">hear</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/QualifiedTypeListener.html#hear(java.lang.Class<?>, java.lang.Object)">hear</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
         
         <div class="jd-descrdiv">Invoked when the <code><a href="../../../../org/eclipse/sisu/space/QualifiedTypeVisitor.html">QualifiedTypeVisitor</a></code> finds a qualified type.</div>
   
@@ -913,7 +924,7 @@ From interface
         
       </span>
       <span class="sympad">SisuIndex</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/File.html">File</a> targetDirectory)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/File.html">File</a> targetDirectory)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -959,7 +970,7 @@ From interface
         void
       </span>
       <span class="sympad">hear</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1034,7 +1045,7 @@ From interface
         void
       </span>
       <span class="sympad">main</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> args)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> args)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1074,7 +1085,7 @@ From interface
         void
       </span>
       <span class="sympad">addClassToIndex</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> anno, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> clazz)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> anno, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> clazz)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1148,10 +1159,10 @@ From interface
          
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/Reader.html">Reader</a>
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Reader.html">Reader</a>
       </span>
       <span class="sympad">getReader</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1182,7 +1193,7 @@ From interface
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/IOException.html">IOException</a></td>
+            <th><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/IOException.html">IOException</a></td>
             <td></td>
         </tr>
       </table>
@@ -1202,10 +1213,10 @@ From interface
          
          
          
-        <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/Writer.html">Writer</a>
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Writer.html">Writer</a>
       </span>
       <span class="sympad">getWriter</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1236,7 +1247,7 @@ From interface
       <h5 class="jd-tagtitle">Throws</h5>
       <table class="jd-tagtable">  
         <tr>
-            <th><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/io/IOException.html">IOException</a></td>
+            <th><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/IOException.html">IOException</a></td>
             <td></td>
         </tr>
       </table>
@@ -1259,7 +1270,7 @@ From interface
         void
       </span>
       <span class="sympad">info</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1300,7 +1311,7 @@ From interface
         void
       </span>
       <span class="sympad">warn</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</span>
     </h4>
       <div class="api-level">
         <div>

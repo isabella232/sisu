@@ -55,7 +55,7 @@
 
   <meta name="description" content="Javadoc API documentation for org.eclipse.sisu.inject." />
 
-<!-- <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico" /> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
 <title>
 
   BeanScanning
@@ -64,18 +64,18 @@
 | org.eclipse.sisu.inject
 
 </title>
-<link href="../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
-<link href="../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
-<script src="../../../../assets/search_autocomplete.js" type="text/javascript"></script>
-<script src="../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
-<script src="../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
-<script src="../../../../assets/prettify.js" type="text/javascript"></script>
+<link href="../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../../assets/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
-  setToRoot("../../../", "../../../../assets/");
+  setToRoot("../../../../", "../../../../../assets/");
 </script>
-<script src="../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
-<script src="../../../../assets/navtree_data.js" type="text/javascript"></script>
-<script src="../../../../assets/customizations.js" type="text/javascript"></script>
+<script src="../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../../assets/customizations.js" type="text/javascript"></script>
 <noscript>
   <style type="text/css">
     html,body{overflow:auto;}
@@ -110,8 +110,8 @@
                       value="search developer docs"
                       onFocus="search_focus_changed(this, true)"
                       onBlur="search_focus_changed(this, false)"
-                      onkeydown="return search_changed(event, true, '../../../')"
-                      onkeyup="return search_changed(event, false, '../../../')" />
+                      onkeydown="return search_changed(event, true, '../../../../')"
+                      onkeyup="return search_changed(event, false, '../../../../')" />
                   <div id="search_filtered_div" class="no-display">
                       <table id="search_filtered" cellspacing=0>
                       </table>
@@ -140,25 +140,25 @@
           <div id="resize-packages-nav">
             <div id="packages-nav">
               <div id="index-links">
-                <a href="../../../packages.html"  >Package Index</a> | 
-                <a href="../../../classes.html" >Class Index</a>
+                <a href="../../../../packages.html"  >Package Index</a> | 
+                <a href="../../../../classes.html" >Class Index</a>
               </div>
               <ul>
                 
+    <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/package-summary.html">org.eclipse.sisu</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="selected api apilevel-">
-  <a href="../../../org/eclipse/sisu/package-summary.html">org.eclipse.sisu</a></li>
+  <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
-  <a href="../../../org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></li>
+  <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
     <li class="api apilevel-">
-  <a href="../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
-    <li class="api apilevel-">
-  <a href="../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
-    <li class="api apilevel-">
-  <a href="../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
-    <li class="api apilevel-">
-  <a href="../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
-    <li class="api apilevel-">
-  <a href="../../../org/sonatype/inject/package-summary.html">org.sonatype.inject</a></li>
+  <a href="../../../../org/sonatype/inject/package-summary.html">org.sonatype.inject</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -167,24 +167,38 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;</li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/AnnotationVisitor.html">AnnotationVisitor</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/ClassFinder.html">ClassFinder</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">ClassVisitor</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/QualifiedTypeListener.html">QualifiedTypeListener</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">SpaceModule.Strategy</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></li>
       </ul>
     </li>
               
-              
-    <li><h2>Annotations</h2>
+    <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Description.html">Description</a></li>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/EagerSingleton.html">EagerSingleton</a></li>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Nullable.html">Nullable</a></li>
-          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Parameters.html">Parameters</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/BundleClassSpace.html">BundleClassSpace</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/CloningClassSpace.html">CloningClassSpace</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/DefaultClassFinder.html">DefaultClassFinder</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/IndexedClassFinder.html">IndexedClassFinder</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/LoadedClass.html">LoadedClass</a>&lt;T&gt;</li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/QualifiedTypeBinder.html">QualifiedTypeBinder</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/QualifiedTypeVisitor.html">QualifiedTypeVisitor</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html">SisuIndex</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/SisuIndexAPT6.html">SisuIndexAPT6</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/SpaceScanner.html">SpaceScanner</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/Streams.html">Streams</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/space/URLClassSpace.html">URLClassSpace</a></li>
       </ul>
     </li>
+              
               
     <li><h2>Enums</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a></li>
+          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></li>
       </ul>
     </li>
               
@@ -194,8 +208,8 @@
         </div><!-- end nav-panels -->
         <div id="nav-tree" style="display:none">
           <div id="index-links">
-            <a href="../../../packages.html"  >Package Index</a> | 
-            <a href="../../../classes.html" >Class Index</a>
+            <a href="../../../../packages.html"  >Package Index</a> | 
+            <a href="../../../../classes.html" >Class Index</a>
           </div>
         </div><!-- end nav-tree -->
       </div><!-- end swapper -->
@@ -205,7 +219,7 @@
         <!-- $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav"); -->
         chooseDefaultNav();
         if ($("#nav-tree").is(':visible')) {
-          init_default_navtree("../../../");
+          init_default_navtree("../../../../");
         } else {
           addLoadEvent(function() {
             scrollIntoView("packages-nav");
@@ -309,7 +323,7 @@ Summary:
   
 
   
-    extends <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">Enum</a>&lt;E&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">Enum</a>&lt;E&gt;&gt;<br/>
+    extends <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">Enum</a>&lt;E&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">Enum</a>&lt;E&gt;&gt;<br/>
   
   
   
@@ -329,7 +343,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="3" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+        <td colspan="3" class="jd-inheritance-class-cell"><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
     </tr>
     
 
@@ -337,7 +351,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">java.lang.Enum</a>&lt;E&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">java.lang.Enum</a>&lt;E&gt;&gt;</td>
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">java.lang.Enum</a>&lt;E&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">java.lang.Enum</a>&lt;E&gt;&gt;</td>
     </tr>
     
 
@@ -347,7 +361,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.BeanScanning</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.space.BeanScanning</td>
     </tr>
     
 
@@ -363,13 +377,13 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Various strategies for discovering bean implementations.</p>
+<p>Common techniques for discovering bean implementations.</p>
 
 
 
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">See Also</h5>
-      <ul class="nolist"><li><code><a href="../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code></li>
+      <ul class="nolist"><li><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code></li>
       </ul>
   </div>
 
@@ -411,7 +425,7 @@ Summary:
 
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>&nbsp;</td>
         <td class="jd-linkcol">CACHE&nbsp;</td>
         <td class="jd-descrcol" width="100%">Scan once and cache results
 &nbsp;</td>
@@ -419,7 +433,7 @@ Summary:
     
     
     <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>&nbsp;</td>
         <td class="jd-linkcol">GLOBAL_INDEX&nbsp;</td>
         <td class="jd-descrcol" width="100%">Use global index (application)
 &nbsp;</td>
@@ -427,7 +441,7 @@ Summary:
     
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>&nbsp;</td>
         <td class="jd-linkcol">INDEX&nbsp;</td>
         <td class="jd-descrcol" width="100%">Use local index (plug-ins)
 &nbsp;</td>
@@ -435,7 +449,7 @@ Summary:
     
     
     <tr class=" api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>&nbsp;</td>
         <td class="jd-linkcol">OFF&nbsp;</td>
         <td class="jd-descrcol" width="100%">Never scan
 &nbsp;</td>
@@ -443,7 +457,7 @@ Summary:
     
     
     <tr class="alt-color api apilevel-" >
-        <td class="jd-descrcol"><a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>&nbsp;</td>
+        <td class="jd-descrcol"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>&nbsp;</td>
         <td class="jd-linkcol">ON&nbsp;</td>
         <td class="jd-descrcol" width="100%">Always scan
 &nbsp;</td>
@@ -481,10 +495,10 @@ Summary:
             
             static
             
-            <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a></nobr>
+            <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../org/eclipse/sisu/BeanScanning.html#valueOf(java.lang.String)">valueOf</a></span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html#valueOf(java.lang.String)">valueOf</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</nobr>
         
   </td></tr>
 
@@ -497,10 +511,10 @@ Summary:
             final
             static
             
-            <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning[]</a></nobr>
+            <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning[]</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../org/eclipse/sisu/BeanScanning.html#values()">values</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html#values()">values</a></span>()</nobr>
         
   </td></tr>
 
@@ -524,11 +538,11 @@ Summary:
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Enum" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.Enum-trigger"
-          src="../../../../assets/images/triangle-closed.png"
+          src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">java.lang.Enum</a>
+  <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">java.lang.Enum</a>
 
 <div id="inherited-methods-java.lang.Enum">
   <div id="inherited-methods-java.lang.Enum-list"
@@ -547,7 +561,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">clone</span>()</nobr>
@@ -566,7 +580,7 @@ From class
             int</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">compareTo</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">compareTo</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
         
   </td></tr>
 
@@ -598,7 +612,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
         
   </td></tr>
 
@@ -627,7 +641,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;E&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;E&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">getDeclaringClass</span>()</nobr>
@@ -659,7 +673,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">name</span>()</nobr>
@@ -691,7 +705,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">toString</span>()</nobr>
@@ -706,11 +720,11 @@ From class
             
             
             static
-            &lt;T&nbsp;extends&nbsp;<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">Enum</a>&lt;T&gt;&gt;
+            &lt;T&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Enum.html">Enum</a>&lt;T&gt;&gt;
             T</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">valueOf</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; arg0, <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> arg1)</nobr>
+        <span class="sympad">valueOf</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; arg0, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> arg1)</nobr>
         
   </td></tr>
 
@@ -726,11 +740,11 @@ From class
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Object" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.Object-trigger"
-          src="../../../../assets/images/triangle-closed.png"
+          src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From class
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
+  <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a>
 
 <div id="inherited-methods-java.lang.Object">
   <div id="inherited-methods-java.lang.Object-list"
@@ -749,7 +763,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">clone</span>()</nobr>
@@ -768,7 +782,7 @@ From class
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
         
   </td></tr>
 
@@ -797,7 +811,7 @@ From class
             final
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">getClass</span>()</nobr>
@@ -861,7 +875,7 @@ From class
             
             
             
-            <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad">toString</span>()</nobr>
@@ -930,11 +944,11 @@ From class
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.Comparable" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.Comparable-trigger"
-          src="../../../../assets/images/triangle-closed.png"
+          src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  <a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/Comparable.html">java.lang.Comparable</a>
+  <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Comparable.html">java.lang.Comparable</a>
 
 <div id="inherited-methods-java.lang.Comparable">
   <div id="inherited-methods-java.lang.Comparable-list"
@@ -1001,7 +1015,7 @@ From interface
         public 
         static 
         final 
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
       </span>
         CACHE
     </h4>
@@ -1032,7 +1046,7 @@ From interface
         public 
         static 
         final 
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
       </span>
         GLOBAL_INDEX
     </h4>
@@ -1063,7 +1077,7 @@ From interface
         public 
         static 
         final 
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
       </span>
         INDEX
     </h4>
@@ -1094,7 +1108,7 @@ From interface
         public 
         static 
         final 
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
       </span>
         OFF
     </h4>
@@ -1125,7 +1139,7 @@ From interface
         public 
         static 
         final 
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
       </span>
         ON
     </h4>
@@ -1181,10 +1195,10 @@ From interface
          
          
          
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
       </span>
       <span class="sympad">valueOf</span>
-      <span class="normal">(<a href="http://download.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1212,7 +1226,7 @@ From interface
         final 
          
          
-        <a href="../../../org/eclipse/sisu/BeanScanning.html">BeanScanning[]</a>
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning[]</a>
       </span>
       <span class="sympad">values</span>
       <span class="normal">()</span>

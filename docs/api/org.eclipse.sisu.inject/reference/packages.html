@@ -206,7 +206,19 @@
 <div id="jd-content">
 
 <div class="jd-descr">
-<p></p>
+<h1>Overview</h1>
+Sisu is a modular <a href="http://atinject.googlecode.com/svn/trunk/javadoc/javax/inject/package-summary.html">JSR330</a>-based container that supports classpath scanning, auto-binding, and dynamic auto-wiring.
+<p><p>
+Sisu uses <a href="http://code.google.com/p/google-guice/">Google-Guice</a> to perform dependency injection and provide the core JSR330 support, but removes the need to write explicit bindings in Guice modules:
+<p><pre>
+Guice.createInjector(
+  new <code><a href="./org/eclipse/sisu/wire/WireModule.html">WireModule</a></code>(                       // auto-wires unresolved dependencies
+    new <code><a href="./org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code>(                     // scans and binds @Named components
+      new <code><a href="./org/eclipse/sisu/space/URLClassSpace.html">URLClassSpace</a></code>( classloader )    // abstracts class/resource finding
+) ) );
+</pre>
+Unresolved dependencies are wired up through the <code><a href="./org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code> which provides a dynamic lookup service across one or more injectors or <code><a href="./org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s.
+<h2>Packages</h2>
 </div>
 
 
@@ -215,14 +227,14 @@
     <tr class="alt-color api apilevel-" >
         <td class="jd-linkcol">
   <a href="./org/eclipse/sisu/package-summary.html">org.eclipse.sisu</a></td>
-        <td class="jd-descrcol" width="100%">Sisu extensions to <a href="http://jcp.org/en/jsr/detail?id=330">JSR330</a>.</td>
+        <td class="jd-descrcol" width="100%">Injectable API for Sisu components (a.k.a beans).</td>
     </tr>
 
 
     <tr class=" api apilevel-" >
         <td class="jd-linkcol">
   <a href="./org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></td>
-        <td class="jd-descrcol" width="100%">Customizable injection of bean properties.</td>
+        <td class="jd-descrcol" width="100%">Customizable injection of bean properties, based on <a href="http://code.google.com/p/google-guice/wiki/CustomInjections">http://code.google.com/p/google-guice/wiki/CustomInjections</a>.</td>
     </tr>
 
 
@@ -236,7 +248,7 @@
     <tr class=" api apilevel-" >
         <td class="jd-linkcol">
   <a href="./org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></td>
-        <td class="jd-descrcol" width="100%">Utilities to launch and test Sisu applications.</td>
+        <td class="jd-descrcol" width="100%">Utilities to test, launch, and extend Sisu applications.</td>
     </tr>
 
 
