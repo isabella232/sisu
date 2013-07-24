@@ -57,6 +57,6 @@ $html = <<<EOHTML
 EOHTML;
 
 # Generate the web page
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $projectUrl . 'css/landing.css"/>');
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $projectUrl . 'assets/landing.css"/>');
 $App->generatePage($theme, $Menu, null, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>
