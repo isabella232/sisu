@@ -419,13 +419,13 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
 -------------------------------------------------- */
 
 a {
-  color: #686884;
+  color: #558;
 }
 a:hover, a:focus {
-  color: #686884;
+  color: #558;
 }
 .nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
-  background-color: #8282A5;
+  background-color: #686884;
 }
 .sisu-docs-sidenav > li {
   background-color: #F0F0F5;
