@@ -412,3 +412,25 @@ only screen and (     -o-min-device-pixel-ratio: 2/1) {
     padding-bottom: 20px;
   }
 }
+
+
+
+/* Sisu modifications
+-------------------------------------------------- */
+
+a {
+  color: #686884;
+}
+a:hover, a:focus {
+  color: #686884;
+}
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+  background-color: #8282A5;
+}
+.sisu-docs-sidenav > li {
+  background-color: #F0F0F5;
+}
+.sisu-docs-sidenav > li > a:hover {
+  background-color: #D8D8E2;
+}
+
