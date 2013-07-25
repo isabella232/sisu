@@ -48,6 +48,7 @@ body > .navbar .brand:hover {
 }
 
 
+
 /* Sections
 -------------------------------------------------- */
 
@@ -424,13 +425,32 @@ a {
 a:hover, a:focus {
   color: #558;
 }
-.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
-  background-color: #686884;
-}
-.sisu-docs-sidenav > li {
+.sisu-docs-sidenav > li > a {
   background-color: #F0F0F5;
 }
 .sisu-docs-sidenav > li > a:hover {
   background-color: #D8D8E2;
+}
+.nav-list > .active > a, .nav-list > .active > a:hover, .nav-list > .active > a:focus {
+  background-color: #686884;
+}
+.navbar .brand {
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+.navbar .brand > img {
+  opacity: .2;
+  -webkit-perspective: 1000;
+     -moz-perspective: 1000;
+          perspective: 1000;
+  -webkit-backface-visibility: hidden;    
+     -moz-backface-visibility: hidden;    
+          backface-visibility: hidden;    
+  -webkit-transition: opacity .2s linear;
+     -moz-transition: opacity .2s linear;
+          transition: opacity .2s linear;
+}
+.navbar .brand > img:hover {
+  opacity: 1;
 }
 
