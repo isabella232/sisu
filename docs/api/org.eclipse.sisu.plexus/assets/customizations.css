@@ -54,3 +54,11 @@ a:visited, a:visited code {
 #jd-content h3 {
   color:#111;
 }
+@media (max-width: 767px) {
+  #header, #side-nav {
+    display: none;
+  }
+  #doc-content {
+    margin-left: 0px !important;
+  }
+}
