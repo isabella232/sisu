@@ -50,6 +50,7 @@ $html = <<<EOHTML
   <p>
     $projectDescription
   </p>
+  <h1 style="text-align:center"><a href="docs/tutorials/index.html">Documentation is on the way!</a></h1>
 </div>
 <div id="rightcolumn">
   $incubation
