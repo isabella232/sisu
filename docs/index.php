@@ -16,7 +16,7 @@ $html  = <<<EOHTML
 <div id="midcolumn">
 
 <h3 id="demo">Tutorials</h3>
-<p>Coming soon...</p>
+<a href="tutorials/index.html">In progress...</a>
 
 <h3 id="api">$milestone API</h3>
 <ul>
