@@ -64,7 +64,7 @@ under http://creativecommons.org/licenses/by/3.0/
     <div class="row">
       <div class="span3 sisu-docs-sidebar">
         <ul class="nav nav-list sisu-docs-sidenav">
-          <li><a href="#download"><i class="icon-chevron-right"></i> Download</a></li>
+          <li><a href="#ready"><i class="icon-chevron-right"></i> Ready</a></li>
           <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li>
           <li><a href="#go"><i class="icon-chevron-right"></i> Go!</a></li>
         </ul>
@@ -73,30 +73,35 @@ under http://creativecommons.org/licenses/by/3.0/
 
 
 
-        <!-- Download
+        <!-- Ready
         ================================================== -->
-        <section id="download">
+        <section id="ready">
           <div class="page-header">
-            <h1>Download</h1>
+            <h1>What is Sisu?</h1>
           </div>
           <p class="lead">
-            <a href="http://central.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.0.0.M4/org.eclipse.sisu.inject-0.0.0.M4.jar">Sisu</a>
-            depends on
-            <a href="http://central.maven.org/maven2/com/google/inject/guice/3.0/guice-3.0.jar">Google-Guice</a>,
-            which in turn depends on the
-            <a href="http://central.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar">aopalliance</a>
-            and
-            <a href="http://central.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar">javax.inject</a>
-            APIs.
+            Sisu is a modular container that supports classpath scanning, auto-binding, and dynamic wiring.
           </p>
+          <p>Let's begin with a simple Maven project, paste the following into a file called 'pom.xml'</p>
 <pre class="prettyprint">
-&lt;dependency>
-  &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
-  &lt;artifactId&gt;org.eclipse.sisu.inject&lt;/artifactId&gt;
-  &lt;version&gt;0.0.0.M4&lt;/version&gt;
-&lt;/dependency&gt;</pre>
-          <p>Download Sisu and its dependencies using this Maven dependency or the individual links above.</p>
-          <br><br><br><br><br><br><br><br>
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;project&gt;&lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;example&lt;/groupId&gt;
+  &lt;artifactId&gt;sisu-5min-demo&lt;/artifactId&gt;
+  &lt;version&gt;0-SNAPSHOT&lt;/version&gt;
+
+  &lt;name&gt;Sisu 5-minute demo&lt;/name&gt;
+
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
+      &lt;artifactId&gt;org.eclipse.sisu.inject&lt;/artifactId&gt;
+      &lt;version&gt;0.0.0.M5&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+&lt;/project&gt;</pre>
         </section>
 
 
@@ -105,10 +110,86 @@ under http://creativecommons.org/licenses/by/3.0/
         ================================================== -->
         <section id="code">
           <div class="page-header">
-            <h1>Code</h1>
+            <h1>What can it do?</h1>
           </div>
-          <p class="lead">In progress...</p>
-          <br><br><br><br><br><br><br><br>
+          <p class="lead">
+            Sisu looks for types annotated with
+            <code class="prettyprint">@Named</code>,
+            binds them, and wires any missing dependencies.
+          </p>
+          <p>Paste the following code into a file called 'src/main/java/example/Example.java'</p>
+<pre class="prettyprint">
+package example;
+
+import java.awt.*;
+import java.util.*;
+import javax.swing.*;
+
+// Standard JSR330 annotations
+import javax.inject.Inject;
+import javax.inject.Named;
+
+// let's create some simple Swing tabs...
+
+abstract class AbstractTab extends JPanel {}
+
+// Sisu will spot any @Named components
+
+@Named("One")
+class ButtonTab extends AbstractTab {
+  ButtonTab() {
+    add(new JButton("Button"));
+  }
+}
+
+@Named("Two")
+class CheckBoxTab extends AbstractTab {
+  CheckBoxTab() {
+    add(new JCheckBox("CheckBox"));
+  }
+}
+
+@Named("Three")
+class RadioButtonTab extends AbstractTab {
+  RadioButtonTab() {
+    ButtonGroup group = new ButtonGroup();
+    group.add(new JRadioButton("+1"));
+    group.add(new JRadioButton("0"));
+    group.add(new JRadioButton("-1"));
+    for (Enumeration&lt;AbstractButton&gt; e = group.getElements(); e.hasMoreElements();) {
+      add(e.nextElement());
+    }
+  }
+}
+
+// Sisu will launch @EagerSingleton's on startup
+
+@Named
+@org.eclipse.sisu.EagerSingleton
+class Window implements Runnable {
+  JTabbedPane pane = new JTabbedPane();
+
+  // Sisu spots we want a map of tabs and wires up the binding for us
+
+  @Inject
+  Window(Map&lt;String, AbstractTab&gt; tabs) {
+
+    for (Map.Entry&lt;String, AbstractTab&gt; t : tabs.entrySet()) {
+      pane.addTab(t.getKey(), t.getValue());
+    }
+
+    SwingUtilities.invokeLater(this);
+  }
+
+  public void run() {
+    JFrame frame = new JFrame("Sisu 5-minute demo");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.add(pane, BorderLayout.CENTER);
+    frame.setLocation(100, 50);
+    frame.setSize(300, 200);
+    frame.setVisible(true);
+  }
+}</pre>
         </section>
 
 
@@ -117,10 +198,21 @@ under http://creativecommons.org/licenses/by/3.0/
         ================================================== -->
         <section id="go">
           <div class="page-header">
-            <h1>Go!</h1>
+            <h1>How does it work?</h1>
           </div>
-          <p class="lead">In progress...</p>
-          <br><br><br><br><br><br><br><br>
+          <p class="lead">
+            Sisu provides a
+            <a href="../api/org.eclipse.sisu.inject/reference/org/eclipse/sisu/space/package-summary.html"><code class="prettyprint">SpaceModule</code></a>
+            for scanning and a
+            <a href="../api/org.eclipse.sisu.inject/reference/org/eclipse/sisu/wire/package-summary.html"><code class="prettyprint">WireModule</code></a>
+            that wires to the dynamic
+            <a href="../api/org.eclipse.sisu.inject/reference/org/eclipse/sisu/inject/package-summary.html"><code class="prettyprint">BeanLocator</code></a>.
+          </p>
+          <p>Paste the following Maven command into your console window to launch the demo</p>
+<pre class="prettyprint">
+mvn compile exec:java -Dexec.mainClass=org.eclipse.sisu.launch.Main</pre>
+          <img src="../../assets/img/5min-demo.png"></img>
+          <p>If you're interested in what Sisu is doing you can turn on tracing with -Dsisu.debug</p>
         </section>
 
 
