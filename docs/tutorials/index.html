@@ -156,7 +156,8 @@ class RadioButtonTab extends AbstractTab {
     group.add(new JRadioButton("+1"));
     group.add(new JRadioButton("0"));
     group.add(new JRadioButton("-1"));
-    for (Enumeration&lt;AbstractButton&gt; e = group.getElements(); e.hasMoreElements();) {
+    Enumeration&lt;AbstractButton&gt; e = group.getElements();
+    while (e.hasMoreElements()) {
       add(e.nextElement());
     }
   }
@@ -169,12 +170,12 @@ class RadioButtonTab extends AbstractTab {
 class Window implements Runnable {
   JTabbedPane pane = new JTabbedPane();
 
-  // Sisu spots we want a map of tabs and wires up the binding for us
+  // Sisu spots we want a map of tabs and wires it up for us
 
   @Inject
   Window(Map&lt;String, AbstractTab&gt; tabs) {
 
-    for (Map.Entry&lt;String, AbstractTab&gt; t : tabs.entrySet()) {
+    for (Map.Entry&lt;String, AbstractTab&gt; t:tabs.entrySet()) {
       pane.addTab(t.getKey(), t.getValue());
     }
 
