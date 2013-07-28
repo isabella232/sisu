@@ -20,11 +20,15 @@ $html  = <<<EOHTML
 unless otherwise specified.</i></p>
 
 <h3 id="dist">Distribution</h3>
+
 <a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.inject.site-0.0.0.M5.zip">Sisu-Inject Bundles</a>
+
+<p></p>
+
 <a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.plexus.site-0.0.0.M5.zip">Sisu-Plexus Bundles</a>
 
 <h3 id="site">Update Site</h3>
-<p>To install a bundle distribution, download the archive and point your P2 installer to that file</p>
+<p>To install a bundle distribution download the zip and point your P2 installer to that file</p>
 
 <h3 id="maven">Maven Artifacts</h3>
 <p>$milestone is also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>.</p>
