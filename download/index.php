@@ -29,7 +29,37 @@ unless otherwise specified.</i></p>
 <p>To install a bundle distribution download the zip and point your P2 installer to that file</p>
 
 <h3 id="maven">Maven Artifacts</h3>
-<p>$milestone is also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>.</p>
+<p>The following artifacts are also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>:</p>
+
+<pre>
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
+    &lt;artifactId&gt;org.eclipse.sisu.inject&lt;/artifactId&gt;
+    &lt;version&gt;$milestone&lt;/version&gt;
+  &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
+    &lt;artifactId&gt;org.eclipse.sisu.inject.extender&lt;/artifactId&gt;
+    &lt;version&gt;$milestone&lt;/version&gt;
+  &lt;/dependency&gt;
+<pre>
+
+<pre>
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
+    &lt;artifactId&gt;sisu-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;$milestone&lt;/version&gt;
+  &lt;/plugin&gt;
+<pre>
+
+<pre>
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
+    &lt;artifactId&gt;org.eclipse.sisu.plexus&lt;/artifactId&gt;
+    &lt;version&gt;$milestone&lt;/version&gt;
+  &lt;/dependency&gt;
+<pre>
 
 </div>
 
