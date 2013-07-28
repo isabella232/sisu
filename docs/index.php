@@ -16,13 +16,13 @@ $html  = <<<EOHTML
 <div id="midcolumn">
 
 <h3 id="demo">Tutorials</h3>
-<a href="tutorials/index.html">In progress...</a>
+<p><a href="tutorials/index.html">In progress...</a></p>
 
-<h3 id="api">$milestone Javadoc</h3>
+<h3 id="api">API</h3>
 <ul>
-<li><a href="api/org.eclipse.sisu.inject/">Sisu-Inject</a></li>
-<li><a href="api/org.eclipse.sisu.mojos/">Sisu-Mojos</a></li>
-<li><a href="api/org.eclipse.sisu.plexus/">Sisu-Plexus</a></li>
+<li><a href="api/org.eclipse.sisu.inject/">Sisu-Inject $milestone javadoc</a></li>
+<li><a href="api/org.eclipse.sisu.plexus/">Sisu-Plexus $milestone javadoc</a></li>
+<li><a href="api/org.eclipse.sisu.mojos/">sisu-maven-plugin site</a></li>
 </ul>
 <p><i>also available from the Central Repository for IDEs with Maven integration.</i></p>
 
