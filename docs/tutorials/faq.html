@@ -7,7 +7,7 @@ under http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Sisu · Javadoc</title>
+    <title>Sisu · FAQ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -17,23 +17,9 @@ under http://creativecommons.org/licenses/by/3.0/
     <link href="../../assets/css/docs.css" rel="stylesheet">
     <link href="../../assets/css/prettify.min.css" rel="stylesheet">
 
-    <style type="text/css"><!--
-      @media (min-width: 768px) {
-        #outerFrame {
-          width: 100%;
-        }
-      }
-      @media (max-width: 767px) {
-        #outerFrame {
-          margin-left: -20px;
-          margin-right: -20px;
-        }
-      }
-    --></style>
-
   </head>
 
-  <body data-spy="scroll" data-target=".sisu-docs-sidebar" style="overflow:hidden;background-color:#191919">
+  <body data-spy="scroll" data-target=".sisu-docs-sidebar">
 
     <!-- Navbar
     ================================================== -->
@@ -51,10 +37,10 @@ under http://creativecommons.org/licenses/by/3.0/
               <li class="">
                 <a href="./index.html">Tutorials</a>
               </li>
-              <li class="active">
+              <li class="">
                 <a href="./javadoc.html">Javadoc</a>
               </li>
-              <li class="">
+              <li class="active">
                 <a href="./faq.html">FAQ</a>
               </li>
               <li class="">
@@ -67,29 +53,65 @@ under http://creativecommons.org/licenses/by/3.0/
     </div>
 
 
-
 <!-- Subhead
 ================================================== -->
-<header class="jumbotron" style="padding:0px">
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h1>Questions?</h1>
+    <p class="lead">Frequently asked...</p>
+  </div>
 </header>
 
 
+  <div class="container">
 
-  <div id="outerFrame" class="container">
-    <!-- Javadoc
+    <!-- Index
     ================================================== -->
-    <iframe src="../api/org.eclipse.sisu.inject/reference/packages.html" width="100%" height="800px"
-      border="0" frameborder="0" scrolling="yes" id="docFrame" style="overflow:auto">
-      <a href="../api/org.eclipse.sisu.inject/reference/packages.html">org.eclipse.sisu.inject</a>
-    </iframe>
+    <div class="row">
+      <div class="span3 sisu-docs-sidebar">
+        <ul class="nav nav-list sisu-docs-sidenav">
+          <li><a href="#contact"><i class="icon-chevron-right"></i> Contact us</a></li>
+          <li><a href="#topic"><i class="icon-chevron-right"></i> &nbsp;</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Contact
+        ================================================== -->
+        <section id="contact">
+          <p class="lead">
+            email <a href="http://dev.eclipse.org/mailman/listinfo/sisu-users/">sisu-users@eclipse.org</a>
+            or visit our <a href="http://www.eclipse.org/forums/index.php/f/232/">community forum</a>
+          </p>
+        </section>
+
+
+
+      </div>
+    </div>
+
   </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Document style adapted from <a href="http://github.com/twitter/bootstrap/blob/gh-pages/">Bootstrap</a> under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <p><a href="http://glyphicons.com">Glyphicons Free</a> licensed under <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+        <ul class="footer-links">
+        </ul>
+      </div>
+    </footer>
 
 
 
     <script src="../../assets/js/jquery.min.js"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
     <script src="../../assets/js/prettify.min.js"></script>
-    <script src="../../assets/js/docframe.min.js"></script>
     <script src="../../assets/js/docs.js"></script>
 
   </body>
