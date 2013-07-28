@@ -53,6 +53,9 @@
     <p:milestone date="11/07/2013" milestone="M4">
       <div>0.0.0.M4 -- sisu extension support</div>
     </p:milestone>
+    <p:milestone date="26/07/2013" milestone="M5">
+      <div>0.0.0.M5 -- documentation and fixes</div>
+    </p:milestone>
   </p:release_milestones>
 
   <p:target_environments>
