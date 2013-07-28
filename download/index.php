@@ -20,8 +20,10 @@ $html  = <<<EOHTML
 unless otherwise specified.</i></p>
 
 <h3 id="dist">Distribution</h3>
-<p><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.inject.site-0.0.0.M5.zip">Sisu-Inject Bundles</a></p>
-<p><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.plexus.site-0.0.0.M5.zip">Sisu-Plexus Bundles</a></p>
+<ul>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.inject.site-$milestone.zip">Sisu-Inject $milestone bundles</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.plexus.site-$milestone.zip">Sisu-Plexus $milestone bundles</a></li>
+</ul>
 
 <h3 id="site">Update Site</h3>
 <p>To install a bundle distribution download the zip and point your P2 installer to that file</p>
