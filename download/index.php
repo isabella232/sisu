@@ -26,7 +26,7 @@ unless otherwise specified.</i></p>
 </ul>
 
 <h3 id="site">Update Site</h3>
-<p>To install a bundle distribution download the zip and point your P2 installer to that file</p>
+<p>To install a bundle distribution download the zip and point your P2 installer at it.</p>
 
 <h3 id="maven">Maven Artifacts</h3>
 <p>The following artifacts are also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>:</p>

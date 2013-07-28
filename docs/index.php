@@ -18,7 +18,7 @@ $html  = <<<EOHTML
 <h3 id="demo">Tutorials</h3>
 <a href="tutorials/index.html">In progress...</a>
 
-<h3 id="api">$milestone API</h3>
+<h3 id="api">$milestone Javadoc</h3>
 <ul>
 <li><a href="api/org.eclipse.sisu.inject/">Sisu-Inject</a></li>
 <li><a href="api/org.eclipse.sisu.mojos/">Sisu-Mojos</a></li>
