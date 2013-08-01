@@ -208,11 +208,13 @@ class Example implements Runnable {
   }
 
   public static void main(String[] args) {
+    ClassLoader classloader = Example.class.getClassLoader();
+
     Guice.createInjector(
-      new WireModule(
-        new SpaceModule(
-          new URLClassSpace(
-            Example.class.getClassLoader()))));
+      new WireModule(                       // auto-wires unresolved dependencies
+        new SpaceModule(                     // scans and binds @Named components
+          new URLClassSpace( classloader )    // abstracts class/resource finding
+    )));
   }
 }</pre>
         </section>
