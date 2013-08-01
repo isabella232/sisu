@@ -138,6 +138,13 @@ import javax.swing.*;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import com.google.inject.Guice;
+
+// Sisu modules for scanning and wiring
+import org.eclipse.sisu.space.SpaceModule;
+import org.eclipse.sisu.space.URLClassSpace;
+import org.eclipse.sisu.wire.WireModule;
+
 // let's create some simple Swing tabs...
 
 abstract class AbstractTab extends JPanel {}
@@ -176,13 +183,13 @@ class RadioButtonTab extends AbstractTab {
 
 @Named
 @org.eclipse.sisu.EagerSingleton
-class Window implements Runnable {
+class Example implements Runnable {
   JTabbedPane pane = new JTabbedPane();
 
   // Sisu spots we want a map of tabs and wires it up for us
 
   @Inject
-  Window(Map&lt;String, AbstractTab&gt; tabs) {
+  Example(Map&lt;String, AbstractTab&gt; tabs) {
 
     for (Map.Entry&lt;String, AbstractTab&gt; t:tabs.entrySet()) {
       pane.addTab(t.getKey(), t.getValue());
@@ -198,6 +205,14 @@ class Window implements Runnable {
     frame.setLocation(100, 50);
     frame.setSize(300, 200);
     frame.setVisible(true);
+  }
+
+  public static void main(String[] args) {
+    Guice.createInjector(
+      new WireModule(
+        new SpaceModule(
+          new URLClassSpace(
+            Example.class.getClassLoader()))));
   }
 }</pre>
         </section>
@@ -220,7 +235,7 @@ class Window implements Runnable {
           </p>
           <p>Paste the following Maven command into your console window to launch the demo</p>
 <pre class="prettyprint">
-mvn compile exec:java -Dexec.mainClass=org.eclipse.sisu.launch.Main</pre>
+mvn compile exec:java -Dexec.mainClass=example.Example</pre>
           <img src="../../assets/img/5min-demo.png"></img>
           <p>If you're interested in what Sisu is doing you can turn on tracing with -Dsisu.debug</p>
         </section>
