@@ -50,7 +50,7 @@ $Nav->setLinkList(array());
 $Nav->addNavSeparator("$projectName Home", $projectUrl);
 $Nav->addCustomNav("Documentation", $projectUrl . "docs/", "_self", 3);
 $Nav->addCustomNav("Downloads", $projectUrl . "download/", "_self", 3);
-$Nav->addCustomNav("Getting Involved", $projectUrl . "involved/", "_self", 3);
+$Nav->addCustomNav("Getting Involved", $projectUrl . "developers/", "_self", 3);
 $Nav->addCustomNav("Support", $projectUrl . "support/", "_self", 3);
 $Nav->addCustomNav("Roadmap", "/projects/project-plan.php?projectid=$projectId", "_self", 3);
 $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self", 3);
@@ -61,7 +61,7 @@ $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self",
 # $Menu->addMenuItem("Home", $projectUrl, "_self");
 # $Menu->addMenuItem("Documentation", $projectUrl . "docs/", "_self");
 # $Menu->addMenuItem("Downloads", $projectUrl . "download/", "_self");
-# $Menu->addMenuItem("Getting Involved", $projectUrl . "involved/", "_self");
+# $Menu->addMenuItem("Getting Involved", $projectUrl . "developers/", "_self");
 # $Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
 
 # To define additional CSS or other pre-body headers

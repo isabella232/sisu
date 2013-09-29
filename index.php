@@ -37,7 +37,7 @@ $html = <<<EOHTML
   <li><a id="buttonDownload" href="download/" title="Download">
   <div class="buttonIcon"></div><h4>Download</h4>
   <p>Distribution, Update site</p></a></li>
-  <li><a id="buttonInvolved" href="involved/" title="Getting Involved">
+  <li><a id="buttonDevelopers" href="developers/" title="Getting Involved">
   <div class="buttonIcon"></div><h4>Getting Involved</h4>
   <p>Sources, Wiki, Setup</p></a></li>
   <li><a id="buttonSupport" href="support/" title="Support">

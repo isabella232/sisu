@@ -174,17 +174,17 @@ a strong {
   background: transparent url( "../img/button-icons.png" ) no-repeat -100px 0;
 }
 
-#buttonInvolved {
+#buttonDevelopers {
    background:transparent url("../img/buttons.png") no-repeat 0 -77px;
    top: 87px;
    left: 0px;
 }
 
-#buttonInvolved:hover {
+#buttonDevelopers:hover {
    background:transparent url("../img/buttons.png") no-repeat -250px -77px;
 }
 
-#buttonInvolved div.buttonIcon {
+#buttonDevelopers div.buttonIcon {
   background: transparent url( "../img/button-icons.png" ) no-repeat -150px 0;
 }
 
