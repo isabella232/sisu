@@ -20,8 +20,8 @@ $html  = <<<EOHTML
 
 <h3 id="api">API</h3>
 <ul>
-<li><a href="api/org.eclipse.sisu.inject/">Sisu-Inject $milestone javadoc</a></li>
-<li><a href="api/org.eclipse.sisu.plexus/">Sisu-Plexus $milestone javadoc</a></li>
+<li><a href="api/org.eclipse.sisu.inject/">Sisu-Inject $release javadoc</a></li>
+<li><a href="api/org.eclipse.sisu.plexus/">Sisu-Plexus $release javadoc</a></li>
 <li><a href="api/org.eclipse.sisu.mojos/">sisu-maven-plugin site</a></li>
 </ul>
 <p><i>also available from the Central Repository for IDEs with Maven integration.</i></p>

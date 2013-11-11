@@ -58,7 +58,7 @@
 <!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
 <title>
 
-  SisuExtensions
+  BundleModule
 
 
 | org.eclipse.sisu.inject
@@ -168,13 +168,13 @@
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
+          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
-          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
       </ul>
     </li>
               
@@ -230,17 +230,6 @@
   
   
   
-   
-  
-  
-
-  
-   
-  
-  
-  
-   
-  
   
 
 
@@ -255,16 +244,22 @@ Summary:
 
 
 
-
-  <a href="#inhfields">Inherited Fields</a>
+  <a href="#lfields">Fields</a>
   
 
+
+
+  &#124; <a href="#pubctors">Ctors</a>
+  
 
 
 
   &#124; <a href="#pubmethods">Methods</a>
   
 
+
+  &#124; <a href="#promethods">Protected Methods</a>
+  
 
 
   &#124; <a href="#inhmethods">Inherited Methods</a>
@@ -288,10 +283,10 @@ Summary:
 <div id="jd-header">
     public
      
-    final 
+     
     
     class
-<h1>SisuExtensions</h1>
+<h1>BundleModule</h1>
 
 
 
@@ -305,9 +300,7 @@ Summary:
   
       implements 
       
-        <a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">SpaceModule.Strategy</a> 
-      
-        <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a> 
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a> 
       
   
   
@@ -331,7 +324,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.launch.SisuExtensions</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.launch.BundleModule</td>
     </tr>
     
 
@@ -347,7 +340,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>SPI mechanism for discovering Module and Strategy extensions.
+<p>Guice module that uses classpath-scanning and auto-wiring to bind JSR330 components from OSGi bundles.
 </p>
 
 
@@ -393,89 +386,76 @@ Summary:
 
 
 
-
-
-
 <!-- =========== FIELD SUMMARY =========== -->
-<table id="inhfields" class="jd-sumtable"><tr><th>
-  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
-  <div style="clear:left;">Inherited Fields</div></th></tr>
+<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
 
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.eclipse.sisu.space.SpaceModule.Strategy" class="jd-expando-trigger closed"
-          ><img id="inherited-fields-org.eclipse.sisu.space.SpaceModule.Strategy-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>From interface
-<a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">org.eclipse.sisu.space.SpaceModule.Strategy</a>
-<div id="inherited-fields-org.eclipse.sisu.space.SpaceModule.Strategy">
-  <div id="inherited-fields-org.eclipse.sisu.space.SpaceModule.Strategy-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-fields-org.eclipse.sisu.space.SpaceModule.Strategy-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
 
     
       <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
-          public
-          static
+          protected
+          
           final
-          <a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">SpaceModule.Strategy</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#DEFAULT">DEFAULT</a></td>
-          <td class="jd-descrcol" width="100%">Default visitor strategy; scan and bind implementations with Qualifiers.</td>
+          <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#extensions">extensions</a></td>
+          <td class="jd-descrcol" width="100%">Local bundle extensions to Sisu.</td>
       </tr>
       
     
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.eclipse.sisu.wire.WireModule.Strategy" class="jd-expando-trigger closed"
-          ><img id="inherited-fields-org.eclipse.sisu.wire.WireModule.Strategy-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>From interface
-<a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">org.eclipse.sisu.wire.WireModule.Strategy</a>
-<div id="inherited-fields-org.eclipse.sisu.wire.WireModule.Strategy">
-  <div id="inherited-fields-org.eclipse.sisu.wire.WireModule.Strategy-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-fields-org.eclipse.sisu.wire.WireModule.Strategy-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
+      <tr class=" api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          final
+          <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#locator">locator</a></td>
+          <td class="jd-descrcol" width="100%">Shared locator of bound components.</td>
+      </tr>
+      
     
       <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
-          public
-          static
+          protected
+          
           final
-          <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#DEFAULT">DEFAULT</a></td>
-          <td class="jd-descrcol" width="100%">Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.</td>
+          <a href="../../../../org/eclipse/sisu/space/BundleClassSpace.html">BundleClassSpace</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#space">space</a></td>
+          <td class="jd-descrcol" width="100%">Local bundle classes and resources.</td>
       </tr>
       
     
-</table>
-  </div>
-</div>
-</td></tr>
-
 
 </table>
 
 
+
+
+
+
+
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<table id="pubctors" class="jd-sumtable"><tr><th colspan="12">Public Constructors</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            </nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#BundleModule(org.osgi.framework.Bundle, org.eclipse.sisu.inject.MutableBeanLocator)">BundleModule</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)</nobr>
+        
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -493,109 +473,13 @@ Summary:
             
             
             
-            static
-            
-            <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#global(org.eclipse.sisu.space.ClassSpace)">global</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
-        
-        <div class="jd-descrdiv">Returns global <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the surrounding class space.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
             
             
-            
-            
-            &lt;T&gt;
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder, java.lang.Class<T>, T)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; contextType, T context)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#configure(com.google.inject.Binder)">configure</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
-        <div class="jd-descrdiv">Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must either have a public
- no-arg constructor or one with the context type.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            &lt;T&gt;
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
-        
-        <div class="jd-descrdiv">Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must have a public no-arg
- constructor.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            static
-            
-            <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#local(org.eclipse.sisu.space.ClassSpace)">local</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
-        
-        <div class="jd-descrdiv">Returns local <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the containing class space.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
-        
-        <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> override the
- default scanning.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
-        
-        <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> override the default
- wiring.</div>
-  
   </td></tr>
 
 
@@ -603,6 +487,105 @@ Summary:
 </table>
 
 
+
+
+<!-- ========== METHOD SUMMARY =========== -->
+<table id="promethods" class="jd-sumtable"><tr><th colspan="12">Protected Methods</th></tr>
+
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#contextModule()">contextModule</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns a module containing common context bindings for the bundle.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#extensionsModule()">extensionsModule</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns a module that installs modules from <code>META-INF/services/com.google.inject.Module</code>.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;?,&nbsp;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#getProperties()">getProperties</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the properties associated with the current context.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#modules()">modules</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns the list of configured binding modules for this bundle.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html#spaceModule()">spaceModule</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Returns a module that scans the bundle classpath for components.</div>
+  
+  </td></tr>
+
+
+
+</table>
 
 
 
@@ -818,19 +801,19 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.space.SpaceModule.Strategy" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.eclipse.sisu.space.SpaceModule.Strategy-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.google.inject.Module" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.google.inject.Module-trigger"
           src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  <a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">org.eclipse.sisu.space.SpaceModule.Strategy</a>
+  <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">com.google.inject.Module</a>
 
-<div id="inherited-methods-org.eclipse.sisu.space.SpaceModule.Strategy">
-  <div id="inherited-methods-org.eclipse.sisu.space.SpaceModule.Strategy-list"
+<div id="inherited-methods-com.google.inject.Module">
+  <div id="inherited-methods-com.google.inject.Module-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-org.eclipse.sisu.space.SpaceModule.Strategy-summary" style="display: none;">
+  <div id="inherited-methods-com.google.inject.Module-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
@@ -843,57 +826,11 @@ From interface
             
             
             
-            <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <span class="sympad">configure</span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> arg0)</nobr>
         
-        <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
-  
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.wire.WireModule.Strategy" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.eclipse.sisu.wire.WireModule.Strategy-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">org.eclipse.sisu.wire.WireModule.Strategy</a>
-
-<div id="inherited-methods-org.eclipse.sisu.wire.WireModule.Strategy">
-  <div id="inherited-methods-org.eclipse.sisu.wire.WireModule.Strategy-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.eclipse.sisu.wire.WireModule.Strategy-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
-        
-        <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
-  
   </td></tr>
 
 
@@ -929,7 +866,145 @@ From interface
 <!-- Fields -->
 
 
+<!-- ========= FIELD DETAIL ======== -->
+<h2>Fields</h2>
+
+
+
+
+<A NAME="extensions"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+        final 
+        <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a>
+      </span>
+        extensions
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Local bundle extensions to Sisu.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="locator"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+        final 
+        <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a>
+      </span>
+        locator
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Shared locator of bound components.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+<A NAME="space"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+        final 
+        <a href="../../../../org/eclipse/sisu/space/BundleClassSpace.html">BundleClassSpace</a>
+      </span>
+        space
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Local bundle classes and resources.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
+
 <!-- Public ctors -->
+
+
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<h2>Public Constructors</h2>
+
+
+
+<A NAME="BundleModule(org.osgi.framework.Bundle, org.eclipse.sisu.inject.MutableBeanLocator)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        
+      </span>
+      <span class="sympad">BundleModule</span>
+      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 
 
 
@@ -945,52 +1020,7 @@ From interface
 
 
 
-<A NAME="global(org.eclipse.sisu.space.ClassSpace)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a>
-      </span>
-      <span class="sympad">global</span>
-      <span class="normal">(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Returns global <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the surrounding class space.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>space</td>
-          <td>The class space</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Global extensions
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="install(com.google.inject.Binder, java.lang.Class<T>, T)"></A>
+<A NAME="configure(com.google.inject.Binder)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1002,57 +1032,7 @@ From interface
          
         void
       </span>
-      <span class="sympad">install</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; contextType, T context)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must either have a public
- no-arg constructor or one with the context type.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>binder</td>
-          <td>The current binder</td>
-        </tr>
-        <tr>
-          <th>contextType</td>
-          <td>Optional context type</td>
-        </tr>
-        <tr>
-          <th>context</td>
-          <td>Optional context instance
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="install(com.google.inject.Binder)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">install</span>
+      <span class="sympad">configure</span>
       <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</span>
     </h4>
       <div class="api-level">
@@ -1065,155 +1045,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must have a public no-arg
- constructor.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>binder</td>
-          <td>The current binder
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="local(org.eclipse.sisu.space.ClassSpace)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a>
-      </span>
-      <span class="sympad">local</span>
-      <span class="normal">(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Returns local <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the containing class space.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>space</td>
-          <td>The class space</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Local extensions
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="visitor(com.google.inject.Binder)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a>
-      </span>
-      <span class="sympad">visitor</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> override the
- default scanning.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>binder</td>
-          <td>The binder</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Extended visitor
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="wiring(com.google.inject.Binder)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a>
-      </span>
-      <span class="sympad">wiring</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> override the default
- wiring.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>binder</td>
-          <td>The binder</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Extended wiring
-</li></ul>
-  </div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     </div>
 </div>
@@ -1223,6 +1055,191 @@ From interface
 
 
 <!-- ========= METHOD DETAIL ======== -->
+
+<h2>Protected Methods</h2>
+
+
+
+<A NAME="contextModule()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a>
+      </span>
+      <span class="sympad">contextModule</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns a module containing common context bindings for the bundle.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Common context module
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="extensionsModule()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a>
+      </span>
+      <span class="sympad">extensionsModule</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns a module that installs modules from <code>META-INF/services/com.google.inject.Module</code>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Local extensions module
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="getProperties()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;?,&nbsp;?&gt;
+      </span>
+      <span class="sympad">getProperties</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the properties associated with the current context.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The properties
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="modules()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a>&gt;
+      </span>
+      <span class="sympad">modules</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns the list of configured binding modules for this bundle.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The bundle's modules
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="spaceModule()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+         
+         
+         
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a>
+      </span>
+      <span class="sympad">spaceModule</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Returns a module that scans the bundle classpath for components.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Classpath scanning module
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 
 
 

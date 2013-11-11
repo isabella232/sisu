@@ -311,7 +311,7 @@ Summary:
   
       implements 
       
-        ProvisionListener 
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a> 
       
         <a href="../../../../org/eclipse/sisu/plexus/PlexusBeanManager.html">PlexusBeanManager</a> 
       
@@ -446,6 +446,22 @@ Summary:
             
             
             
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#configure(com.google.inject.Binder)">configure</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
@@ -457,7 +473,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -473,7 +489,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -491,7 +507,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -502,22 +518,6 @@ Summary:
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#manageChild()">manageChild</a></span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            &lt;T&gt;
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#onProvision(com.google.inject.spi.ProvisionListener.ProvisionInvocation<T>)">onProvision</a></span>(ProvisionInvocation&lt;T&gt; pi)</nobr>
         
   </td></tr>
 
@@ -777,19 +777,19 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.google.inject.spi.ProvisionListener" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-com.google.inject.spi.ProvisionListener-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.google.inject.Module" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-com.google.inject.Module-trigger"
           src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  com.google.inject.spi.ProvisionListener
+  <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">com.google.inject.Module</a>
 
-<div id="inherited-methods-com.google.inject.spi.ProvisionListener">
-  <div id="inherited-methods-com.google.inject.spi.ProvisionListener-list"
+<div id="inherited-methods-com.google.inject.Module">
+  <div id="inherited-methods-com.google.inject.Module-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-com.google.inject.spi.ProvisionListener-summary" style="display: none;">
+  <div id="inherited-methods-com.google.inject.Module-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
@@ -801,11 +801,11 @@ From interface
             
             
             
-            &lt;T&gt;
+            
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">onProvision</span>(ProvisionInvocation&lt;T&gt; arg0)</nobr>
+        <span class="sympad">configure</span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> arg0)</nobr>
         
   </td></tr>
 
@@ -1012,6 +1012,37 @@ From interface
 
 
 
+<A NAME="configure(com.google.inject.Binder)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        void
+      </span>
+      <span class="sympad">configure</span>
+      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <A NAME="manage(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1147,37 +1178,6 @@ From interface
       </span>
       <span class="sympad">manageChild</span>
       <span class="normal">()</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<A NAME="onProvision(com.google.inject.spi.ProvisionListener.ProvisionInvocation<T>)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">onProvision</span>
-      <span class="normal">(ProvisionInvocation&lt;T&gt; pi)</span>
     </h4>
       <div class="api-level">
         <div>

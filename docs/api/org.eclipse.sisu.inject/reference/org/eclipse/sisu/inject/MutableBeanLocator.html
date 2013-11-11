@@ -445,7 +445,7 @@ Summary:
             
             
             
-            void</nobr>
+            boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html#add(org.eclipse.sisu.inject.BindingPublisher, int)">add</a></span>(<a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a> publisher, int rank)</nobr>
@@ -481,7 +481,25 @@ Summary:
             
             
             
-            void</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;<a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a>&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html#publishers()">publishers</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Snapshot of currently registered <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html#remove(org.eclipse.sisu.inject.BindingPublisher)">remove</a></span>(<a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a> publisher)</nobr>
@@ -492,7 +510,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             abstract
             
@@ -658,7 +676,7 @@ From interface
 
   </p>
   <div class="jd-tagdata jd-tagdescr"><p>Adds the given ranked Injector and distributes its <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binding.html">Binding</a></code>s. Marked as deprecated because most
- clients should <b>not</b> call this method; any injector that contains a binding to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code> is
+ clients should <b>not</b> call this method; any injector with an instance binding to a <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code> is
  automatically added to that locator as part of the bootstrapping process.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
@@ -669,7 +687,7 @@ From interface
         </tr>
         <tr>
           <th>rank</td>
-          <td>The assigned rank</td>
+          <td>The assigned rank; should reflect the injector's <code><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html#maxRank()">maxRank()</a></code></td>
         </tr>
       </table>
   </div>
@@ -688,7 +706,7 @@ From interface
          
         abstract 
          
-        void
+        boolean
       </span>
       <span class="sympad">add</span>
       <span class="normal">(<a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a> publisher, int rank)</span>
@@ -713,10 +731,14 @@ From interface
         </tr>
         <tr>
           <th>rank</td>
-          <td>The assigned rank
-</td>
+          <td>The assigned rank; should reflect <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html#maxBindingRank()">maxBindingRank()</a></code></td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li><code>true</code> if the publisher was added; otherwise <code>false</code>
+</li></ul>
   </div>
 
     </div>
@@ -755,6 +777,42 @@ From interface
 </div>
 
 
+<A NAME="publishers()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+        abstract 
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;<a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a>&gt;
+      </span>
+      <span class="sympad">publishers</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Snapshot of currently registered <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>The registered <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="remove(org.eclipse.sisu.inject.BindingPublisher)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -765,7 +823,7 @@ From interface
          
         abstract 
          
-        void
+        boolean
       </span>
       <span class="sympad">remove</span>
       <span class="normal">(<a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a> publisher)</span>
@@ -786,10 +844,14 @@ From interface
       <table class="jd-tagtable">
         <tr>
           <th>publisher</td>
-          <td>The old publisher
-</td>
+          <td>The old publisher</td>
         </tr>
       </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li><code>true</code> if the publisher was removed; otherwise <code>false</code>
+</li></ul>
   </div>
 
     </div>

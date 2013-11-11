@@ -21,27 +21,27 @@ unless otherwise specified.</i></p>
 
 <h3 id="dist">Distribution</h3>
 <ul>
-<li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.inject.site-$milestone.zip">Sisu-Inject $milestone bundles</a></li>
-<li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/milestones/org.eclipse.sisu.plexus.site-$milestone.zip">Sisu-Plexus $milestone bundles</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/releases/org.eclipse.sisu.inject.site-$release.zip">Sisu-Inject $release bundles</a></li>
+<li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/releases/org.eclipse.sisu.plexus.site-$release.zip">Sisu-Plexus $release bundles</a></li>
 </ul>
 
 <h3 id="site">Update Site</h3>
 <p>To install a bundle distribution download the zip and point your P2 installer at it.</p>
 
 <h3 id="maven">Maven Artifacts</h3>
-<p>The following artifacts are also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$milestone%22">Central Repository</a>:</p>
+<p>The following artifacts are also available from the <a href="http://search.maven.org/#search|ga|1|g%3A%22org.eclipse.sisu%22%20AND%20v:%22$release%22">Central Repository</a>:</p>
 
 <pre>
   &lt;dependency&gt;
     &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
     &lt;artifactId&gt;org.eclipse.sisu.inject&lt;/artifactId&gt;
-    &lt;version&gt;$milestone&lt;/version&gt;
+    &lt;version&gt;$release&lt;/version&gt;
   &lt;/dependency&gt;
 
   &lt;dependency&gt;
     &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
     &lt;artifactId&gt;org.eclipse.sisu.inject.extender&lt;/artifactId&gt;
-    &lt;version&gt;$milestone&lt;/version&gt;
+    &lt;version&gt;$release&lt;/version&gt;
   &lt;/dependency&gt;
 <pre>
 
@@ -49,7 +49,7 @@ unless otherwise specified.</i></p>
   &lt;plugin&gt;
     &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
     &lt;artifactId&gt;sisu-maven-plugin&lt;/artifactId&gt;
-    &lt;version&gt;$milestone&lt;/version&gt;
+    &lt;version&gt;$release&lt;/version&gt;
   &lt;/plugin&gt;
 <pre>
 
@@ -57,7 +57,7 @@ unless otherwise specified.</i></p>
   &lt;dependency&gt;
     &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
     &lt;artifactId&gt;org.eclipse.sisu.plexus&lt;/artifactId&gt;
-    &lt;version&gt;$milestone&lt;/version&gt;
+    &lt;version&gt;$release&lt;/version&gt;
   &lt;/dependency&gt;
 <pre>
 

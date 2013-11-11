@@ -168,9 +168,12 @@
               
     <li><h2>Classes</h2>
       <ul>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
       </ul>
     </li>
@@ -251,7 +254,9 @@
  <pre>
  java -classpath myapp.jar:javax.inject.jar:aopalliance.jar:guice-3.0.jar:org.eclipse.sisu.inject.jar org.eclipse.sisu.launch.Main</pre> 
  
- And a class that discovers <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">Sisu extensions</a></code> registered under <code>META-INF/services</code>.
+ An OSGi <code><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">extender</a></code> that assembles Sisu applications from OSGi bundles containing JSR330 components.
+ <p><p>
+ And a helper class that discovers Sisu <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">extensions</a></code> registered under <code>META-INF/services</code>.
 
   </div>
 
@@ -268,6 +273,14 @@
     
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></td>
+              <td class="jd-descrcol" width="100%">Guice module that uses classpath-scanning and auto-wiring to bind JSR330 components from OSGi bundles.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></td>
+              <td class="jd-descrcol" width="100%">OSGi BundleTracker that tracks JSR330 bundles and uses <code><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></code> to bind components.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></td>
               <td class="jd-descrcol" width="100%">Abstract TestNG/JUnit4 test that automatically binds and injects itself.&nbsp;</td>
           </tr>
@@ -280,6 +293,10 @@
               <td class="jd-descrcol" width="100%">Bootstrap class that creates a static Injector by scanning the current class-path for beans.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></td>
+              <td class="jd-descrcol" width="100%">Basic OSGi extender for Sisu that watches for JSR330 bundles and publishes them to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></td>
               <td class="jd-descrcol" width="100%">SPI mechanism for discovering Module and Strategy extensions.&nbsp;</td>
           </tr>

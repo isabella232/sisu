@@ -498,13 +498,32 @@ Summary:
             <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html#select(java.util.Map<?, ?>)">select</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;?,&nbsp;?&gt; properties)</nobr>
+        
+        <div class="jd-descrdiv">Selects the property named <i>"org.eclipse.sisu.space.BeanScanning"</i> and attempts to map its value to a
+ <code><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></code> literal, ignoring case.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
+            
+            <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/space/BeanScanning.html#valueOf(java.lang.String)">valueOf</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name)</nobr>
         
   </td></tr>
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -1183,6 +1202,61 @@ From interface
 
 <h2>Public Methods</h2>
 
+
+
+<A NAME="select(java.util.Map<?, ?>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a>
+      </span>
+      <span class="sympad">select</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/Map.html">Map</a>&lt;?,&nbsp;?&gt; properties)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Selects the property named <i>"org.eclipse.sisu.space.BeanScanning"</i> and attempts to map its value to a
+ <code><a href="../../../../org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></code> literal, ignoring case. Defaults to <code><a href="../../../../org/eclipse/sisu/space/BeanScanning.html#ON">ON</a></code> for blank or null values.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>properties</td>
+          <td>The properties</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Selected scanning option</li></ul>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Throws</h5>
+      <table class="jd-tagtable">  
+        <tr>
+            <th><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/IllegalArgumentException.html">IllegalArgumentException</a></td>
+            <td>if the property value cannot be mapped
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
 
 
 <A NAME="valueOf(java.lang.String)"></A>

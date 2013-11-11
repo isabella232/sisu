@@ -168,9 +168,12 @@
               
     <li><h2>Classes</h2>
       <ul>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
       </ul>
     </li>
@@ -252,7 +255,9 @@
  <pre>
  java -classpath myapp.jar:javax.inject.jar:aopalliance.jar:guice-3.0.jar:org.eclipse.sisu.inject.jar org.eclipse.sisu.launch.Main</pre> 
  
- And a class that discovers <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">Sisu extensions</a></code> registered under <code>META-INF/services</code>.
+ An OSGi <code><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">extender</a></code> that assembles Sisu applications from OSGi bundles containing JSR330 components.
+ <p><p>
+ And a helper class that discovers Sisu <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">extensions</a></code> registered under <code>META-INF/services</code>.
 </p>
 </div>
 
