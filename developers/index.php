@@ -18,6 +18,11 @@ $committers = $summary->getCommittersSideItem();
 $html  = <<<EOHTML
 <div id="midcolumn">
 
+<h3 id="wiki">Wiki</h3>
+<p>
+  Information about building, testing and debugging $projectName can be found in our <a href="$wiki">wiki space</a>.
+</p>
+
 <h3 id="sources">Source Code</h3>
 <p>
   The source files of the project are stored in <a href="$sources">Git repositories</a>. Please
@@ -53,11 +58,6 @@ $html  = <<<EOHTML
   We use the <a href="http://wiki.eclipse.org/Development_Resources/Automatic_IP_Log">automatic IP log tool</a>
   to track code contributions and third-party dependencies. See <a href="$iplog">$projectName's tentative IP log</a>
   for the list of currently approved dependencies. 
-</p>
-
-<h3 id="wiki">Wiki</h3>
-<p>
-  Information about building, testing and debugging $projectName can be found in our <a href="$wiki">wiki space</a>.
 </p>
 
 <h3 id="issues">Bug Tracker</h3>
