@@ -52,7 +52,8 @@ $Nav->addCustomNav("Documentation", $projectUrl . "docs/", "_self", 3);
 $Nav->addCustomNav("Downloads", $projectUrl . "download/", "_self", 3);
 $Nav->addCustomNav("Getting Involved", $projectUrl . "developers/", "_self", 3);
 $Nav->addCustomNav("Support", $projectUrl . "support/", "_self", 3);
-$Nav->addCustomNav("Roadmap", "/projects/project-plan.php?projectid=$projectId", "_self", 3);
+$Nav->addCustomNav("Changelog", "http://wiki.eclipse.org/Sisu/Changelog", "_self", 3);
+$Nav->addCustomNav("Roadmap", "/projects/$projectId/releases", "_self", 3);
 $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self", 3);
 
 # top navigation bar
