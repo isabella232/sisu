@@ -53,14 +53,12 @@ $html = <<<EOHTML
   <h1 style="text-align:center"><a href="docs/tutorials/index.html">Documentation is on the way!</a></h1>
 </div>
 <div id="rightcolumn">
-<!--
   <div class="sideitem">
     <h6>New and Noteworthy</h6>
     <div>
-      <p>...</p>
+      <p>Sisu <a href="download/">0.1.0</a> has been released!</p>
     </div>
   </div>
--->
   $incubation
 </div>
 EOHTML;
