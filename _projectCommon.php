@@ -27,7 +27,7 @@ $ci = "https://hudson.eclipse.org/hudson/";
 $about = "/projects/project.php?id=$projectId";
 $iplog = "/projects/ip_log.php?projectid=$projectId";
 $incubation = $summary->getIncubationSideItem();
-$release = "0.1.0";
+$release = "0.1.1";
 
 # Set the theme for your project's web pages.
 # See http://eclipse.org/phoenix/
