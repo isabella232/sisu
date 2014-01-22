@@ -70,9 +70,9 @@ $mailingLists
 
 <h3 id="ci">Continuous Integration</h3>
 <p>
-  We use <a href="$ci">Eclipse's Hudson instance</a> for our continuous integration
+  We use <a href="$ci">Hudson</a> for our continuous integration
   builds. Hudson is configured to periodically poll our Git repositories for changes and automatically starts a new
-  build when required. We also have a daily <a href="https://hudson.eclipse.org/sandbox/job/sisu-sonar/">Sonar job</a>
+  build when required. We also have a daily <a href="https://hudson.eclipse.org/sisu/job/sisu-sonar/">Sonar job</a>
   to track <a href="https://dev.eclipse.org/sonar/dashboard/index/org.eclipse.sisu:sisu-inject">code quality</a>.
 </p>
 <p>

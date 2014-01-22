@@ -23,7 +23,7 @@ $projectUrl = normalizeRelativeUrl($project->getProjectUrl());
 $issueTracker = normalizeHttpUrl($project->getBugzillaUrl()); 
 $wiki = normalizeHttpUrl($project->getWikiUrl());
 $sources = "http://git.eclipse.org/c/sisu/";
-$ci = "https://hudson.eclipse.org/hudson/";
+$ci = "https://hudson.eclipse.org/sisu/";
 $about = "/projects/project.php?id=$projectId";
 $iplog = "/projects/ip_log.php?projectid=$projectId";
 $incubation = $summary->getIncubationSideItem();
