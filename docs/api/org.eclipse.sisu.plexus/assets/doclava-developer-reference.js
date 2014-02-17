@@ -1,6 +1,5 @@
 var API_LEVEL_ENABLED_COOKIE = "api_level_enabled";
 var API_LEVEL_INDEX_COOKIE = "api_level_index";
-var SINCE_DATA = [];
 var minLevelIndex = 0;
 
 function toggleApiLevelSelector(checkbox) {

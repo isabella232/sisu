@@ -179,6 +179,7 @@
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/EagerSingleton.html">EagerSingleton</a></li>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Nullable.html">Nullable</a></li>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Parameters.html">Parameters</a></li>
+        <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Priority.html">Priority</a></li>
       </ul>
     </li>
               
@@ -347,7 +348,7 @@
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/Parameters.html">Parameters</a></td>
-              <td class="jd-descrcol" width="100%">Qualifier of parameters passed into Sisu:<br>
+              <td class="jd-descrcol" width="100%">Qualifier of application parameters:<br>
  <br>
  
  <pre>
@@ -358,6 +359,23 @@
  &#064;Inject
  &#064;Parameters
  Map&lt;?, ?&gt; properties;
+ </pre>
+ 
+ This qualifier marks collections of values that act as overall application parameters, like the <code>String[]</code>
+ argument array passed into the main method or the <code>Map</code> of system properties.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/Priority.html">Priority</a></td>
+              <td class="jd-descrcol" width="100%">Defines the priority ordering of a bean:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Priority( 999 )
+ public class ImportantComponent
+ {
+     //
+ }
  </pre>
 &nbsp;</td>
           </tr>

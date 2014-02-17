@@ -158,7 +158,6 @@
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBean.html">PlexusBean</a>&lt;T&gt;</li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanConverter.html">PlexusBeanConverter</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanLocator.html">PlexusBeanLocator</a></li>
-        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanManager.html">PlexusBeanManager</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanMetadata.html">PlexusBeanMetadata</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanSource.html">PlexusBeanSource</a></li>
@@ -171,12 +170,15 @@
       <ul>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ClassRealmUtils.html">ClassRealmUtils</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ComponentDescriptorBeanModule.html">ComponentDescriptorBeanModule</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html">ComponentImpl</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/CompositeBeanHelper.html">CompositeBeanHelper</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ConfigurationImpl.html">ConfigurationImpl</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/DefaultPlexusBeanLocator.html">DefaultPlexusBeanLocator</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/Hints.html">Hints</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusAnnotatedBeanModule.html">PlexusAnnotatedBeanModule</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusAnnotatedMetadata.html">PlexusAnnotatedMetadata</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBindingModule.html">PlexusBindingModule</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBundlePlan.html">PlexusBundlePlan</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusDateTypeConverter.html">PlexusDateTypeConverter</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html">PlexusLifecycleManager</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusSpaceModule.html">PlexusSpaceModule</a></li>
@@ -184,6 +186,7 @@
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeVisitor.html">PlexusTypeVisitor</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusXmlBeanConverter.html">PlexusXmlBeanConverter</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusXmlBeanModule.html">PlexusXmlBeanModule</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/RequirementImpl.html">RequirementImpl</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/Roles.html">Roles</a></li>
       </ul>
     </li>
@@ -272,26 +275,22 @@
               <td class="jd-descrcol" width="100%">Service that locates beans of various types, using optional Plexus hints as a guide.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanManager.html">PlexusBeanManager</a></td>
-              <td class="jd-descrcol" width="100%">Service that manages the lifecycle of Plexus beans.&nbsp;</td>
-          </tr>
-        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanMetadata.html">PlexusBeanMetadata</a></td>
               <td class="jd-descrcol" width="100%">Supplies metadata associated with a particular Plexus bean implementation.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></td>
               <td class="jd-descrcol" width="100%">Module-like interface for contributing Plexus bindings with additional metadata.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanSource.html">PlexusBeanSource</a></td>
               <td class="jd-descrcol" width="100%">Source of Plexus component beans and associated metadata.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeListener.html">PlexusTypeListener</a></td>
               <td class="jd-descrcol" width="100%">QualifiedTypeListener that also listens for Plexus components.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/Strategies.html">Strategies</a></td>
               <td class="jd-descrcol" width="100%">Constants representing supported Plexus instantiation strategies.&nbsp;</td>
           </tr>
@@ -314,8 +313,16 @@
               <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that binds Plexus components according to their ComponentDescriptors.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html">ComponentImpl</a></td>
+              <td class="jd-descrcol" width="100%">Partial runtime implementation of Plexus @Component annotation, supporting the most common attributes.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/CompositeBeanHelper.html">CompositeBeanHelper</a></td>
               <td class="jd-descrcol" width="100%">Helper class that implements low-level Plexus configuration of composite beans.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/ConfigurationImpl.html">ConfigurationImpl</a></td>
+              <td class="jd-descrcol" width="100%">Runtime implementation of Plexus @Configuration annotation.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/DefaultPlexusBeanLocator.html">DefaultPlexusBeanLocator</a></td>
@@ -338,32 +345,40 @@
               <td class="jd-descrcol" width="100%">Guice Module that supports registration, injection, and management of Plexus beans.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusBundlePlan.html">PlexusBundlePlan</a></td>
+              <td class="jd-descrcol" width="100%">BundlePlan that prepares BindingPublishers for Plexus bundles.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusDateTypeConverter.html">PlexusDateTypeConverter</a></td>
               <td class="jd-descrcol" width="100%">TypeConverter Module that converts Plexus formatted date strings into Dates.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html">PlexusLifecycleManager</a></td>
-              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanManager.html">PlexusBeanManager</a></code> that manages Plexus components requiring lifecycle management.&nbsp;</td>
-          </tr>
         <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html">PlexusLifecycleManager</a></td>
+              <td class="jd-descrcol" width="100%">BeanManager that manages Plexus components requiring lifecycle management.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusSpaceModule.html">PlexusSpaceModule</a></td>
               <td class="jd-descrcol" width="100%">Guice Module that provides Plexus semantics without the full-blown Plexus container.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeBinder.html">PlexusTypeBinder</a></td>
               <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeListener.html">PlexusTypeListener</a></code> that binds Plexus Components.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeVisitor.html">PlexusTypeVisitor</a></td>
               <td class="jd-descrcol" width="100%">SpaceVisitor that reports Plexus bean classes annotated with @Component.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusXmlBeanConverter.html">PlexusXmlBeanConverter</a></td>
               <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanConverter.html">PlexusBeanConverter</a></code> Module that converts Plexus XML configuration into beans.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/PlexusXmlBeanModule.html">PlexusXmlBeanModule</a></td>
               <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/plexus/PlexusBeanModule.html">PlexusBeanModule</a></code> that binds Plexus components by scanning XML resources.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/RequirementImpl.html">RequirementImpl</a></td>
+              <td class="jd-descrcol" width="100%">Runtime implementation of Plexus @Requirement annotation.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/plexus/Roles.html">Roles</a></td>

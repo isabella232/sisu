@@ -58,7 +58,7 @@
 <!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
 <title>
 
-  SisuExtender
+  BeanScheduler
 
 
 | org.eclipse.sisu.inject
@@ -147,11 +147,11 @@
                 
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/package-summary.html">org.eclipse.sisu</a></li>
-    <li class="api apilevel-">
+    <li class="selected api apilevel-">
   <a href="../../../../org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
-    <li class="selected api apilevel-">
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
@@ -167,24 +167,36 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanBinder.html">BeanBinder</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanProperty.html">BeanProperty</a>&lt;T&gt;</li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></li>
-          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanListener.html">BeanListener</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanProperties.html">BeanProperties</a></li>
+          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html">BeanScheduler</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/DeclaredMembers.html">DeclaredMembers</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/LifecycleModule.html">LifecycleModule</a></li>
       </ul>
     </li>
               
+    <li><h2>Annotations</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/IgnoreSetters.html">IgnoreSetters</a></li>
+      </ul>
+    </li>
               
+    <li><h2>Enums</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/DeclaredMembers.View.html">DeclaredMembers.View</a></li>
+      </ul>
+    </li>
               
               
             </ul><br/>
@@ -223,13 +235,6 @@
 <div id="api-info-block">
 
 
-
-  
-   
-  
-  
-  
-  
 
   
    
@@ -290,9 +295,9 @@ Summary:
     public
      
      
-    
+    abstract
     class
-<h1>SisuExtender</h1>
+<h1>BeanScheduler</h1>
 
 
 
@@ -303,11 +308,6 @@ Summary:
   
 
   
-  
-      implements 
-      
-        <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleActivator.html">BundleActivator</a> 
-      
   
   
 
@@ -330,7 +330,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.launch.SisuExtender</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.bean.BeanScheduler</td>
     </tr>
     
 
@@ -339,6 +339,37 @@ Summary:
 
 
 
+<table class="jd-sumtable jd-sumtable-subclasses"><tr><td colspan="12" style="border:none;margin:0;padding:0;">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="subclasses-direct" class="jd-expando-trigger closed"
+          ><img id="subclasses-direct-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>Known Direct Subclasses
+
+  <div id="subclasses-direct">
+      <div id="subclasses-direct-list"
+              class="jd-inheritedlinks"
+              
+              >
+          
+            
+              <a href="../../../../org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a>
+            
+          
+      </div>
+      <div id="subclasses-direct-summary"
+              style="display: none;"
+              >
+  <table class="jd-sumtable-expando">
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a></td>
+              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></code> that manages JSR250 beans and schedules lifecycle events.&nbsp;</td>
+          </tr>
+  </table>
+      </div>
+  </div>
+</td></tr></table>
+
 
 
 
@@ -346,8 +377,8 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>OSGi extender that uses Sisu and Guice to wire up applications from one or more component bundles.<br>
- To enable it install <code>org.eclipse.sisu.inject.extender</code>, or adapt the class for your own extender.
+<p>Schedules safe activation of beans even when cyclic dependencies are involved.<br>
+ Takes advantage of the new Guice ProvisionListener SPI, if available at runtime.
 </p>
 
 
@@ -400,12 +431,12 @@ Summary:
     
       <tr class="alt-color api apilevel-" >
           <td class="jd-typecol"><nobr>
-          protected
-          
-          
-          <a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#tracker">tracker</a></td>
-          <td class="jd-descrcol" width="100%">Tracker of component bundles.</td>
+          public
+          static
+          final
+          <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a></nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html#MODULE">MODULE</a></td>
+          <td class="jd-descrcol" width="100%"></td>
       </tr>
       
     
@@ -434,7 +465,7 @@ Summary:
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#SisuExtender()">SisuExtender</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html#BeanScheduler()">BeanScheduler</a></span>()</nobr>
         
   </td></tr>
 
@@ -457,30 +488,16 @@ Summary:
         <td class="jd-typecol"><nobr>
             
             
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#start(org.osgi.framework.BundleContext)">start</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
+            final
             
             
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#stop(org.osgi.framework.BundleContext)">stop</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html#schedule(java.lang.Object)">schedule</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</nobr>
         
+        <div class="jd-descrdiv">Schedules activation of the given bean at the next safe activation point.</div>
+  
   </td></tr>
 
 
@@ -498,71 +515,17 @@ Summary:
 	 
     <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
+            abstract
             
             
             
             
-            
-            int</nobr>
+            void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#bundleStateMask()">bundleStateMask</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html#activate(java.lang.Object)">activate</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</nobr>
         
-        <div class="jd-descrdiv">Returns the mask of bundle states this extender is interested in.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#createLocator(org.osgi.framework.BundleContext)">createLocator</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</nobr>
-        
-        <div class="jd-descrdiv">Returns a new locator of bound components for this extender.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#createTracker(org.osgi.framework.BundleContext)">createTracker</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</nobr>
-        
-        <div class="jd-descrdiv">Creates a new tracker of component bundles for this extender.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html#findLocator(org.osgi.framework.BundleContext)">findLocator</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</nobr>
-        
-        <div class="jd-descrdiv">Finds the locator associated with this extender; creates one if none exist.</div>
+        <div class="jd-descrdiv">Customized activation of the given bean.</div>
   
   </td></tr>
 
@@ -781,64 +744,6 @@ From class
 </td></tr>
 
 
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.osgi.framework.BundleActivator" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.osgi.framework.BundleActivator-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleActivator.html">org.osgi.framework.BundleActivator</a>
-
-<div id="inherited-methods-org.osgi.framework.BundleActivator">
-  <div id="inherited-methods-org.osgi.framework.BundleActivator-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.osgi.framework.BundleActivator-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">start</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">stop</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
 </table>
 
 
@@ -871,17 +776,17 @@ From interface
 
 
 
-<A NAME="tracker"></A>
+<A NAME="MODULE"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
-        protected 
-         
-         
-        <a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a>
+        public 
+        static 
+        final 
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a>
       </span>
-        tracker
+        MODULE
     </h4>
       <div class="api-level">
         
@@ -893,8 +798,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Tracker of component bundles.
-</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
 
     
     </div>
@@ -911,7 +815,7 @@ From interface
 
 
 
-<A NAME="SisuExtender()"></A>
+<A NAME="BeanScheduler()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -923,7 +827,7 @@ From interface
          
         
       </span>
-      <span class="sympad">SisuExtender</span>
+      <span class="sympad">BeanScheduler</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -957,20 +861,20 @@ From interface
 
 
 
-<A NAME="start(org.osgi.framework.BundleContext)"></A>
+<A NAME="schedule(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
          
-         
+        final 
          
          
         void
       </span>
-      <span class="sympad">start</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</span>
+      <span class="sympad">schedule</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -982,38 +886,17 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<A NAME="stop(org.osgi.framework.BundleContext)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">stop</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Schedules activation of the given bean at the next safe activation point.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>bean</td>
+          <td>The managed bean
+</td>
+        </tr>
+      </table>
+  </div>
 
     </div>
 </div>
@@ -1028,7 +911,7 @@ From interface
 
 
 
-<A NAME="bundleStateMask()"></A>
+<A NAME="activate(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1036,12 +919,12 @@ From interface
         protected 
          
          
+        abstract 
          
-         
-        int
+        void
       </span>
-      <span class="sympad">bundleStateMask</span>
-      <span class="normal">()</span>
+      <span class="sympad">activate</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1053,146 +936,16 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Returns the mask of bundle states this extender is interested in.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>State mask
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="createLocator(org.osgi.framework.BundleContext)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-         
-         
-        <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a>
-      </span>
-      <span class="sympad">createLocator</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Returns a new locator of bound components for this extender.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Customized activation of the given bean.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>context</td>
-          <td>The extender context</td>
+          <th>bean</td>
+          <td>The bean to activate
+</td>
         </tr>
       </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New bean locator
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="createTracker(org.osgi.framework.BundleContext)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-         
-         
-        <a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a>
-      </span>
-      <span class="sympad">createTracker</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Creates a new tracker of component bundles for this extender.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</td>
-          <td>The extender context</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New bundle tracker
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="findLocator(org.osgi.framework.BundleContext)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-        final 
-         
-         
-        <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a>
-      </span>
-      <span class="sympad">findLocator</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Finds the locator associated with this extender; creates one if none exist.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>context</td>
-          <td>The extender context</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Associated bean locator
-</li></ul>
   </div>
 
     </div>

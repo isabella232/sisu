@@ -58,7 +58,7 @@
 <!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
 <title>
 
-  BundleScanner
+  SisuTracker
 
 
 | org.eclipse.sisu.inject
@@ -165,16 +165,22 @@
           <div id="classes-nav">
             <ul>
               
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></li>
+      </ul>
+    </li>
               
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
-          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
+          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></li>
       </ul>
     </li>
               
@@ -224,6 +230,13 @@
   
   
    
+  
+  
+
+  
+   
+  
+  
   
   
 
@@ -298,7 +311,7 @@ Summary:
      
     
     class
-<h1>BundleScanner</h1>
+<h1>SisuTracker</h1>
 
 
 
@@ -313,6 +326,11 @@ Summary:
   
 
   
+  
+      implements 
+      
+        <a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a> 
+      
   
   
 
@@ -345,7 +363,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.launch.BundleScanner</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.launch.SisuTracker</td>
     </tr>
     
 
@@ -361,7 +379,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>OSGi BundleTracker that tracks JSR330 bundles and uses <code><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></code> to bind components.
+<p>OSGi BundleTracker that tracks component bundles and uses <code><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code>s to publish them.
 </p>
 
 
@@ -418,7 +436,7 @@ Summary:
           
           final
           <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#locator">locator</a></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#locator">locator</a></td>
           <td class="jd-descrcol" width="100%">Shared locator of bound components.</td>
       </tr>
       
@@ -428,8 +446,19 @@ Summary:
           protected
           
           final
+          <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;</nobr></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#plans">plans</a></td>
+          <td class="jd-descrcol" width="100%">Custom plans; contributed by attaching fragments to the extender bundle.</td>
+      </tr>
+      
+    
+      <tr class="alt-color api apilevel-" >
+          <td class="jd-typecol"><nobr>
+          protected
+          
+          final
           int</nobr></td>
-          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#stateMask">stateMask</a></td>
+          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#stateMask">stateMask</a></td>
           <td class="jd-descrcol" width="100%">Mask of bundle states being tracked.</td>
       </tr>
       
@@ -485,6 +514,8 @@ org.osgi.util.tracker.BundleTracker
 
 
 
+
+
 </table>
 
 
@@ -506,7 +537,7 @@ org.osgi.util.tracker.BundleTracker
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#BundleScanner(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)">BundleScanner</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context, int stateMask, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#SisuTracker(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)">SisuTracker</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context, int stateMask, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)</nobr>
         
   </td></tr>
 
@@ -535,7 +566,7 @@ org.osgi.util.tracker.BundleTracker
             <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#addingBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent)">addingBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#addingBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent)">addingBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event)</nobr>
         
   </td></tr>
 
@@ -551,7 +582,7 @@ org.osgi.util.tracker.BundleTracker
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#open()">open</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#open()">open</a></span>()</nobr>
         
   </td></tr>
 
@@ -561,15 +592,15 @@ org.osgi.util.tracker.BundleTracker
         <td class="jd-typecol"><nobr>
             
             
-            final
             
             
-            void</nobr>
+            
+            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#purgeBundles()">purgeBundles</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
         
-        <div class="jd-descrdiv">Purges any bundles that are no longer valid.</div>
+        <div class="jd-descrdiv">Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</div>
   
   </td></tr>
 
@@ -585,7 +616,25 @@ org.osgi.util.tracker.BundleTracker
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#removedBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent, java.lang.Object)">removedBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#purgeBundles()">purgeBundles</a></span>()</nobr>
+        
+        <div class="jd-descrdiv">Purges any bundles that are no longer valid.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            final
+            
+            
+            void</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#removedBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent, java.lang.Object)">removedBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
         
   </td></tr>
 
@@ -609,48 +658,13 @@ org.osgi.util.tracker.BundleTracker
             
             
             
-            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#createInjector(org.osgi.framework.Bundle)">createInjector</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#discoverPlans()">discoverPlans</a></span>()</nobr>
         
-        <div class="jd-descrdiv">Creates a new <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> for the given bundle.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#destroyInjector(org.osgi.framework.Bundle, com.google.inject.Injector)">destroyInjector</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a> injector)</nobr>
-        
-        <div class="jd-descrdiv">Destroys the old <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> for the given bundle.</div>
-  
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#evictBundle(org.osgi.framework.Bundle, com.google.inject.Injector)">evictBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a> injector)</nobr>
-        
-        <div class="jd-descrdiv">Determines whether we should destroy the <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> of the given bundle.</div>
+        <div class="jd-descrdiv">Discovers plans listed locally under <code>META-INF/services/org.eclipse.sisu.launch.BundlePlan</code> ;
+ implementations must have a public no-arg constructor or one that accepts a <code><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></code>.</div>
   
   </td></tr>
 
@@ -666,9 +680,9 @@ org.osgi.util.tracker.BundleTracker
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html#injectBundle(org.osgi.framework.Bundle)">injectBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#evictBundle(org.osgi.framework.Bundle)">evictBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
         
-        <div class="jd-descrdiv">Determines whether we should create an <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> for the given bundle.</div>
+        <div class="jd-descrdiv">Determines whether we should remove the <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> associated with the given bundle.</div>
   
   </td></tr>
 
@@ -1076,6 +1090,50 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.launch.BundlePlan" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.eclipse.sisu.launch.BundlePlan-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">org.eclipse.sisu.launch.BundlePlan</a>
+
+<div id="inherited-methods-org.eclipse.sisu.launch.BundlePlan">
+  <div id="inherited-methods-org.eclipse.sisu.launch.BundlePlan-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.eclipse.sisu.launch.BundlePlan-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
+        
+        <div class="jd-descrdiv">Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer" class="jd-expando-trigger closed"
           ><img id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer-trigger"
           src="../../../../../assets/images/triangle-closed.png"
@@ -1210,6 +1268,37 @@ From interface
 
 
 
+<A NAME="plans"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        protected 
+         
+        final 
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;
+      </span>
+        plans
+    </h4>
+      <div class="api-level">
+        
+
+
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Custom plans; contributed by attaching fragments to the extender bundle.
+</p></div>
+
+    
+    </div>
+</div>
+
+
+
 <A NAME="stateMask"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1250,7 +1339,7 @@ From interface
 
 
 
-<A NAME="BundleScanner(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)"></A>
+<A NAME="SisuTracker(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1262,7 +1351,7 @@ From interface
          
         
       </span>
-      <span class="sympad">BundleScanner</span>
+      <span class="sympad">SisuTracker</span>
       <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context, int stateMask, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)</span>
     </h4>
       <div class="api-level">
@@ -1358,6 +1447,51 @@ From interface
 </div>
 
 
+<A NAME="prepare(org.osgi.framework.Bundle)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a>
+      </span>
+      <span class="sympad">prepare</span>
+      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>bundle</td>
+          <td>The bundle</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Publisher of bindings; <code>null</code> if the plan doesn't apply
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="purgeBundles()"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -1430,7 +1564,7 @@ From interface
 
 
 
-<A NAME="createInjector(org.osgi.framework.Bundle)"></A>
+<A NAME="discoverPlans()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1440,10 +1574,10 @@ From interface
          
          
          
-        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a>
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;
       </span>
-      <span class="sympad">createInjector</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</span>
+      <span class="sympad">discoverPlans</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1455,19 +1589,11 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Creates a new <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> for the given bundle.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>bundle</td>
-          <td>The bundle</td>
-        </tr>
-      </table>
-  </div>
+  <div class="jd-tagdata jd-tagdescr"><p>Discovers plans listed locally under <code>META-INF/services/org.eclipse.sisu.launch.BundlePlan</code> ;
+ implementations must have a public no-arg constructor or one that accepts a <code><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></code>.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>New injector
+      <ul class="nolist"><li>List of plans
 </li></ul>
   </div>
 
@@ -1475,52 +1601,7 @@ From interface
 </div>
 
 
-<A NAME="destroyInjector(org.osgi.framework.Bundle, com.google.inject.Injector)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">destroyInjector</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a> injector)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Destroys the old <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> for the given bundle.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>bundle</td>
-          <td>The bundle</td>
-        </tr>
-        <tr>
-          <th>injector</td>
-          <td>Old injector
-</td>
-        </tr>
-      </table>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="evictBundle(org.osgi.framework.Bundle, com.google.inject.Injector)"></A>
+<A NAME="evictBundle(org.osgi.framework.Bundle)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1533,55 +1614,6 @@ From interface
         boolean
       </span>
       <span class="sympad">evictBundle</span>
-      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a> injector)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Determines whether we should destroy the <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> of the given bundle.</p></div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Parameters</h5>
-      <table class="jd-tagtable">
-        <tr>
-          <th>bundle</td>
-          <td>The bundle</td>
-        </tr>
-        <tr>
-          <th>injector</td>
-          <td>The injector</td>
-        </tr>
-      </table>
-  </div>
-  <div class="jd-tagdata">
-      <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li><code>true</code> if the injector should be destroyed; otherwise <code>false</code>
-</li></ul>
-  </div>
-
-    </div>
-</div>
-
-
-<A NAME="injectBundle(org.osgi.framework.Bundle)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-         
-         
-        boolean
-      </span>
-      <span class="sympad">injectBundle</span>
       <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</span>
     </h4>
       <div class="api-level">
@@ -1594,7 +1626,7 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Determines whether we should create an <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code> for the given bundle.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Determines whether we should remove the <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> associated with the given bundle.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1606,7 +1638,7 @@ From interface
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li><code>true</code> if an injector should be created; otherwise <code>false</code>
+      <ul class="nolist"><li><code>true</code> if the publisher should be removed; otherwise <code>false</code>
 </li></ul>
   </div>
 

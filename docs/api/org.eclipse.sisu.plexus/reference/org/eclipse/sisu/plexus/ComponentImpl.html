@@ -58,7 +58,7 @@
 <!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
 <title>
 
-  PlexusLifecycleManager
+  ComponentImpl
 
 
 | org.eclipse.sisu.plexus
@@ -170,7 +170,7 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ClassRealmUtils.html">ClassRealmUtils</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ComponentDescriptorBeanModule.html">ComponentDescriptorBeanModule</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html">ComponentImpl</a></li>
+          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html">ComponentImpl</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/CompositeBeanHelper.html">CompositeBeanHelper</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/ConfigurationImpl.html">ConfigurationImpl</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/DefaultPlexusBeanLocator.html">DefaultPlexusBeanLocator</a></li>
@@ -180,7 +180,7 @@
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBindingModule.html">PlexusBindingModule</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusBundlePlan.html">PlexusBundlePlan</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusDateTypeConverter.html">PlexusDateTypeConverter</a></li>
-          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html">PlexusLifecycleManager</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html">PlexusLifecycleManager</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusSpaceModule.html">PlexusSpaceModule</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeBinder.html">PlexusTypeBinder</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/plexus/PlexusTypeVisitor.html">PlexusTypeVisitor</a></li>
@@ -236,8 +236,6 @@
   
   
   
-   
-  
   
 
   
@@ -247,15 +245,6 @@
   
   
 
-  
-   
-  
-  
-  
-  
-
-  
-   
   
   
   
@@ -274,11 +263,8 @@ Summary:
 
 
 
-  <a href="#inhfields">Inherited Fields</a>
-  
 
-
-  &#124; <a href="#pubctors">Ctors</a>
+  <a href="#pubctors">Ctors</a>
   
 
 
@@ -286,9 +272,6 @@ Summary:
   &#124; <a href="#pubmethods">Methods</a>
   
 
-
-  &#124; <a href="#promethods">Protected Methods</a>
-  
 
 
   &#124; <a href="#inhmethods">Inherited Methods</a>
@@ -315,16 +298,12 @@ Summary:
     final 
     
     class
-<h1>PlexusLifecycleManager</h1>
+<h1>ComponentImpl</h1>
 
 
 
   
-  
-  
-
-  
-    extends BeanScheduler<br/>
+    extends <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a><br/>
   
   
   
@@ -333,9 +312,7 @@ Summary:
   
       implements 
       
-        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a> 
-      
-        BeanManager 
+        Component 
       
   
   
@@ -351,7 +328,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="3" class="jd-inheritance-class-cell"><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
+        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">java.lang.Object</a></td>
     </tr>
     
 
@@ -359,17 +336,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell">org.eclipse.sisu.bean.BeanScheduler</td>
-    </tr>
-    
-
-    <tr>
-        
-            <td class="jd-inheritance-space">&nbsp;</td>
-        
-            <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
-         	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.plexus.PlexusLifecycleManager</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.plexus.ComponentImpl</td>
     </tr>
     
 
@@ -385,7 +352,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>BeanManager that manages Plexus components requiring lifecycle management.
+<p>Partial runtime implementation of Plexus @Component annotation, supporting the most common attributes.
 </p>
 
 
@@ -434,55 +401,6 @@ Summary:
 
 
 
-<!-- =========== FIELD SUMMARY =========== -->
-<table id="inhfields" class="jd-sumtable"><tr><th>
-  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
-  <div style="clear:left;">Inherited Fields</div></th></tr>
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.eclipse.sisu.bean.BeanScheduler" class="jd-expando-trigger closed"
-          ><img id="inherited-fields-org.eclipse.sisu.bean.BeanScheduler-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>From class
-org.eclipse.sisu.bean.BeanScheduler
-<div id="inherited-fields-org.eclipse.sisu.bean.BeanScheduler">
-  <div id="inherited-fields-org.eclipse.sisu.bean.BeanScheduler-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-fields-org.eclipse.sisu.bean.BeanScheduler-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          public
-          static
-          final
-          <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a></nobr></td>
-          <td class="jd-linkcol">MODULE</td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-
-
-
-
-
-</table>
-
-
 
 
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -501,7 +419,7 @@ org.eclipse.sisu.bean.BeanScheduler
             </nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#PlexusLifecycleManager(javax.inject.Provider<org.codehaus.plexus.context.Context>, javax.inject.Provider<org.codehaus.plexus.logging.LoggerManager>, javax.inject.Provider<?>, org.eclipse.sisu.bean.BeanManager)">PlexusLifecycleManager</a></span>(Provider&lt;Context&gt; plexusContextProvider, Provider&lt;LoggerManager&gt; plexusLoggerManagerProvider, Provider&lt;?&gt; slf4jLoggerFactoryProvider, BeanManager delegate)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#ComponentImpl(java.lang.Class<?>, java.lang.String, java.lang.String, java.lang.String)">ComponentImpl</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; role, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> hint, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> instantiationStrategy, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> description)</nobr>
         
   </td></tr>
 
@@ -527,10 +445,10 @@ org.eclipse.sisu.bean.BeanScheduler
             
             
             
-            void</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#configure(com.google.inject.Binder)">configure</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#alias()">alias</a></span>()</nobr>
         
   </td></tr>
 
@@ -543,10 +461,10 @@ org.eclipse.sisu.bean.BeanScheduler
             
             
             
-            boolean</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#manage(java.lang.Object)">manage</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#annotationType()">annotationType</a></span>()</nobr>
         
   </td></tr>
 
@@ -559,10 +477,42 @@ org.eclipse.sisu.bean.BeanScheduler
             
             
             
-            PropertyBinding</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#manage(org.eclipse.sisu.bean.BeanProperty)">manage</a></span>(BeanProperty property)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#composer()">composer</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#configurator()">configurator</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#description()">description</a></span>()</nobr>
         
   </td></tr>
 
@@ -578,7 +528,71 @@ org.eclipse.sisu.bean.BeanScheduler
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#manage(java.lang.Class<?>)">manage</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; clazz)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#equals(java.lang.Object)">equals</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> rhs)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#factory()">factory</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            int</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#hashCode()">hashCode</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#hint()">hint</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#instantiationStrategy()">instantiationStrategy</a></span>()</nobr>
         
   </td></tr>
 
@@ -594,7 +608,7 @@ org.eclipse.sisu.bean.BeanScheduler
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#unmanage(java.lang.Object)">unmanage</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#isolatedRealm()">isolatedRealm</a></span>()</nobr>
         
   </td></tr>
 
@@ -607,10 +621,90 @@ org.eclipse.sisu.bean.BeanScheduler
             
             
             
-            boolean</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#unmanage()">unmanage</a></span>()</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#lifecycleHandler()">lifecycleHandler</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#profile()">profile</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#role()">role</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#toString()">toString</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#type()">type</a></span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/ComponentImpl.html#version()">version</a></span>()</nobr>
         
   </td></tr>
 
@@ -619,31 +713,6 @@ org.eclipse.sisu.bean.BeanScheduler
 </table>
 
 
-
-
-<!-- ========== METHOD SUMMARY =========== -->
-<table id="promethods" class="jd-sumtable"><tr><th colspan="12">Protected Methods</th></tr>
-
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/plexus/PlexusLifecycleManager.html#activate(java.lang.Object)">activate</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</nobr>
-        
-  </td></tr>
-
-
-
-</table>
 
 
 
@@ -653,64 +722,6 @@ org.eclipse.sisu.bean.BeanScheduler
 <table id="inhmethods" class="jd-sumtable"><tr><th>
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.bean.BeanScheduler" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.eclipse.sisu.bean.BeanScheduler-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From class
-
-  org.eclipse.sisu.bean.BeanScheduler
-
-<div id="inherited-methods-org.eclipse.sisu.bean.BeanScheduler">
-  <div id="inherited-methods-org.eclipse.sisu.bean.BeanScheduler-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.eclipse.sisu.bean.BeanScheduler-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">activate</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            final
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">schedule</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
 
 
 <tr class="api apilevel-" >
@@ -917,19 +928,19 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-com.google.inject.Module" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-com.google.inject.Module-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.annotation.Annotation" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-java.lang.annotation.Annotation-trigger"
           src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">com.google.inject.Module</a>
+  <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">java.lang.annotation.Annotation</a>
 
-<div id="inherited-methods-com.google.inject.Module">
-  <div id="inherited-methods-com.google.inject.Module-list"
+<div id="inherited-methods-java.lang.annotation.Annotation">
+  <div id="inherited-methods-java.lang.annotation.Annotation-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-com.google.inject.Module-summary" style="display: none;">
+  <div id="inherited-methods-java.lang.annotation.Annotation-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
@@ -942,84 +953,10 @@ From interface
             
             
             
-            void</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>&gt;</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">configure</span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.bean.BeanManager" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.eclipse.sisu.bean.BeanManager-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  org.eclipse.sisu.bean.BeanManager
-
-<div id="inherited-methods-org.eclipse.sisu.bean.BeanManager">
-  <div id="inherited-methods-org.eclipse.sisu.bean.BeanManager-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.eclipse.sisu.bean.BeanManager-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">manage</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            PropertyBinding</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">manage</span>(BeanProperty&lt;?&gt; arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            boolean</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">manage</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; arg0)</nobr>
+        <span class="sympad">annotationType</span>()</nobr>
         
   </td></tr>
 
@@ -1035,7 +972,7 @@ From interface
             boolean</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">unmanage</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
         
   </td></tr>
 
@@ -1048,10 +985,26 @@ From interface
             
             
             
-            boolean</nobr>
+            int</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">unmanage</span>()</nobr>
+        <span class="sympad">hashCode</span>()</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            abstract
+            
+            
+            
+            
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad">toString</span>()</nobr>
         
   </td></tr>
 
@@ -1060,6 +1013,8 @@ From interface
   </div>
 </div>
 </td></tr>
+
+
 
 
 </table>
@@ -1096,7 +1051,7 @@ From interface
 
 
 
-<A NAME="PlexusLifecycleManager(javax.inject.Provider<org.codehaus.plexus.context.Context>, javax.inject.Provider<org.codehaus.plexus.logging.LoggerManager>, javax.inject.Provider<?>, org.eclipse.sisu.bean.BeanManager)"></A>
+<A NAME="ComponentImpl(java.lang.Class<?>, java.lang.String, java.lang.String, java.lang.String)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1108,8 +1063,8 @@ From interface
          
         
       </span>
-      <span class="sympad">PlexusLifecycleManager</span>
-      <span class="normal">(Provider&lt;Context&gt; plexusContextProvider, Provider&lt;LoggerManager&gt; plexusLoggerManagerProvider, Provider&lt;?&gt; slf4jLoggerFactoryProvider, BeanManager delegate)</span>
+      <span class="sympad">ComponentImpl</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; role, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> hint, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> instantiationStrategy, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> description)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1142,7 +1097,7 @@ From interface
 
 
 
-<A NAME="configure(com.google.inject.Binder)"></A>
+<A NAME="alias()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1152,10 +1107,10 @@ From interface
          
          
          
-        void
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">configure</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</span>
+      <span class="sympad">alias</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1173,7 +1128,131 @@ From interface
 </div>
 
 
-<A NAME="manage(java.lang.Object)"></A>
+<A NAME="annotationType()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>&gt;
+      </span>
+      <span class="sympad">annotationType</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="composer()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">composer</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="configurator()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">configurator</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="description()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">description</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="equals(java.lang.Object)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1185,8 +1264,8 @@ From interface
          
         boolean
       </span>
-      <span class="sympad">manage</span>
-      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</span>
+      <span class="sympad">equals</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> rhs)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1204,7 +1283,7 @@ From interface
 </div>
 
 
-<A NAME="manage(org.eclipse.sisu.bean.BeanProperty)"></A>
+<A NAME="factory()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1214,10 +1293,10 @@ From interface
          
          
          
-        PropertyBinding
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">manage</span>
-      <span class="normal">(BeanProperty property)</span>
+      <span class="sympad">factory</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1235,7 +1314,100 @@ From interface
 </div>
 
 
-<A NAME="manage(java.lang.Class<?>)"></A>
+<A NAME="hashCode()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        int
+      </span>
+      <span class="sympad">hashCode</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="hint()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">hint</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="instantiationStrategy()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">instantiationStrategy</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="isolatedRealm()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1247,8 +1419,8 @@ From interface
          
         boolean
       </span>
-      <span class="sympad">manage</span>
-      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; clazz)</span>
+      <span class="sympad">isolatedRealm</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1266,7 +1438,7 @@ From interface
 </div>
 
 
-<A NAME="unmanage(java.lang.Object)"></A>
+<A NAME="lifecycleHandler()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1276,10 +1448,10 @@ From interface
          
          
          
-        boolean
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">unmanage</span>
-      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</span>
+      <span class="sympad">lifecycleHandler</span>
+      <span class="normal">()</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1297,7 +1469,7 @@ From interface
 </div>
 
 
-<A NAME="unmanage()"></A>
+<A NAME="profile()"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1307,9 +1479,133 @@ From interface
          
          
          
-        boolean
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
       </span>
-      <span class="sympad">unmanage</span>
+      <span class="sympad">profile</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="role()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;
+      </span>
+      <span class="sympad">role</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="toString()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">toString</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="type()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">type</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
+<A NAME="version()"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
+      </span>
+      <span class="sympad">version</span>
       <span class="normal">()</span>
     </h4>
       <div class="api-level">
@@ -1332,42 +1628,6 @@ From interface
 
 
 <!-- ========= METHOD DETAIL ======== -->
-
-<h2>Protected Methods</h2>
-
-
-
-<A NAME="activate(java.lang.Object)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        protected 
-         
-         
-         
-         
-        void
-      </span>
-      <span class="sympad">activate</span>
-      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> bean)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
 
 
 

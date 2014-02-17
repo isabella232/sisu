@@ -55,27 +55,27 @@
 
   <meta name="description" content="Javadoc API documentation for org.eclipse.sisu.inject." />
 
-<!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
+<!-- <link rel="shortcut icon" type="image/x-icon" href="../../../favicon.ico" /> -->
 <title>
 
-  IgnoreSetters
+  Priority
 
 
 | org.eclipse.sisu.inject
 
 </title>
-<link href="../../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
-<link href="../../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
-<script src="../../../../../assets/search_autocomplete.js" type="text/javascript"></script>
-<script src="../../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
-<script src="../../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
-<script src="../../../../../assets/prettify.js" type="text/javascript"></script>
+<link href="../../../../assets/doclava-developer-docs.css" rel="stylesheet" type="text/css" />
+<link href="../../../../assets/customizations.css" rel="stylesheet" type="text/css" />
+<script src="../../../../assets/search_autocomplete.js" type="text/javascript"></script>
+<script src="../../../../assets/jquery-resizable.min.js" type="text/javascript"></script>
+<script src="../../../../assets/doclava-developer-docs.js" type="text/javascript"></script>
+<script src="../../../../assets/prettify.js" type="text/javascript"></script>
 <script type="text/javascript">
-  setToRoot("../../../../", "../../../../../assets/");
+  setToRoot("../../../", "../../../../assets/");
 </script>
-<script src="../../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
-<script src="../../../../../assets/navtree_data.js" type="text/javascript"></script>
-<script src="../../../../../assets/customizations.js" type="text/javascript"></script>
+<script src="../../../../assets/doclava-developer-reference.js" type="text/javascript"></script>
+<script src="../../../../assets/navtree_data.js" type="text/javascript"></script>
+<script src="../../../../assets/customizations.js" type="text/javascript"></script>
 <noscript>
   <style type="text/css">
     html,body{overflow:auto;}
@@ -110,8 +110,8 @@
                       value="search developer docs"
                       onFocus="search_focus_changed(this, true)"
                       onBlur="search_focus_changed(this, false)"
-                      onkeydown="return search_changed(event, true, '../../../../')"
-                      onkeyup="return search_changed(event, false, '../../../../')" />
+                      onkeydown="return search_changed(event, true, '../../../')"
+                      onkeyup="return search_changed(event, false, '../../../')" />
                   <div id="search_filtered_div" class="no-display">
                       <table id="search_filtered" cellspacing=0>
                       </table>
@@ -140,25 +140,25 @@
           <div id="resize-packages-nav">
             <div id="packages-nav">
               <div id="index-links">
-                <a href="../../../../packages.html"  >Package Index</a> | 
-                <a href="../../../../classes.html" >Class Index</a>
+                <a href="../../../packages.html"  >Package Index</a> | 
+                <a href="../../../classes.html" >Class Index</a>
               </div>
               <ul>
                 
-    <li class="api apilevel-">
-  <a href="../../../../org/eclipse/sisu/package-summary.html">org.eclipse.sisu</a></li>
     <li class="selected api apilevel-">
-  <a href="../../../../org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></li>
+  <a href="../../../org/eclipse/sisu/package-summary.html">org.eclipse.sisu</a></li>
     <li class="api apilevel-">
-  <a href="../../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
+  <a href="../../../org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></li>
     <li class="api apilevel-">
-  <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
+  <a href="../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
     <li class="api apilevel-">
-  <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
+  <a href="../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
-  <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
+  <a href="../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
-  <a href="../../../../org/sonatype/inject/package-summary.html">org.sonatype.inject</a></li>
+  <a href="../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
+    <li class="api apilevel-">
+  <a href="../../../org/sonatype/inject/package-summary.html">org.sonatype.inject</a></li>
               </ul><br/>
             </div> <!-- end packages -->
           </div> <!-- end resize-packages -->
@@ -167,36 +167,22 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanBinder.html">BeanBinder</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanProperty.html">BeanProperty</a>&lt;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;</li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;</li>
       </ul>
     </li>
               
-    <li><h2>Classes</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanListener.html">BeanListener</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanProperties.html">BeanProperties</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html">BeanScheduler</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/DeclaredMembers.html">DeclaredMembers</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/LifecycleModule.html">LifecycleModule</a></li>
-      </ul>
-    </li>
               
     <li><h2>Annotations</h2>
       <ul>
-          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/bean/IgnoreSetters.html">IgnoreSetters</a></li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Description.html">Description</a></li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/EagerSingleton.html">EagerSingleton</a></li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Nullable.html">Nullable</a></li>
+          <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Parameters.html">Parameters</a></li>
+          <li class="selected api apilevel-"><a href="../../../org/eclipse/sisu/Priority.html">Priority</a></li>
       </ul>
     </li>
               
-    <li><h2>Enums</h2>
-      <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/DeclaredMembers.View.html">DeclaredMembers.View</a></li>
-      </ul>
-    </li>
               
               
             </ul><br/>
@@ -204,8 +190,8 @@
         </div><!-- end nav-panels -->
         <div id="nav-tree" style="display:none">
           <div id="index-links">
-            <a href="../../../../packages.html"  >Package Index</a> | 
-            <a href="../../../../classes.html" >Class Index</a>
+            <a href="../../../packages.html"  >Package Index</a> | 
+            <a href="../../../classes.html" >Class Index</a>
           </div>
         </div><!-- end nav-tree -->
       </div><!-- end swapper -->
@@ -215,7 +201,7 @@
         <!-- $("<a href='#' id='nav-swap' onclick='swapNav();return false;' style='font-size:10px;line-height:9px;margin-left:1em;text-decoration:none;'><span id='tree-link'>Use Tree Navigation</span><span id='panel-link' style='display:none'>Use Panel Navigation</span></a>").appendTo("#side-nav"); -->
         chooseDefaultNav();
         if ($("#nav-tree").is(':visible')) {
-          init_default_navtree("../../../../");
+          init_default_navtree("../../../");
         } else {
           addLoadEvent(function() {
             scrollIntoView("packages-nav");
@@ -285,7 +271,7 @@ Summary:
      
     abstract
     @interface
-<h1>IgnoreSetters</h1>
+<h1>Priority</h1>
 
 
 
@@ -309,7 +295,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.bean.IgnoreSetters</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.Priority</td>
     </tr>
     
 
@@ -325,7 +311,17 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Annotates class hierarchies that don't want setter injection.
+<p>Defines the priority ordering of a bean:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Priority( 999 )
+ public class ImportantComponent
+ {
+     //
+ }
+ </pre>
 </p>
 
 
@@ -395,7 +391,7 @@ Summary:
 <td colspan="12">
   <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-java.lang.annotation.Annotation" class="jd-expando-trigger closed"
           ><img id="inherited-methods-java.lang.annotation.Annotation-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
+          src="../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 

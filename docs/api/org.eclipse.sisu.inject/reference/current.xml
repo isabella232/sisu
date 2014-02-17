@@ -174,6 +174,17 @@
 <implements name="java.lang.annotation.Annotation">
 </implements>
 </class>
+<class name="Priority"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
 </package>
 <package name="org.eclipse.sisu.bean"
 >
@@ -236,6 +247,77 @@
 </parameter>
 </method>
 </class>
+<interface name="BeanManager"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="manage"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clazz" type="java.lang.Class&lt;?&gt;">
+</parameter>
+</method>
+<method name="manage"
+ return="org.eclipse.sisu.bean.PropertyBinding"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="property" type="org.eclipse.sisu.bean.BeanProperty&lt;?&gt;">
+</parameter>
+</method>
+<method name="manage"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<method name="unmanage"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<method name="unmanage"
+ return="boolean"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</interface>
 <class name="BeanProperties"
  extends="java.lang.Object"
  abstract="false"
@@ -326,6 +408,59 @@
 </parameter>
 </method>
 </interface>
+<class name="BeanScheduler"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<constructor name="BeanScheduler"
+ type="org.eclipse.sisu.bean.BeanScheduler"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="activate"
+ return="void"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<method name="schedule"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<field name="MODULE"
+ type="com.google.inject.Module"
+ transient="false"
+ volatile="false"
+ static="true"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</field>
+</class>
 <class name="DeclaredMembers"
  extends="java.lang.Object"
  abstract="false"
@@ -403,6 +538,133 @@
 >
 <implements name="java.lang.annotation.Annotation">
 </implements>
+</class>
+<class name="LifecycleManager"
+ extends="org.eclipse.sisu.bean.BeanScheduler"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.eclipse.sisu.bean.BeanManager">
+</implements>
+<constructor name="LifecycleManager"
+ type="org.eclipse.sisu.bean.LifecycleManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="activate"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<method name="manage"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="clazz" type="java.lang.Class&lt;?&gt;">
+</parameter>
+</method>
+<method name="manage"
+ return="org.eclipse.sisu.bean.PropertyBinding"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="property" type="org.eclipse.sisu.bean.BeanProperty&lt;?&gt;">
+</parameter>
+</method>
+<method name="manage"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<method name="unmanage"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bean" type="java.lang.Object">
+</parameter>
+</method>
+<method name="unmanage"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+</class>
+<class name="LifecycleModule"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="com.google.inject.Module">
+</implements>
+<constructor name="LifecycleModule"
+ type="org.eclipse.sisu.bean.LifecycleModule"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</constructor>
+<method name="configure"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="binder" type="com.google.inject.Binder">
+</parameter>
+</method>
 </class>
 <interface name="PropertyBinder"
  abstract="true"
@@ -894,6 +1156,16 @@
 <parameter name="function" type="org.eclipse.sisu.inject.RankingFunction">
 </parameter>
 </constructor>
+<constructor name="InjectorPublisher"
+ type="org.eclipse.sisu.inject.InjectorPublisher"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="injector" type="com.google.inject.Injector">
+</parameter>
+</constructor>
 <method name="getInjector"
  return="com.google.inject.Injector"
  abstract="false"
@@ -978,6 +1250,19 @@
 </parameter>
 </method>
 <method name="adapt"
+ return="com.google.inject.Provider&lt;java.lang.Iterable&lt;org.sonatype.inject.BeanEntry&lt;Q, T&gt;&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="delegate" type="com.google.inject.Provider&lt;java.lang.Iterable&lt;? extends org.eclipse.sisu.BeanEntry&lt;Q, T&gt;&gt;&gt;">
+</parameter>
+</method>
+<method name="adapt"
  return="org.eclipse.sisu.Mediator&lt;Q, T, W&gt;"
  abstract="false"
  native="false"
@@ -1001,19 +1286,6 @@
  visibility="public"
 >
 <parameter name="clazz" type="java.lang.Class&lt;T&gt;">
-</parameter>
-</method>
-<method name="beanEntriesProvider"
- return="com.google.inject.Provider&lt;java.lang.Iterable&lt;org.sonatype.inject.BeanEntry&lt;K, V&gt;&gt;&gt;"
- abstract="false"
- native="false"
- synchronized="false"
- static="true"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="key" type="com.google.inject.Key&lt;V&gt;">
 </parameter>
 </method>
 <method name="proxy"
@@ -1785,159 +2057,27 @@
 >
 </field>
 </class>
-<class name="BundleScanner"
- extends="org.osgi.util.tracker.BundleTracker"
- abstract="false"
+<interface name="BundlePlan"
+ abstract="true"
  static="false"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<constructor name="BundleScanner"
- type="org.eclipse.sisu.launch.BundleScanner"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="context" type="org.osgi.framework.BundleContext">
-</parameter>
-<parameter name="stateMask" type="int">
-</parameter>
-<parameter name="locator" type="org.eclipse.sisu.inject.MutableBeanLocator">
-</parameter>
-</constructor>
-<method name="addingBundle"
- return="java.lang.Object"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="bundle" type="org.osgi.framework.Bundle">
-</parameter>
-<parameter name="event" type="org.osgi.framework.BundleEvent">
-</parameter>
-</method>
-<method name="createInjector"
- return="com.google.inject.Injector"
- abstract="false"
+<method name="prepare"
+ return="org.eclipse.sisu.inject.BindingPublisher"
+ abstract="true"
  native="false"
  synchronized="false"
  static="false"
  final="false"
  deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="bundle" type="org.osgi.framework.Bundle">
-</parameter>
-</method>
-<method name="destroyInjector"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="bundle" type="org.osgi.framework.Bundle">
-</parameter>
-<parameter name="injector" type="com.google.inject.Injector">
-</parameter>
-</method>
-<method name="evictBundle"
- return="boolean"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="bundle" type="org.osgi.framework.Bundle">
-</parameter>
-<parameter name="injector" type="com.google.inject.Injector">
-</parameter>
-</method>
-<method name="injectBundle"
- return="boolean"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="protected"
->
-<parameter name="bundle" type="org.osgi.framework.Bundle">
-</parameter>
-</method>
-<method name="open"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="purgeBundles"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="public"
->
-</method>
-<method name="removedBundle"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="true"
- deprecated="not deprecated"
  visibility="public"
 >
 <parameter name="bundle" type="org.osgi.framework.Bundle">
 </parameter>
-<parameter name="event" type="org.osgi.framework.BundleEvent">
-</parameter>
-<parameter name="object" type="java.lang.Object">
-</parameter>
 </method>
-<field name="locator"
- type="org.eclipse.sisu.inject.MutableBeanLocator"
- transient="false"
- volatile="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-<field name="stateMask"
- type="int"
- transient="false"
- volatile="false"
- static="false"
- final="true"
- deprecated="not deprecated"
- visibility="protected"
->
-</field>
-</class>
+</interface>
 <class name="InjectedTest"
  extends="java.lang.Object"
  abstract="true"
@@ -2340,6 +2480,89 @@
 </parameter>
 </method>
 </class>
+<class name="SisuBundlePlan"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.eclipse.sisu.launch.BundlePlan">
+</implements>
+<constructor name="SisuBundlePlan"
+ type="org.eclipse.sisu.launch.SisuBundlePlan"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="locator" type="org.eclipse.sisu.inject.MutableBeanLocator">
+</parameter>
+</constructor>
+<method name="appliesTo"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+</method>
+<method name="compose"
+ return="com.google.inject.Module"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+</method>
+<method name="inject"
+ return="com.google.inject.Injector"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="module" type="com.google.inject.Module">
+</parameter>
+</method>
+<method name="prepare"
+ return="org.eclipse.sisu.inject.BindingPublisher"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+</method>
+<field name="locator"
+ type="org.eclipse.sisu.inject.MutableBeanLocator"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+</class>
 <class name="SisuExtender"
  extends="java.lang.Object"
  abstract="false"
@@ -2380,8 +2603,8 @@
 <parameter name="context" type="org.osgi.framework.BundleContext">
 </parameter>
 </method>
-<method name="createScanner"
- return="org.eclipse.sisu.launch.BundleScanner"
+<method name="createTracker"
+ return="org.eclipse.sisu.launch.SisuTracker"
  abstract="false"
  native="false"
  synchronized="false"
@@ -2401,7 +2624,7 @@
  static="false"
  final="true"
  deprecated="not deprecated"
- visibility="public"
+ visibility="protected"
 >
 <parameter name="context" type="org.osgi.framework.BundleContext">
 </parameter>
@@ -2432,6 +2655,16 @@
 <parameter name="context" type="org.osgi.framework.BundleContext">
 </parameter>
 </method>
+<field name="tracker"
+ type="org.eclipse.sisu.launch.SisuTracker"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
 </class>
 <class name="SisuExtensions"
  extends="java.lang.Object"
@@ -2445,6 +2678,36 @@
 </implements>
 <implements name="org.eclipse.sisu.wire.WireModule.Strategy">
 </implements>
+<method name="create"
+ return="java.util.List&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="spi" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="create"
+ return="java.util.List&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="spi" type="java.lang.Class&lt;T&gt;">
+</parameter>
+<parameter name="contextType" type="java.lang.Class&lt;C&gt;">
+</parameter>
+<parameter name="context" type="C">
+</parameter>
+</method>
 <method name="global"
  return="org.eclipse.sisu.launch.SisuExtensions"
  abstract="false"
@@ -2483,9 +2746,22 @@
 >
 <parameter name="binder" type="com.google.inject.Binder">
 </parameter>
-<parameter name="contextType" type="java.lang.Class&lt;T&gt;">
+<parameter name="contextType" type="java.lang.Class&lt;C&gt;">
 </parameter>
-<parameter name="context" type="T">
+<parameter name="context" type="C">
+</parameter>
+</method>
+<method name="load"
+ return="java.util.List&lt;java.lang.Class&lt;? extends T&gt;&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="spi" type="java.lang.Class&lt;T&gt;">
 </parameter>
 </method>
 <method name="local"
@@ -2527,6 +2803,152 @@
 <parameter name="binder" type="com.google.inject.Binder">
 </parameter>
 </method>
+</class>
+<class name="SisuTracker"
+ extends="org.osgi.util.tracker.BundleTracker"
+ abstract="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.eclipse.sisu.launch.BundlePlan">
+</implements>
+<constructor name="SisuTracker"
+ type="org.eclipse.sisu.launch.SisuTracker"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="org.osgi.framework.BundleContext">
+</parameter>
+<parameter name="stateMask" type="int">
+</parameter>
+<parameter name="locator" type="org.eclipse.sisu.inject.MutableBeanLocator">
+</parameter>
+</constructor>
+<method name="addingBundle"
+ return="java.lang.Object"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+<parameter name="event" type="org.osgi.framework.BundleEvent">
+</parameter>
+</method>
+<method name="discoverPlans"
+ return="java.util.List&lt;org.eclipse.sisu.launch.BundlePlan&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</method>
+<method name="evictBundle"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+</method>
+<method name="open"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="prepare"
+ return="org.eclipse.sisu.inject.BindingPublisher"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+</method>
+<method name="purgeBundles"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="removedBundle"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="bundle" type="org.osgi.framework.Bundle">
+</parameter>
+<parameter name="event" type="org.osgi.framework.BundleEvent">
+</parameter>
+<parameter name="object" type="java.lang.Object">
+</parameter>
+</method>
+<field name="locator"
+ type="org.eclipse.sisu.inject.MutableBeanLocator"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="plans"
+ type="java.util.List"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
+<field name="stateMask"
+ type="int"
+ transient="false"
+ volatile="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="protected"
+>
+</field>
 </class>
 </package>
 <package name="org.eclipse.sisu.space"

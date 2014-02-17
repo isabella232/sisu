@@ -212,12 +212,19 @@ Sisu is a modular <a href="http://atinject.googlecode.com/svn/trunk/javadoc/java
 Sisu uses <a href="http://code.google.com/p/google-guice/">Google-Guice</a> to perform dependency injection and provide the core JSR330 support, but removes the need to write explicit bindings in Guice modules:
 <p><pre>
 Guice.createInjector(
-  new <code><a href="./org/eclipse/sisu/wire/WireModule.html">WireModule</a></code>(                       // auto-wires unresolved dependencies
-    new <code><a href="./org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code>(                     // scans and binds @Named components
-      new <code><a href="./org/eclipse/sisu/space/URLClassSpace.html">URLClassSpace</a></code>( classloader )    // abstracts class/resource finding
+  new <code><a href="./org/eclipse/sisu/wire/package-summary.html">WireModule</a></code>(                       // auto-wires unresolved dependencies
+    new <code><a href="./org/eclipse/sisu/space/package-summary.html">SpaceModule</a></code>(                     // scans and binds @Named components
+      new <code><a href="./org/eclipse/sisu/space/package-summary.html">URLClassSpace</a></code>( classloader )    // abstracts class/resource finding
 ) ) );
 </pre>
-Unresolved dependencies are wired up through the <code><a href="./org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code> which provides a dynamic lookup service across one or more injectors or <code><a href="./org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s.
+In the example above the <code>SpaceModule</code> scans the classpath using the <code>ClassSpace</code> abstraction. Any classes annotated with a <code>@Qualifier</code> annotation like <code>@Named</code>
+will be bound as components, making them visible to the <code><a href="./org/eclipse/sisu/inject/package-summary.html">BeanLocator</a></code> and surrounding <code>WireModule</code> (constructed around the set of modules making up
+the application; in this example there is only one, the <code>SpaceModule</code>).
+<p><p>
+The <code>WireModule</code> uses the Guice introspection SPI to analyze all bindings in the application and apply various rules to finish wiring the configuration. Unsatisfied <code>@Inject</code>
+requirements are populated using the <code>BeanLocator</code> which provides a lookup service across all injectors it knows about, allowing for plugin-style solutions. As well as individual
+components, the <code>WireModule</code> can satisfy requests for component collections like Lists and Maps (using <code>@Named</code> values as keys). It also cleans up duplicate and overridden
+bindings, and merges <code><a href="./org/eclipse/sisu/Parameters.html">Parameters</a></code> bindings.
 <h2>Packages</h2>
 </div>
 

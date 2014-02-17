@@ -292,30 +292,42 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></td>
+            <td class="jd-descrcol" width="100%">Service that manages the lifecycle of beans.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/BeanProperties.html">BeanProperties</a></td>
             <td class="jd-descrcol" width="100%">Iterable that iterates over potential bean properties in a class hierarchy.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/BeanProperty.html">BeanProperty</a>&lt;T&gt;</td>
             <td class="jd-descrcol" width="100%">Represents a bean property such as a field or setter method.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/BeanScanning.html">BeanScanning</a></td>
             <td class="jd-descrcol" width="100%">Common techniques for discovering bean implementations.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/sonatype/inject/BeanScanning.html">BeanScanning</a></td>
             <td class="jd-descrcol" width="100%">
       <em>
   This enum is deprecated.
       Replaced by <code><a href="./org/eclipse/sisu/space/BeanScanning.html">org.eclipse.sisu.space.BeanScanning</a></code>
 </em>&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/BeanScheduler.html">BeanScheduler</a></td>
+            <td class="jd-descrcol" width="100%">Schedules safe activation of beans even when cyclic dependencies are involved.&nbsp;</td>
         </tr>
     
     
@@ -344,8 +356,8 @@
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></td>
-            <td class="jd-descrcol" width="100%">OSGi BundleTracker that tracks JSR330 bundles and uses <code><a href="./org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></code> to bind components.&nbsp;</td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></td>
+            <td class="jd-descrcol" width="100%">Something that can prepare <code><a href="./org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s for component bundles.&nbsp;</td>
         </tr>
     
     
@@ -587,6 +599,19 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a></td>
+            <td class="jd-descrcol" width="100%"><code><a href="./org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></code> that manages JSR250 beans and schedules lifecycle events.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/LifecycleModule.html">LifecycleModule</a></td>
+            <td class="jd-descrcol" width="100%">Guice Module that provides JSR250 lifecycle management by following PostConstruct and
+ PreDestroy annotations.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/LoadedClass.html">LoadedClass</a>&lt;T&gt;</td>
             <td class="jd-descrcol" width="100%">Pseudo <code><a href="./org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a></code> backed by an already loaded Class.&nbsp;</td>
         </tr>
@@ -714,7 +739,7 @@
     
         <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/Parameters.html">Parameters</a></td>
-            <td class="jd-descrcol" width="100%">Qualifier of parameters passed into Sisu:<br>
+            <td class="jd-descrcol" width="100%">Qualifier of application parameters:<br>
  <br>
  
  <pre>
@@ -726,7 +751,9 @@
  &#064;Parameters
  Map&lt;?, ?&gt; properties;
  </pre>
-&nbsp;</td>
+ 
+ This qualifier marks collections of values that act as overall application parameters, like the <code>String[]</code>
+ argument array passed into the main method or the <code>Map</code> of system properties.&nbsp;</td>
         </tr>
     
     
@@ -741,12 +768,29 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/Priority.html">Priority</a></td>
+            <td class="jd-descrcol" width="100%">Defines the priority ordering of a bean:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Priority( 999 )
+ public class ImportantComponent
+ {
+     //
+ }
+ </pre>
+&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></td>
             <td class="jd-descrcol" width="100%">Provides custom <code><a href="./org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></code>s for bean properties such as fields or setter methods.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></td>
             <td class="jd-descrcol" width="100%">Represents a bean property that has been bound by a <code><a href="./org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></code>.&nbsp;</td>
         </tr>
@@ -798,26 +842,38 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></td>
-            <td class="jd-descrcol" width="100%">Basic OSGi extender for Sisu that watches for JSR330 bundles and publishes them to the <code><a href="./org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></td>
+            <td class="jd-descrcol" width="100%"><code><a href="./org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code> that prepares <code><a href="./org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s for JSR330 bundles.&nbsp;</td>
         </tr>
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></td>
-            <td class="jd-descrcol" width="100%">SPI mechanism for discovering Module and Strategy extensions.&nbsp;</td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></td>
+            <td class="jd-descrcol" width="100%">OSGi extender that uses Sisu and Guice to wire up applications from one or more component bundles.&nbsp;</td>
         </tr>
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></td>
+            <td class="jd-descrcol" width="100%">SPI mechanism for discovering Module and <code>Strategy</code> extensions.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/SisuIndex.html">SisuIndex</a></td>
             <td class="jd-descrcol" width="100%">Command-line utility that generates a qualified class index for a space-separated list of JARs.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/SisuIndexAPT6.html">SisuIndexAPT6</a></td>
             <td class="jd-descrcol" width="100%">Java 6 Annotation Processor that generates a qualified class index for the current build.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></td>
+            <td class="jd-descrcol" width="100%">OSGi BundleTracker that tracks component bundles and uses <code><a href="./org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code>s to publish them.&nbsp;</td>
         </tr>
     
     

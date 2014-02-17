@@ -168,6 +168,7 @@
     <li><h2>Interfaces</h2>
       <ul>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanBinder.html">BeanBinder</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanProperty.html">BeanProperty</a>&lt;T&gt;</li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></li>
@@ -178,7 +179,10 @@
       <ul>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanListener.html">BeanListener</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanProperties.html">BeanProperties</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html">BeanScheduler</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/DeclaredMembers.html">DeclaredMembers</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/bean/LifecycleModule.html">LifecycleModule</a></li>
       </ul>
     </li>
               
@@ -282,14 +286,18 @@
               <td class="jd-descrcol" width="100%">Provides custom <code><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></code>s for beans that contain one or more properties.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></td>
+              <td class="jd-descrcol" width="100%">Service that manages the lifecycle of beans.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/BeanProperty.html">BeanProperty</a>&lt;T&gt;</td>
               <td class="jd-descrcol" width="100%">Represents a bean property such as a field or setter method.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></td>
               <td class="jd-descrcol" width="100%">Provides custom <code><a href="../../../../org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></code>s for bean properties such as fields or setter methods.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/PropertyBinding.html">PropertyBinding</a></td>
               <td class="jd-descrcol" width="100%">Represents a bean property that has been bound by a <code><a href="../../../../org/eclipse/sisu/bean/PropertyBinder.html">PropertyBinder</a></code>.&nbsp;</td>
           </tr>
@@ -312,8 +320,21 @@
               <td class="jd-descrcol" width="100%">Iterable that iterates over potential bean properties in a class hierarchy.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/BeanScheduler.html">BeanScheduler</a></td>
+              <td class="jd-descrcol" width="100%">Schedules safe activation of beans even when cyclic dependencies are involved.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/DeclaredMembers.html">DeclaredMembers</a></td>
               <td class="jd-descrcol" width="100%">Iterable that iterates over declared members of a class hierarchy.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/LifecycleManager.html">LifecycleManager</a></td>
+              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/bean/BeanManager.html">BeanManager</a></code> that manages JSR250 beans and schedules lifecycle events.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/bean/LifecycleModule.html">LifecycleModule</a></td>
+              <td class="jd-descrcol" width="100%">Guice Module that provides JSR250 lifecycle management by following PostConstruct and
+ PreDestroy annotations.&nbsp;</td>
           </tr>
   </table>
     </div>

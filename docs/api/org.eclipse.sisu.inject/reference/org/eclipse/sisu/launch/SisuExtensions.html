@@ -165,16 +165,22 @@
           <div id="classes-nav">
             <ul>
               
+    <li><h2>Interfaces</h2>
+      <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></li>
+      </ul>
+    </li>
               
     <li><h2>Classes</h2>
       <ul>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleScanner.html">BundleScanner</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
           <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></li>
       </ul>
     </li>
               
@@ -347,7 +353,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>SPI mechanism for discovering Module and Strategy extensions.
+<p>SPI mechanism for discovering Module and <code>Strategy</code> extensions.
 </p>
 
 
@@ -493,6 +499,44 @@ Summary:
             
             
             
+            
+            &lt;T&gt;
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#create(java.lang.Class<T>)">create</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)</nobr>
+        
+        <div class="jd-descrdiv">Creates instances of extensions listed under <code>META-INF/services/ fully-qualified-SPI-name</code> ;
+ implementations must have a public no-arg constructor.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            &lt;T,&nbsp;C&gt;
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#create(java.lang.Class<T>, java.lang.Class<C>, C)">create</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)</nobr>
+        
+        <div class="jd-descrdiv">Creates instances of extensions listed under <code>META-INF/services/ fully-qualified-SPI-name</code> ;
+ implementations must either have a public no-arg constructor or one with the declared context type.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
             static
             
             <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></nobr>
@@ -512,14 +556,14 @@ Summary:
             
             
             
-            &lt;T&gt;
+            &lt;C&gt;
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder, java.lang.Class<T>, T)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; contextType, T context)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder, java.lang.Class<C>, C)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)</nobr>
         
-        <div class="jd-descrdiv">Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must either have a public
- no-arg constructor or one with the context type.</div>
+        <div class="jd-descrdiv">Installs modules listed under <code>META-INF/services/com.google.inject.Module</code>; modules must either have a
+ public no-arg constructor or one with the declared context type.</div>
   
   </td></tr>
 
@@ -531,20 +575,38 @@ Summary:
             
             
             
-            &lt;T&gt;
+            
             void</nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
-        <div class="jd-descrdiv">Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must have a public no-arg
- constructor.</div>
+        <div class="jd-descrdiv">Installs modules listed under <code>META-INF/services/com.google.inject.Module</code>; modules must have a public
+ no-arg constructor.</div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            
+            &lt;T&gt;
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;T&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#load(java.lang.Class<T>)">load</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)</nobr>
+        
+        <div class="jd-descrdiv">Loads extension types listed under <code>META-INF/services/ fully-qualified-SPI-name</code>.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -562,7 +624,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -574,14 +636,14 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
-        <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> override the
- default scanning.</div>
+        <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> extensions
+ override the default scanning.</div>
   
   </td></tr>
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -593,8 +655,8 @@ Summary:
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
         
-        <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> override the default
- wiring.</div>
+        <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> extensions override
+ the default wiring.</div>
   
   </td></tr>
 
@@ -945,6 +1007,106 @@ From interface
 
 
 
+<A NAME="create(java.lang.Class<T>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;
+      </span>
+      <span class="sympad">create</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates instances of extensions listed under <code>META-INF/services/ fully-qualified-SPI-name</code> ;
+ implementations must have a public no-arg constructor.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>spi</td>
+          <td>The extension SPI</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>List of extensions
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="create(java.lang.Class<T>, java.lang.Class<C>, C)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;
+      </span>
+      <span class="sympad">create</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Creates instances of extensions listed under <code>META-INF/services/ fully-qualified-SPI-name</code> ;
+ implementations must either have a public no-arg constructor or one with the declared context type.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>spi</td>
+          <td>The extension SPI</td>
+        </tr>
+        <tr>
+          <th>contextType</td>
+          <td>Optional context type</td>
+        </tr>
+        <tr>
+          <th>context</td>
+          <td>Optional context instance</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>List of extensions
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 <A NAME="global(org.eclipse.sisu.space.ClassSpace)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -990,7 +1152,7 @@ From interface
 </div>
 
 
-<A NAME="install(com.google.inject.Binder, java.lang.Class<T>, T)"></A>
+<A NAME="install(com.google.inject.Binder, java.lang.Class<C>, C)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1003,7 +1165,7 @@ From interface
         void
       </span>
       <span class="sympad">install</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; contextType, T context)</span>
+      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1015,8 +1177,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must either have a public
- no-arg constructor or one with the context type.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Installs modules listed under <code>META-INF/services/com.google.inject.Module</code>; modules must either have a
+ public no-arg constructor or one with the declared context type.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1065,8 +1227,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Installs modules listed in <code>META-INF/services/com.google.inject.Module</code>; modules must have a public no-arg
- constructor.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Installs modules listed under <code>META-INF/services/com.google.inject.Module</code>; modules must have a public
+ no-arg constructor.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1076,6 +1238,51 @@ From interface
 </td>
         </tr>
       </table>
+  </div>
+
+    </div>
+</div>
+
+
+<A NAME="load(java.lang.Class<T>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+         
+         
+         
+        <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;T&gt;&gt;
+      </span>
+      <span class="sympad">load</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Loads extension types listed under <code>META-INF/services/ fully-qualified-SPI-name</code>.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>spi</td>
+          <td>The extension SPI</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>List of extension types
+</li></ul>
   </div>
 
     </div>
@@ -1152,8 +1359,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> override the
- default scanning.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> extensions
+ override the default scanning.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
@@ -1198,8 +1405,8 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> override the default
- wiring.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> extensions override
+ the default wiring.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">

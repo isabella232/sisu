@@ -417,6 +417,22 @@ Summary:
             
             
             static
+            &lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T&gt;
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Provider.html">Provider</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;<a href="../../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;Q,&nbsp;T&gt;&gt;&gt;</nobr>
+        </td>
+        <td class="jd-linkcol" width="100%"><nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Legacy.html#adapt(com.google.inject.Provider<java.lang.Iterable<? extends org.eclipse.sisu.BeanEntry<Q, T>>>)">adapt</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Provider.html">Provider</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;?&nbsp;extends&nbsp;<a href="../../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q,&nbsp;T&gt;&gt;&gt; delegate)</nobr>
+        
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol"><nobr>
+            
+            
+            
+            static
             &lt;Q&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;T,&nbsp;W&gt;
             <a href="../../../../org/eclipse/sisu/Mediator.html">Mediator</a>&lt;Q,&nbsp;T,&nbsp;W&gt;</nobr>
         </td>
@@ -427,7 +443,7 @@ Summary:
 
 
 	 
-    <tr class="alt-color api apilevel-" >
+    <tr class=" api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -443,7 +459,7 @@ Summary:
 
 
 	 
-    <tr class=" api apilevel-" >
+    <tr class="alt-color api apilevel-" >
         <td class="jd-typecol"><nobr>
             
             
@@ -454,22 +470,6 @@ Summary:
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
         <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Legacy.html#as(java.lang.Class<T>)">as</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; clazz)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            static
-            &lt;K&nbsp;extends&nbsp;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/annotation/Annotation.html">Annotation</a>,&nbsp;V&gt;
-            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Provider.html">Provider</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;<a href="../../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;K,&nbsp;V&gt;&gt;&gt;</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Legacy.html#beanEntriesProvider(com.google.inject.Key<V>)">beanEntriesProvider</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Key.html">Key</a>&lt;V&gt; key)</nobr>
         
   </td></tr>
 
@@ -779,6 +779,37 @@ From class
 </div>
 
 
+<A NAME="adapt(com.google.inject.Provider<java.lang.Iterable<? extends org.eclipse.sisu.BeanEntry<Q, T>>>)"></A>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+        static 
+         
+         
+         
+        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Provider.html">Provider</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;<a href="../../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;Q,&nbsp;T&gt;&gt;&gt;
+      </span>
+      <span class="sympad">adapt</span>
+      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Provider.html">Provider</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;?&nbsp;extends&nbsp;<a href="../../../../org/eclipse/sisu/BeanEntry.html">BeanEntry</a>&lt;Q,&nbsp;T&gt;&gt;&gt; delegate)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p></p></div>
+
+    </div>
+</div>
+
+
 <A NAME="adapt(org.sonatype.inject.Mediator<Q, T, W>)"></A>
 
 <div class="jd-details api apilevel-"> 
@@ -855,37 +886,6 @@ From class
       </span>
       <span class="sympad">as</span>
       <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; clazz)</span>
-    </h4>
-      <div class="api-level">
-        <div>
-
-</div>
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p></p></div>
-
-    </div>
-</div>
-
-
-<A NAME="beanEntriesProvider(com.google.inject.Key<V>)"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-         
-         
-         
-        <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Provider.html">Provider</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Iterable.html">Iterable</a>&lt;<a href="../../../../org/sonatype/inject/BeanEntry.html">BeanEntry</a>&lt;K,&nbsp;V&gt;&gt;&gt;
-      </span>
-      <span class="sympad">beanEntriesProvider</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Key.html">Key</a>&lt;V&gt; key)</span>
     </h4>
       <div class="api-level">
         <div>

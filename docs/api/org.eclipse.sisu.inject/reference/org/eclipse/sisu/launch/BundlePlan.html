@@ -58,7 +58,7 @@
 <!-- <link rel="shortcut icon" type="image/x-icon" href="../../../../favicon.ico" /> -->
 <title>
 
-  WireModule.Strategy
+  BundlePlan
 
 
 | org.eclipse.sisu.inject
@@ -151,11 +151,11 @@
   <a href="../../../../org/eclipse/sisu/bean/package-summary.html">org.eclipse.sisu.bean</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
-    <li class="api apilevel-">
+    <li class="selected api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
-    <li class="selected api apilevel-">
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/sonatype/inject/package-summary.html">org.sonatype.inject</a></li>
@@ -167,22 +167,20 @@
               
     <li><h2>Interfaces</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/ParameterKeys.html">ParameterKeys</a></li>
-          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></li>
+          <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></li>
       </ul>
     </li>
               
     <li><h2>Classes</h2>
       <ul>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/AbstractTypeConverter.html">AbstractTypeConverter</a>&lt;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/ChildWireModule.html">ChildWireModule</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/EntryListAdapter.html">EntryListAdapter</a>&lt;K,&nbsp;V&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/EntryMapAdapter.html">EntryMapAdapter</a>&lt;K,&nbsp;V&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/EntrySetAdapter.html">EntrySetAdapter</a>&lt;K,&nbsp;V&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/LocatorWiring.html">LocatorWiring</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/MergedModule.html">MergedModule</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/BundleModule.html">BundleModule</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTest.html">InjectedTest</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/InjectedTestCase.html">InjectedTestCase</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/Main.html">Main</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></li>
       </ul>
     </li>
               
@@ -238,14 +236,11 @@ Summary:
 
 
 
-  <a href="#lfields">Fields</a>
-  
 
 
 
 
-
-  &#124; <a href="#pubmethods">Methods</a>
+  <a href="#pubmethods">Methods</a>
   
 
 
@@ -268,11 +263,11 @@ Summary:
 
 <div id="jd-header">
     public
-    static 
+     
      
     
     interface
-<h1>WireModule.Strategy</h1>
+<h1>BundlePlan</h1>
 
 
 
@@ -291,7 +286,7 @@ Summary:
 
     <tr>
          	
-        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.wire.WireModule.Strategy</td>
+        <td colspan="1" class="jd-inheritance-class-cell">org.eclipse.sisu.launch.BundlePlan</td>
     </tr>
     
 
@@ -316,7 +311,9 @@ Summary:
               >
           
             
-              <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a>
+              <a href="../../../../org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a>,
+            
+              <a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a>
             
           
       </div>
@@ -325,8 +322,12 @@ Summary:
               >
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></td>
-              <td class="jd-descrcol" width="100%">SPI mechanism for discovering Module and <code>Strategy</code> extensions.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></td>
+              <td class="jd-descrcol" width="100%"><code><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code> that prepares <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s for JSR330 bundles.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></td>
+              <td class="jd-descrcol" width="100%">OSGi BundleTracker that tracks component bundles and uses <code><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code>s to publish them.&nbsp;</td>
           </tr>
   </table>
       </div>
@@ -338,7 +339,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Wiring strategy.
+<p>Something that can prepare <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s for component bundles.
 </p>
 
 
@@ -384,26 +385,6 @@ Summary:
 
 
 
-<!-- =========== FIELD SUMMARY =========== -->
-<table id="lfields" class="jd-sumtable"><tr><th colspan="12">Fields</th></tr>
-
-
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          public
-          static
-          final
-          <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></nobr></td>
-          <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#DEFAULT">DEFAULT</a></td>
-          <td class="jd-descrcol" width="100%">Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.</td>
-      </tr>
-      
-    
-
-</table>
-
-
 
 
 
@@ -426,12 +407,12 @@ Summary:
             
             
             
-            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></nobr>
+            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></nobr>
         </td>
         <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
         
-        <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
+        <div class="jd-descrdiv">Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</div>
   
   </td></tr>
 
@@ -468,44 +449,6 @@ Summary:
 <!-- Fields -->
 
 
-<!-- ========= FIELD DETAIL ======== -->
-<h2>Fields</h2>
-
-
-
-
-<A NAME="DEFAULT"></A>
-
-<div class="jd-details api apilevel-"> 
-    <h4 class="jd-details-title">
-      <span class="normal">
-        public 
-        static 
-        final 
-        <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a>
-      </span>
-        DEFAULT
-    </h4>
-      <div class="api-level">
-        
-
-
-        
-  
-
-      </div>
-    <div class="jd-details-descr">
-      
-  <div class="jd-tagdata jd-tagdescr"><p>Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.
-</p></div>
-
-    
-    </div>
-</div>
-
-
-
-
 <!-- Public ctors -->
 
 
@@ -522,7 +465,7 @@ Summary:
 
 
 
-<A NAME="wiring(com.google.inject.Binder)"></A>
+<A NAME="prepare(org.osgi.framework.Bundle)"></A>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -532,10 +475,10 @@ Summary:
          
         abstract 
          
-        <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a>
+        <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a>
       </span>
-      <span class="sympad">wiring</span>
-      <span class="normal">(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</span>
+      <span class="sympad">prepare</span>
+      <span class="normal">(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -547,19 +490,19 @@ Summary:
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a></code>.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>binder</td>
-          <td>The binder</td>
+          <th>bundle</td>
+          <td>The bundle</td>
         </tr>
       </table>
   </div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
-      <ul class="nolist"><li>Selected wiring
+      <ul class="nolist"><li>Publisher of bindings; <code>null</code> if the plan doesn't apply
 </li></ul>
   </div>
 
