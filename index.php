@@ -56,10 +56,10 @@ $html = <<<EOHTML
   <div class="sideitem">
     <h6>New and Noteworthy</h6>
     <div>
-      2014-02-17 &nbsp; Sisu <a href="download/">0.2.0</a> has been released!
+      2014-04-21 &nbsp; <a href="download/">0.2.1</a> maintenance release
     </div>
     <div>
-      2013-11-25 &nbsp; 0.1.1 maintenance release
+      2014-02-17 &nbsp; Sisu 0.2.0 has been released!
     </div>
   </div>
   $incubation
