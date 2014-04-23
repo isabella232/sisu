@@ -59,6 +59,12 @@ unless otherwise specified.</i></p>
     &lt;artifactId&gt;org.eclipse.sisu.plexus&lt;/artifactId&gt;
     &lt;version&gt;$release&lt;/version&gt;
   &lt;/dependency&gt;
+
+  &lt;dependency&gt;
+    &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
+    &lt;artifactId&gt;org.eclipse.sisu.plexus.extender&lt;/artifactId&gt;
+    &lt;version&gt;$release&lt;/version&gt;
+  &lt;/dependency&gt;
 <pre>
 
 </div>
