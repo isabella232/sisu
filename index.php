@@ -24,12 +24,8 @@ require_once("banner.php");
 <div id="rightcolumn">
   <div class="sideitem">
     <h6>New and Noteworthy</h6>
-    <div>
-      2014-04-21 &nbsp; <a href="download/">0.2.1</a> maintenance release
-    </div>
-    <div>
-      2014-02-17 &nbsp; Sisu 0.2.0 has been released!
-    </div>
+    <h7>2014-04-21</h7><p><a href="download/">0.2.1</a> maintenance release</p>
+    <h7>2014-02-17</h7><p>Sisu 0.2.0 has been released!</p>
   </div>
   <?php print $incubation;?>
 </div>
