@@ -48,7 +48,7 @@ $pageTitle 	= $projectName;
 # $Nav->setLinkList(array());
 
 # Break the navigation into sections
-# $Nav->addNavSeparator("$projectName Home", $projectUrl);
+$Nav->addNavSeparator("$projectName", $projectUrl);
 $Nav->addCustomNav("Documentation", $projectUrl . "docs/", "_self", 3);
 $Nav->addCustomNav("Downloads", $projectUrl . "download/", "_self", 3);
 $Nav->addCustomNav("Get Involved", $projectUrl . "developers/", "_self", 3);
