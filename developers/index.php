@@ -10,7 +10,7 @@
  *    Stuart McCulloch (Sonatype, Inc.) - Custom content for Sisu
  *******************************************************************************/
 
-$pageTitle = "Getting Involved";
+$pageTitle = "Get Involved";
 $mailingLists = $summary->getMailingListsHtml();
 $committers = $summary->getCommittersSideItem();
 

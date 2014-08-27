@@ -18,7 +18,7 @@ ob_start();
 <div id="midcolumn">
 
 <h3 id="demo">Tutorials</h3>
-<p><a href="tutorials/index.html">In progress...</a></p>
+<p><a href="tutorials/index.html">Sisu in 5 minutes</a></p>
 
 <h3 id="api">API</h3>
 <ul>
