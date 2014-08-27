@@ -18,5 +18,8 @@ div.sisu{position:relative;top:-223px;left:220px;}}
 @media (min-width:768px) and (max-width:991px){
 div.sisu{position:relative;top:-218px;left:220px;}}
 
-@media (min-width:0px) and (max-width:767px){
+@media (min-width:400px) and (max-width:767px){
 div.sisu{position:relative;top:-143px;left:175px;}}
+
+@media (min-width:0px) and (max-width:399px){
+div.sisu{display:none;}}
