@@ -14,10 +14,10 @@ ob_start();
 ?>
 
 <div id="midcolumn">
+  <center><h3><a href="docs/tutorials/index.html">Sisu in 5 minutes</a></h3></center>
   <p>
     <?php print $projectDescription;?>
   </p>
-  <center><h3><a href="docs/tutorials/index.html">Documentation is on the way!</a></h3></center>
 </div>
 
 <div id="rightcolumn">
