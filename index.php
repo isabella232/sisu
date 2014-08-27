@@ -14,10 +14,9 @@ ob_start();
 ?>
 
 <div id="midcolumn">
-  <center><h3><a href="docs/tutorials/index.html">Sisu in 5 minutes</a></h3></center>
-  <p>
-    <?php print $projectDescription;?>
-  </p>
+  <center><h3><a class="btn btn-huge btn-primary" href="docs/tutorials/index.html">Sisu in 5 minutes</a></h3></center>
+  <hr/>
+  <p><?php print $projectDescription;?></p>
 </div>
 
 <div id="rightcolumn">
