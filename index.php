@@ -11,7 +11,6 @@
  *******************************************************************************/
 
 ob_start();
-require_once("banner.php");
 ?>
 
 <div id="midcolumn">
@@ -32,7 +31,6 @@ require_once("banner.php");
 
 <?php
 $html = ob_get_clean();
-
 # Generate the web page
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>

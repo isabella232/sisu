@@ -11,12 +11,10 @@
  *******************************************************************************/
 
 $pageTitle = "Getting Involved";
-
 $mailingLists = $summary->getMailingListsHtml();
 $committers = $summary->getCommittersSideItem();
 
 ob_start();
-require_once("../banner.php");
 ?>
 
 <div id="midcolumn">

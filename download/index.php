@@ -13,7 +13,6 @@
 $pageTitle = "Downloads";
 
 ob_start();
-require_once("../banner.php");
 ?>
 
 <div id="midcolumn">

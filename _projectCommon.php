@@ -67,16 +67,20 @@ $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self",
 
 # To define additional CSS or other pre-body headers
 
+ob_start();
+require_once("banner.php");
+$banner = ob_get_clean();
+
 # Initialize custom solstice $variables.
 $variables = array();
 # Add classes to <body>. (String)
 $variables['body_classes'] = '';
 # Insert custom HTML in the breadcrumb region. (String)
-$variables['breadcrumbs_html'] = "";
+$variables['breadcrumbs_html'] = '';
 # Hide the breadcrumbs. (Bool)
 $variables['hide_breadcrumbs'] = FALSE;
 # Insert HTML before the left nav. (String)
-$variables['leftnav_html'] = '';
+$variables['leftnav_html'] = "$banner";
 # Update the main container class (String)
 $variables['main_container_classes'] = 'container';
 # Insert HTML after opening the main content container, before the left sidebar. (String)

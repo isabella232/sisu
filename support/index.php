@@ -11,11 +11,9 @@
  *******************************************************************************/
 
 $pageTitle = "Support";
-
 $issueTracker = normalizeHttpUrl($project->getBugzillaUrl()); 
 
 ob_start();
-require_once("../banner.php");
 ?>
 
 <div id="midcolumn">
