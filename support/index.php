@@ -1,26 +1,29 @@
 <?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
 /*******************************************************************************
- * Copyright (c) 2012 
+ * Copyright (c) 2014 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    
+ *    Stuart McCulloch (Sonatype, Inc.) - Custom content for Sisu
  *******************************************************************************/
 
-$pageTitle = $pageTitle . " / Support";
+$pageTitle = "Support";
 
 $issueTracker = normalizeHttpUrl($project->getBugzillaUrl()); 
 
-$html  = <<<EOHTML
+ob_start();
+require_once("../banner.php");
+?>
+
 <div id="midcolumn">
 
 <h3 id="bugs">Bug Tracker</h3>
 <p>
   If you encounter a bug or have a feature request, please enter a sufficiently detailed issue in our
-  <a href="$issueTracker">bug tracker</a>.
+  <a href="<?php print $issueTracker;?>">bug tracker</a>.
   We especially appreciate issues that come with suggested patches or enough information to be recreated locally.
 </p>
 <p>
@@ -45,11 +48,11 @@ $html  = <<<EOHTML
 </div>
 
 <div id="rightcolumn">
-$incubation
+<?php print $incubation;?>
 </div>
-EOHTML;
 
+<?php
+$html = ob_get_clean();
 # Generate the web page
-$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="' . $projectUrl . 'assets/css/section.css"/>');
 $App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
 ?>

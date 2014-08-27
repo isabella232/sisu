@@ -1,13 +1,13 @@
 <?php
 /*******************************************************************************
- * Copyright (c) 2011, 2012 Eclipse Foundation and others.
+ * Copyright (c) 2014 Eclipse Foundation and others.
  * All rights reserved. This program and the accompanying materials
  * are made available under the terms of the Eclipse Public License v1.0
  * which accompanies this distribution, and is available at
  * http://www.eclipse.org/legal/epl-v10.html
  *
  * Contributors:
- *    
+ *    Stuart McCulloch (Sonatype, Inc.) - Custom content for Sisu
  *******************************************************************************/
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/classes/Project.class.php");
@@ -30,8 +30,9 @@ $incubation = $summary->getIncubationSideItem();
 $release = "0.2.1";
 
 # Set the theme for your project's web pages.
-# See http://eclipse.org/phoenix/
-$theme = "Nova";
+# See the Committer Tools "Phoenix" secion in the How Do I? for list of themes
+# https://dev.eclipse.org/committers/
+$theme = "solstice";
 
 # Define keywords, author and title here, or in each PHP page specifically
 $pageKeywords	= "sisu, dependency injection, inject, ioc, jsr330";
@@ -44,7 +45,7 @@ $pageTitle 	= $projectName;
 # these are optional
 
 # If you want to override the eclipse.org navigation, uncomment below.
-$Nav->setLinkList(array());
+# $Nav->setLinkList(array());
 
 # Break the navigation into sections
 $Nav->addNavSeparator("$projectName Home", $projectUrl);
@@ -65,6 +66,27 @@ $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self",
 # $Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
 
 # To define additional CSS or other pre-body headers
+
+# Initialize custom solstice $variables.
+$variables = array();
+# Add classes to <body>. (String)
+$variables['body_classes'] = '';
+# Insert custom HTML in the breadcrumb region. (String)
+$variables['breadcrumbs_html'] = "";
+# Hide the breadcrumbs. (Bool)
+$variables['hide_breadcrumbs'] = FALSE;
+# Insert HTML before the left nav. (String)
+$variables['leftnav_html'] = '';
+# Update the main container class (String)
+$variables['main_container_classes'] = 'container';
+# Insert HTML after opening the main content container, before the left sidebar. (String)
+$variables['main_container_html'] = '';
+
+# Set Solstice theme variables. (Array)
+$App->setThemeVariables($variables);
+
+# Insert extra html before closing </head> tag.
+$App->AddExtraHtmlHeader('<link rel="stylesheet" type="text/css" href="/sisu/assets/css/banner.css"/>');
 
 # To enable occasional Eclipse Foundation Promotion banners on your pages (EclipseCon, etc)
 $App->Promotion = FALSE;
