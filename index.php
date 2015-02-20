@@ -24,7 +24,6 @@ ob_start();
     <h6>New and Noteworthy</h6>
     <h7>2015-02-20</h7><p>Sisu <a href="download/">0.3.0</a> has been released!</p>
     <h7>2014-04-21</h7><p>0.2.1 maintenance release</p>
-    <h7>2014-02-17</h7><p>Sisu 0.2.0 has been released!</p>
   </div>
   <?php print $incubation;?>
 </div>
