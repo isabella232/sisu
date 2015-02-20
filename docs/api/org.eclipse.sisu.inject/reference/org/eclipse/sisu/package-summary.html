@@ -154,6 +154,8 @@
     <li class="api apilevel-">
   <a href="../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -176,10 +178,13 @@
     <li><h2>Annotations</h2>
       <ul>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Description.html">Description</a></li>
+        <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Dynamic.html">Dynamic</a></li>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/EagerSingleton.html">EagerSingleton</a></li>
+        <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Hidden.html">Hidden</a></li>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Nullable.html">Nullable</a></li>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Parameters.html">Parameters</a></li>
         <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Priority.html">Priority</a></li>
+        <li class="api apilevel-"><a href="../../../org/eclipse/sisu/Typed.html">Typed</a></li>
       </ul>
     </li>
               
@@ -320,6 +325,18 @@
  </pre>&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/Dynamic.html">Dynamic</a></td>
+              <td class="jd-descrcol" width="100%">Marks dependencies that should be dynamic proxies:<br>
+ <br>
+ 
+ <pre>
+ &#064;Inject
+ &#064;Dynamic
+ Component proxy;
+ </pre>
+&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/EagerSingleton.html">EagerSingleton</a></td>
               <td class="jd-descrcol" width="100%">Marks beans that should be created as soon as possible:<br>
  <br>
@@ -333,6 +350,20 @@
  }
  </pre>
 &nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/Hidden.html">Hidden</a></td>
+              <td class="jd-descrcol" width="100%">Hides a bean from being located or watched:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Hidden
+ public class InternalComponent
+ {
+     //
+ }
+ </pre>&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/Nullable.html">Nullable</a></td>
@@ -373,6 +404,23 @@
  &#064;Named
  &#064;Priority( 999 )
  public class ImportantComponent
+ {
+     //
+ }
+ </pre>
+&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../org/eclipse/sisu/Typed.html">Typed</a></td>
+              <td class="jd-descrcol" width="100%">Restricts the visible types of a bean:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Typed( Widget.class, Service.class )
+ public class PrinterWidget
+     extends AbstractWidget
+     implements Service
  {
      //
  }

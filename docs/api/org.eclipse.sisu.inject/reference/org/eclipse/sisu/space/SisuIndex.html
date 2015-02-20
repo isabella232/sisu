@@ -153,6 +153,8 @@
   <a href="../../../../org/eclipse/sisu/inject/package-summary.html">org.eclipse.sisu.inject</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
+    <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
     <li class="selected api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
@@ -251,6 +253,15 @@
    
   
   
+   
+  
+  
+  
+
+  
+   
+  
+  
   
   
 
@@ -265,10 +276,13 @@ Summary:
 
 
 
+  <a href="#inhconstants">Inherited Constants</a>
+  
 
 
 
-  <a href="#pubctors">Ctors</a>
+
+  &#124; <a href="#pubctors">Ctors</a>
   
 
 
@@ -302,7 +316,7 @@ Summary:
 <div id="jd-header">
     public
      
-    final 
+     
     
     class
 <h1>SisuIndex</h1>
@@ -319,7 +333,9 @@ Summary:
   
       implements 
       
-        <a href="../../../../org/eclipse/sisu/space/QualifiedTypeListener.html">QualifiedTypeListener</a> 
+        <a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">ClassVisitor</a> 
+      
+        <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a> 
       
   
   
@@ -409,6 +425,49 @@ Summary:
 
 
 
+<!-- =========== ENUM CONSTANT SUMMARY =========== -->
+<table id="inhconstants" class="jd-sumtable"><tr><th>
+  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
+  <div style="clear:left;">Inherited Constants</div></th></tr>
+
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-constants-org.eclipse.sisu.space.ClassVisitor" class="jd-expando-trigger closed"
+          ><img id="inherited-constants-org.eclipse.sisu.space.ClassVisitor-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>From interface
+<a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">org.eclipse.sisu.space.ClassVisitor</a>
+<div id="inherited-constants-org.eclipse.sisu.space.ClassVisitor">
+  <div id="inherited-constants-org.eclipse.sisu.space.ClassVisitor-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-constants-org.eclipse.sisu.space.ClassVisitor-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+    
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">int</td>
+        <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/space/ClassVisitor.html#NON_INSTANTIABLE">NON_INSTANTIABLE</a></td>
+        <td class="jd-descrcol" width="100%">Non-instantiable classes: INTERFACE | ABSTRACT | ANNOTATION | ENUM | SYNTHETIC.</td>
+    </tr>
+    
+    
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+
+</table>
+
+
 
 
 
@@ -423,16 +482,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            </nobr>
+            
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#SisuIndex(java.io.File)">SisuIndex</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/File.html">File</a> targetDirectory)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#SisuIndex(java.io.File)">SisuIndex</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/File.html">File</a> targetDirectory)
         
   </td></tr>
 
@@ -452,51 +511,141 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
+            final
             
             
-            
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#hear(java.lang.Class<?>, java.lang.Object)">hear</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#enterClass(int, java.lang.String, java.lang.String, java.lang.String[])">enterClass</a></span>(int modifiers, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> _extends, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> _implements)
         
-        <div class="jd-descrdiv">Invoked when the <code><a href="../../../../org/eclipse/sisu/space/QualifiedTypeVisitor.html">QualifiedTypeVisitor</a></code> finds a qualified type.</div>
+        <div class="jd-descrdiv">Enters the class definition.</div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
+            final
             
             
-            
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#index(org.eclipse.sisu.space.ClassSpace)">index</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#enterSpace(org.eclipse.sisu.space.ClassSpace)">enterSpace</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> _space)
+        
+        <div class="jd-descrdiv">Enters the class space.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#index(org.eclipse.sisu.space.ClassSpace)">index</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> _space)
+        
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#leaveClass()">leaveClass</a></span>()
+        
+        <div class="jd-descrdiv">Leaves the class definition.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#leaveSpace()">leaveSpace</a></span>()
+        
+        <div class="jd-descrdiv">Leaves the class space.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            
+            static
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#main(java.lang.String[])">main</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> args)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
+            final
             
-            static
             
-            void</nobr>
+            <a href="../../../../org/eclipse/sisu/space/AnnotationVisitor.html">AnnotationVisitor</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#main(java.lang.String[])">main</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> args)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#visitAnnotation(java.lang.String)">visitAnnotation</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> desc)
         
+        <div class="jd-descrdiv">Visits an annotation declared on the class.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            
+            
+            final
+            
+            
+            <a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">ClassVisitor</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#visitClass(java.net.URL)">visitClass</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/net/URL.html">URL</a> url)
+        
+        <div class="jd-descrdiv">Visits a class resource in the class space.</div>
+  
   </td></tr>
 
 
@@ -513,16 +662,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             synchronized
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#addClassToIndex(java.lang.Object, java.lang.Object)">addClassToIndex</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> anno, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> clazz)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#addClassToIndex(java.lang.Object, java.lang.Object)">addClassToIndex</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> anno, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> clazz)
         
         <div class="jd-descrdiv">Adds a new annotated class entry to the index.</div>
   
@@ -531,16 +680,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             synchronized
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#flushIndex()">flushIndex</a></span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#flushIndex()">flushIndex</a></span>()
         
         <div class="jd-descrdiv">Writes the current index as a series of tables.</div>
   
@@ -549,16 +698,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Reader.html">Reader</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Reader.html">Reader</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getReader(java.lang.String)">getReader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getReader(java.lang.String)">getReader</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)
         
         <div class="jd-descrdiv">Creates a new reader for the given input path.</div>
   
@@ -567,16 +716,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Writer.html">Writer</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/io/Writer.html">Writer</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getWriter(java.lang.String)">getWriter</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#getWriter(java.lang.String)">getWriter</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> path)
         
         <div class="jd-descrdiv">Creates a new writer for the given output path.</div>
   
@@ -585,16 +734,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#info(java.lang.String)">info</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#info(java.lang.String)">info</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)
         
         <div class="jd-descrdiv">Reports an informational message.</div>
   
@@ -603,16 +752,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#warn(java.lang.String)">warn</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SisuIndex.html#warn(java.lang.String)">warn</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> message)
         
         <div class="jd-descrdiv">Reports a warning message.</div>
   
@@ -653,176 +802,176 @@ From class
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clone</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">finalize</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getClass</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notify</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notifyAll</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
         
   </td></tr>
 
@@ -836,37 +985,153 @@ From class
 
 <tr class="api apilevel-" >
 <td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.space.QualifiedTypeListener" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.eclipse.sisu.space.QualifiedTypeListener-trigger"
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.space.ClassVisitor" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.eclipse.sisu.space.ClassVisitor-trigger"
           src="../../../../../assets/images/triangle-closed.png"
           class="jd-expando-trigger-img" /></a>
 From interface
 
-  <a href="../../../../org/eclipse/sisu/space/QualifiedTypeListener.html">org.eclipse.sisu.space.QualifiedTypeListener</a>
+  <a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">org.eclipse.sisu.space.ClassVisitor</a>
 
-<div id="inherited-methods-org.eclipse.sisu.space.QualifiedTypeListener">
-  <div id="inherited-methods-org.eclipse.sisu.space.QualifiedTypeListener-list"
+<div id="inherited-methods-org.eclipse.sisu.space.ClassVisitor">
+  <div id="inherited-methods-org.eclipse.sisu.space.ClassVisitor-list"
         class="jd-inheritedlinks">
   </div>
-  <div id="inherited-methods-org.eclipse.sisu.space.QualifiedTypeListener-summary" style="display: none;">
+  <div id="inherited-methods-org.eclipse.sisu.space.ClassVisitor-summary" style="display: none;">
     <table class="jd-sumtable-expando">
     
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             abstract
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/QualifiedTypeListener.html#hear(java.lang.Class<?>, java.lang.Object)">hear</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/ClassVisitor.html#enterClass(int, java.lang.String, java.lang.String, java.lang.String[])">enterClass</a></span>(int modifiers, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> _extends, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> _implements)
         
-        <div class="jd-descrdiv">Invoked when the <code><a href="../../../../org/eclipse/sisu/space/QualifiedTypeVisitor.html">QualifiedTypeVisitor</a></code> finds a qualified type.</div>
+        <div class="jd-descrdiv">Enters the class definition.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/ClassVisitor.html#leaveClass()">leaveClass</a></span>()
+        
+        <div class="jd-descrdiv">Leaves the class definition.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            <a href="../../../../org/eclipse/sisu/space/AnnotationVisitor.html">AnnotationVisitor</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/ClassVisitor.html#visitAnnotation(java.lang.String)">visitAnnotation</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> desc)
+        
+        <div class="jd-descrdiv">Visits an annotation declared on the class.</div>
+  
+  </td></tr>
+
+
+</table>
+  </div>
+</div>
+</td></tr>
+
+
+
+<tr class="api apilevel-" >
+<td colspan="12">
+  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.eclipse.sisu.space.SpaceVisitor" class="jd-expando-trigger closed"
+          ><img id="inherited-methods-org.eclipse.sisu.space.SpaceVisitor-trigger"
+          src="../../../../../assets/images/triangle-closed.png"
+          class="jd-expando-trigger-img" /></a>
+From interface
+
+  <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">org.eclipse.sisu.space.SpaceVisitor</a>
+
+<div id="inherited-methods-org.eclipse.sisu.space.SpaceVisitor">
+  <div id="inherited-methods-org.eclipse.sisu.space.SpaceVisitor-list"
+        class="jd-inheritedlinks">
+  </div>
+  <div id="inherited-methods-org.eclipse.sisu.space.SpaceVisitor-summary" style="display: none;">
+    <table class="jd-sumtable-expando">
+    
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html#enterSpace(org.eclipse.sisu.space.ClassSpace)">enterSpace</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)
+        
+        <div class="jd-descrdiv">Enters the class space.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class=" api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            void
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html#leaveSpace()">leaveSpace</a></span>()
+        
+        <div class="jd-descrdiv">Leaves the class space.</div>
+  
+  </td></tr>
+
+
+	 
+    <tr class="alt-color api apilevel-" >
+        <td class="jd-typecol">
+            abstract
+            
+            
+            
+            
+            <a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">ClassVisitor</a>
+        </td>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html#visitClass(java.net.URL)">visitClass</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/net/URL.html">URL</a> url)
+        
+        <div class="jd-descrdiv">Visits a class resource in the class space.</div>
   
   </td></tr>
 
@@ -911,7 +1176,7 @@ From interface
 
 
 
-<A NAME="SisuIndex(java.io.File)"></A>
+<a id="SisuIndex(java.io.File)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -957,20 +1222,20 @@ From interface
 
 
 
-<A NAME="hear(java.lang.Class<?>, java.lang.Object)"></A>
+<a id="enterClass(int, java.lang.String, java.lang.String, java.lang.String[])"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
          
-         
+        final 
          
          
         void
       </span>
-      <span class="sympad">hear</span>
-      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; qualifiedType, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> source)</span>
+      <span class="sympad">enterClass</span>
+      <span class="normal">(int modifiers, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> name, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> _extends, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String[]</a> _implements)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -982,17 +1247,26 @@ From interface
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Invoked when the <code><a href="../../../../org/eclipse/sisu/space/QualifiedTypeVisitor.html">QualifiedTypeVisitor</a></code> finds a qualified type.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Enters the class definition.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>qualifiedType</td>
-          <td>The qualified type</td>
+          <th>modifiers</th>
+          <td>The access modifiers</td>
         </tr>
         <tr>
-          <th>source</td>
-          <td>The source of this type</td>
+          <th>name</th>
+          <td>The internal name, such as "javax/inject/Provider"</td>
+        </tr>
+        <tr>
+          <th>_extends</th>
+          <td>Extends this superclass</td>
+        </tr>
+        <tr>
+          <th>_implements</th>
+          <td>Implements these interfaces
+</td>
         </tr>
       </table>
   </div>
@@ -1001,20 +1275,61 @@ From interface
 </div>
 
 
-<A NAME="index(org.eclipse.sisu.space.ClassSpace)"></A>
+<a id="enterSpace(org.eclipse.sisu.space.ClassSpace)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
       <span class="normal">
         public 
          
+        final 
          
+         
+        void
+      </span>
+      <span class="sympad">enterSpace</span>
+      <span class="normal">(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> _space)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Enters the class space.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>_space</th>
+          <td>The class space
+</td>
+        </tr>
+      </table>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="index(org.eclipse.sisu.space.ClassSpace)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+        final 
          
          
         void
       </span>
       <span class="sympad">index</span>
-      <span class="normal">(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</span>
+      <span class="normal">(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> _space)</span>
     </h4>
       <div class="api-level">
         <div>
@@ -1032,7 +1347,71 @@ From interface
 </div>
 
 
-<A NAME="main(java.lang.String[])"></A>
+<a id="leaveClass()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+        final 
+         
+         
+        void
+      </span>
+      <span class="sympad">leaveClass</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Leaves the class definition.
+</p></div>
+
+    </div>
+</div>
+
+
+<a id="leaveSpace()"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+        final 
+         
+         
+        void
+      </span>
+      <span class="sympad">leaveSpace</span>
+      <span class="normal">()</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Leaves the class space.
+</p></div>
+
+    </div>
+</div>
+
+
+<a id="main(java.lang.String[])"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1063,6 +1442,95 @@ From interface
 </div>
 
 
+<a id="visitAnnotation(java.lang.String)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+        final 
+         
+         
+        <a href="../../../../org/eclipse/sisu/space/AnnotationVisitor.html">AnnotationVisitor</a>
+      </span>
+      <span class="sympad">visitAnnotation</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> desc)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Visits an annotation declared on the class.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>desc</th>
+          <td>The JVM descriptor for the annotation class, such as "Ljavax/inject/Qualifier;"</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Annotation visitor; <code>null</code> if it is not interested in visiting the annotation</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
+<a id="visitClass(java.net.URL)"></a>
+
+<div class="jd-details api apilevel-"> 
+    <h4 class="jd-details-title">
+      <span class="normal">
+        public 
+         
+        final 
+         
+         
+        <a href="../../../../org/eclipse/sisu/space/ClassVisitor.html">ClassVisitor</a>
+      </span>
+      <span class="sympad">visitClass</span>
+      <span class="normal">(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/net/URL.html">URL</a> url)</span>
+    </h4>
+      <div class="api-level">
+        <div>
+
+</div>
+        
+  
+
+      </div>
+    <div class="jd-details-descr">
+      
+  <div class="jd-tagdata jd-tagdescr"><p>Visits a class resource in the class space.</p></div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Parameters</h5>
+      <table class="jd-tagtable">
+        <tr>
+          <th>url</th>
+          <td>The class resource URL</td>
+        </tr>
+      </table>
+  </div>
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">Returns</h5>
+      <ul class="nolist"><li>Class visitor; <code>null</code> if it is not interested in visiting the class
+</li></ul>
+  </div>
+
+    </div>
+</div>
+
+
 
 
 
@@ -1072,7 +1540,7 @@ From interface
 
 
 
-<A NAME="addClassToIndex(java.lang.Object, java.lang.Object)"></A>
+<a id="addClassToIndex(java.lang.Object, java.lang.Object)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1102,11 +1570,11 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>anno</td>
+          <th>anno</th>
           <td>The annotation name</td>
         </tr>
         <tr>
-          <th>clazz</td>
+          <th>clazz</th>
           <td>The class name
 </td>
         </tr>
@@ -1117,7 +1585,7 @@ From interface
 </div>
 
 
-<A NAME="flushIndex()"></A>
+<a id="flushIndex()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1149,7 +1617,7 @@ From interface
 </div>
 
 
-<A NAME="getReader(java.lang.String)"></A>
+<a id="getReader(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1179,7 +1647,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>path</td>
+          <th>path</th>
           <td>The input path</td>
         </tr>
       </table>
@@ -1203,7 +1671,7 @@ From interface
 </div>
 
 
-<A NAME="getWriter(java.lang.String)"></A>
+<a id="getWriter(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1233,7 +1701,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>path</td>
+          <th>path</th>
           <td>The output path</td>
         </tr>
       </table>
@@ -1257,7 +1725,7 @@ From interface
 </div>
 
 
-<A NAME="info(java.lang.String)"></A>
+<a id="info(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1287,7 +1755,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>message</td>
+          <th>message</th>
           <td>The message
 </td>
         </tr>
@@ -1298,7 +1766,7 @@ From interface
 </div>
 
 
-<A NAME="warn(java.lang.String)"></A>
+<a id="warn(java.lang.String)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1328,7 +1796,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>message</td>
+          <th>message</th>
           <td>The message
 </td>
         </tr>
@@ -1343,7 +1811,7 @@ From interface
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
+<a id="navbar_top"></a>
 
 <div id="footer">
 Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.

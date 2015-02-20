@@ -154,6 +154,8 @@
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -167,13 +169,12 @@
               
     <li><h2>Interfaces</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/AnnotatedSource.html">AnnotatedSource</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingSubscriber.html">BindingSubscriber</a>&lt;T&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a>&lt;T&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredProvider.html">DeferredProvider</a>&lt;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DescribedBinding.html">DescribedBinding</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/HiddenBinding.html">HiddenBinding</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></li>
           <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></li>
       </ul>
@@ -183,10 +184,12 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultBeanLocator.html">DefaultBeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultRankingFunction.html">DefaultRankingFunction</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorPublisher.html">InjectorPublisher</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Guice4.html">Guice4</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorBindings.html">InjectorBindings</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Legacy.html">Legacy</a>&lt;S&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Logs.html">Logs</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Soft.html">Soft</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Sources.html">Sources</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html">TypeArguments</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Weak.html">Weak</a></li>
       </ul>
@@ -403,34 +406,34 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             abstract
             
             
             
             
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html#maxRank()">maxRank</a></span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html#maxRank()">maxRank</a></span>()
         
-        <div class="jd-descrdiv">Estimates the maximum rank this function may assign to a Binding.</div>
+        <div class="jd-descrdiv">Estimates the maximum rank this function may assign to a <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binding.html">Binding</a></code>.</div>
   
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             abstract
             
             
             
             &lt;T&gt;
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html#rank(com.google.inject.Binding<T>)">rank</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binding.html">Binding</a>&lt;T&gt; binding)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html#rank(com.google.inject.Binding<T>)">rank</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binding.html">Binding</a>&lt;T&gt; binding)
         
         <div class="jd-descrdiv">Assigns a numeric rank to the given binding.</div>
   
@@ -485,7 +488,7 @@ Summary:
 
 
 
-<A NAME="maxRank()"></A>
+<a id="maxRank()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -510,7 +513,7 @@ Summary:
       </div>
     <div class="jd-details-descr">
       
-  <div class="jd-tagdata jd-tagdescr"><p>Estimates the maximum rank this function may assign to a Binding.</p></div>
+  <div class="jd-tagdata jd-tagdescr"><p>Estimates the maximum rank this function may assign to a <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binding.html">Binding</a></code>.</p></div>
   <div class="jd-tagdata">
       <h5 class="jd-tagtitle">Returns</h5>
       <ul class="nolist"><li>Maximum rank</li></ul>
@@ -525,7 +528,7 @@ Summary:
 </div>
 
 
-<A NAME="rank(com.google.inject.Binding<T>)"></A>
+<a id="rank(com.google.inject.Binding<T>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -555,7 +558,7 @@ Summary:
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>binding</td>
+          <th>binding</th>
           <td>The binding</td>
         </tr>
       </table>
@@ -578,7 +581,7 @@ Summary:
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
+<a id="navbar_top"></a>
 
 <div id="footer">
 Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.

@@ -154,6 +154,8 @@
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -167,13 +169,12 @@
               
     <li><h2>Interfaces</h2>
       <ul>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/AnnotatedSource.html">AnnotatedSource</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingSubscriber.html">BindingSubscriber</a>&lt;T&gt;</li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a>&lt;T&gt;</li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredProvider.html">DeferredProvider</a>&lt;T&gt;</li>
-        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DescribedBinding.html">DescribedBinding</a></li>
-        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/HiddenBinding.html">HiddenBinding</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></li>
       </ul>
@@ -183,10 +184,12 @@
       <ul>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultBeanLocator.html">DefaultBeanLocator</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultRankingFunction.html">DefaultRankingFunction</a></li>
-        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorPublisher.html">InjectorPublisher</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Guice4.html">Guice4</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorBindings.html">InjectorBindings</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Legacy.html">Legacy</a>&lt;S&gt;</li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Logs.html">Logs</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Soft.html">Soft</a></li>
+        <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Sources.html">Sources</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html">TypeArguments</a></li>
         <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Weak.html">Weak</a></li>
       </ul>
@@ -299,38 +302,34 @@
     
   <table class="jd-sumtable-expando">
         <tr class="alt-color api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/AnnotatedSource.html">AnnotatedSource</a></td>
+              <td class="jd-descrcol" width="100%">Binding source locations can implement this interface to supply annotations to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></td>
               <td class="jd-descrcol" width="100%">Finds and tracks bean implementations annotated with Qualifier annotations.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></td>
               <td class="jd-descrcol" width="100%">Publisher of Bindings to interested <code><a href="../../../../org/eclipse/sisu/inject/BindingSubscriber.html">BindingSubscriber</a></code>s.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/BindingSubscriber.html">BindingSubscriber</a>&lt;T&gt;</td>
               <td class="jd-descrcol" width="100%">Subscriber of Bindings from one or more <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a>&lt;T&gt;</td>
               <td class="jd-descrcol" width="100%">Placeholder Class; postpones classloading until absolutely necessary.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/DeferredProvider.html">DeferredProvider</a>&lt;T&gt;</td>
               <td class="jd-descrcol" width="100%">Provider backed by a <code><a href="../../../../org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a></code>.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/DescribedBinding.html">DescribedBinding</a></td>
-              <td class="jd-descrcol" width="100%">Binding source locations should implement this interface to supply descriptions to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
-          </tr>
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/HiddenBinding.html">HiddenBinding</a></td>
-              <td class="jd-descrcol" width="100%">Binding source locations should implement this interface to hide bindings from the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
-          </tr>
-        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></td>
               <td class="jd-descrcol" width="100%">Mutable <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code> that finds and tracks bindings across zero or more <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s.&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></td>
               <td class="jd-descrcol" width="100%">Assigns each Binding a rank according to some function; higher ranks take precedence over lower ranks.&nbsp;</td>
           </tr>
@@ -353,10 +352,14 @@
               <td class="jd-descrcol" width="100%">Simple <code><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code> that partitions qualified bindings into two main groups.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
-              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/InjectorPublisher.html">InjectorPublisher</a></td>
-              <td class="jd-descrcol" width="100%">Publisher of Bindings from a single Injector; ranked according to a given <code><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code>.&nbsp;</td>
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Guice4.html">Guice4</a></td>
+              <td class="jd-descrcol" width="100%">Utility methods for dealing with changes in the Guice 4.0 SPI.&nbsp;</td>
           </tr>
         <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/InjectorBindings.html">InjectorBindings</a></td>
+              <td class="jd-descrcol" width="100%">Publisher of Bindings from a single Injector; ranked according to a given <code><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code>.&nbsp;</td>
+          </tr>
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Legacy.html">Legacy</a>&lt;S&gt;</td>
               <td class="jd-descrcol" width="100%">
       <em>
@@ -364,13 +367,17 @@
       Limited support for migrating legacy types.
 </em>&nbsp;</td>
           </tr>
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Logs.html">Logs</a></td>
               <td class="jd-descrcol" width="100%">Utility methods for dealing with container logging and recovery.&nbsp;</td>
           </tr>
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Soft.html">Soft</a></td>
               <td class="jd-descrcol" width="100%">Utility methods for dealing with SoftReference collections.&nbsp;</td>
+          </tr>
+        <tr class=" api apilevel-" >
+              <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Sources.html">Sources</a></td>
+              <td class="jd-descrcol" width="100%">Utility methods for dealing with annotated sources.&nbsp;</td>
           </tr>
         <tr class="alt-color api apilevel-" >
               <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html">TypeArguments</a></td>

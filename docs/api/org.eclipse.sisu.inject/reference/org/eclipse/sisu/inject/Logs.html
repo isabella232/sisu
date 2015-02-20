@@ -154,6 +154,8 @@
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -167,13 +169,12 @@
               
     <li><h2>Interfaces</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/AnnotatedSource.html">AnnotatedSource</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingSubscriber.html">BindingSubscriber</a>&lt;T&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a>&lt;T&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredProvider.html">DeferredProvider</a>&lt;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DescribedBinding.html">DescribedBinding</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/HiddenBinding.html">HiddenBinding</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></li>
       </ul>
@@ -183,10 +184,12 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultBeanLocator.html">DefaultBeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultRankingFunction.html">DefaultRankingFunction</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorPublisher.html">InjectorPublisher</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Guice4.html">Guice4</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorBindings.html">InjectorBindings</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Legacy.html">Legacy</a>&lt;S&gt;</li>
           <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Logs.html">Logs</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Soft.html">Soft</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Sources.html">Sources</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html">TypeArguments</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Weak.html">Weak</a></li>
       </ul>
@@ -390,22 +393,22 @@ Summary:
 
     
       <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           public
           static
           final
-          <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr></td>
+          <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Logs.html#NEW_LINE">NEW_LINE</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
       
     
       <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           public
           static
           final
-          boolean</nobr></td>
+          boolean</td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/inject/Logs.html#TRACE_ENABLED">TRACE_ENABLED</a></td>
           <td class="jd-descrcol" width="100%"></td>
       </tr>
@@ -431,16 +434,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#catchThrowable(java.lang.Throwable)">catchThrowable</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Throwable.html">Throwable</a> problem)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#catchThrowable(java.lang.Throwable)">catchThrowable</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Throwable.html">Throwable</a> problem)
         
         <div class="jd-descrdiv">Helper method for catching <code><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Throwable.html">Throwable</a></code>s; severe errors such as ThreadDeath are always re-thrown.</div>
   
@@ -449,16 +452,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#identityToString(java.lang.Object)">identityToString</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#identityToString(java.lang.Object)">identityToString</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)
         
         <div class="jd-descrdiv">Returns an identity string for the given object.</div>
   
@@ -467,16 +470,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#throwUnchecked(java.lang.Throwable)">throwUnchecked</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Throwable.html">Throwable</a> problem)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#throwUnchecked(java.lang.Throwable)">throwUnchecked</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Throwable.html">Throwable</a> problem)
         
         <div class="jd-descrdiv">Helper method for throwing <code><a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Throwable.html">Throwable</a></code>s; checked exceptions are wrapped as ProvisionExceptions.</div>
   
@@ -485,16 +488,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#toString(com.google.inject.Injector)">toString</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a> injector)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#toString(com.google.inject.Injector)">toString</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a> injector)
         
         <div class="jd-descrdiv">Returns a string representation of the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Injector.html">Injector</a></code>.</div>
   
@@ -503,16 +506,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#toString(com.google.inject.Module)">toString</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a> module)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#toString(com.google.inject.Module)">toString</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a> module)
         
         <div class="jd-descrdiv">Returns a string representation of the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Module.html">Module</a></code>.</div>
   
@@ -521,16 +524,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#trace(java.lang.String, java.lang.Object, java.lang.Object)">trace</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> format, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#trace(java.lang.String, java.lang.Object, java.lang.Object)">trace</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> format, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)
         
         <div class="jd-descrdiv">Logs a trace message; uses "{}" format anchors.</div>
   
@@ -539,16 +542,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#warn(java.lang.String, java.lang.Object, java.lang.Object)">warn</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> format, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/Logs.html#warn(java.lang.String, java.lang.Object, java.lang.Object)">warn</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a> format, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)
         
         <div class="jd-descrdiv">Logs a warning message; uses "{}" format anchors.</div>
   
@@ -591,176 +594,176 @@ From class
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clone</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">finalize</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getClass</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notify</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notifyAll</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
         
   </td></tr>
 
@@ -803,7 +806,7 @@ From class
 
 
 
-<A NAME="NEW_LINE"></A>
+<a id="NEW_LINE"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -833,7 +836,7 @@ From class
 
 
 
-<A NAME="TRACE_ENABLED"></A>
+<a id="TRACE_ENABLED"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -880,7 +883,7 @@ From class
 
 
 
-<A NAME="catchThrowable(java.lang.Throwable)"></A>
+<a id="catchThrowable(java.lang.Throwable)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -910,7 +913,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>problem</td>
+          <th>problem</th>
           <td>The problem
 </td>
         </tr>
@@ -921,7 +924,7 @@ From class
 </div>
 
 
-<A NAME="identityToString(java.lang.Object)"></A>
+<a id="identityToString(java.lang.Object)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -951,7 +954,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>object</td>
+          <th>object</th>
           <td>The object</td>
         </tr>
       </table>
@@ -971,7 +974,7 @@ From class
 </div>
 
 
-<A NAME="throwUnchecked(java.lang.Throwable)"></A>
+<a id="throwUnchecked(java.lang.Throwable)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1001,7 +1004,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>problem</td>
+          <th>problem</th>
           <td>The problem
 </td>
         </tr>
@@ -1012,7 +1015,7 @@ From class
 </div>
 
 
-<A NAME="toString(com.google.inject.Injector)"></A>
+<a id="toString(com.google.inject.Injector)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1042,7 +1045,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>injector</td>
+          <th>injector</th>
           <td>The injector</td>
         </tr>
       </table>
@@ -1057,7 +1060,7 @@ From class
 </div>
 
 
-<A NAME="toString(com.google.inject.Module)"></A>
+<a id="toString(com.google.inject.Module)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1087,7 +1090,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>module</td>
+          <th>module</th>
           <td>The module</td>
         </tr>
       </table>
@@ -1102,7 +1105,7 @@ From class
 </div>
 
 
-<A NAME="trace(java.lang.String, java.lang.Object, java.lang.Object)"></A>
+<a id="trace(java.lang.String, java.lang.Object, java.lang.Object)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1132,15 +1135,15 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>format</td>
+          <th>format</th>
           <td>The trace message format</td>
         </tr>
         <tr>
-          <th>arg1</td>
+          <th>arg1</th>
           <td>First object to format</td>
         </tr>
         <tr>
-          <th>arg2</td>
+          <th>arg2</th>
           <td>Second object to format
 </td>
         </tr>
@@ -1151,7 +1154,7 @@ From class
 </div>
 
 
-<A NAME="warn(java.lang.String, java.lang.Object, java.lang.Object)"></A>
+<a id="warn(java.lang.String, java.lang.Object, java.lang.Object)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1181,15 +1184,15 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>format</td>
+          <th>format</th>
           <td>The warning message format</td>
         </tr>
         <tr>
-          <th>arg1</td>
+          <th>arg1</th>
           <td>First object to format</td>
         </tr>
         <tr>
-          <th>arg2</td>
+          <th>arg2</th>
           <td>Second object to format
 </td>
         </tr>
@@ -1208,7 +1211,7 @@ From class
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
+<a id="navbar_top"></a>
 
 <div id="footer">
 Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.

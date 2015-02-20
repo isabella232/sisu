@@ -154,6 +154,8 @@
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -167,13 +169,12 @@
               
     <li><h2>Interfaces</h2>
       <ul>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/AnnotatedSource.html">AnnotatedSource</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/BindingSubscriber.html">BindingSubscriber</a>&lt;T&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredClass.html">DeferredClass</a>&lt;T&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DeferredProvider.html">DeferredProvider</a>&lt;T&gt;</li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DescribedBinding.html">DescribedBinding</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/HiddenBinding.html">HiddenBinding</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></li>
       </ul>
@@ -183,10 +184,12 @@
       <ul>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultBeanLocator.html">DefaultBeanLocator</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/DefaultRankingFunction.html">DefaultRankingFunction</a></li>
-          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorPublisher.html">InjectorPublisher</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Guice4.html">Guice4</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/InjectorBindings.html">InjectorBindings</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Legacy.html">Legacy</a>&lt;S&gt;</li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Logs.html">Logs</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Soft.html">Soft</a></li>
+          <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Sources.html">Sources</a></li>
           <li class="selected api apilevel-"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html">TypeArguments</a></li>
           <li class="api apilevel-"><a href="../../../../org/eclipse/sisu/inject/Weak.html">Weak</a></li>
       </ul>
@@ -395,16 +398,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral[]</a>&lt;?&gt;</nobr>
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral[]</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#get(com.google.inject.TypeLiteral<?>)">get</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; typeLiteral)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#get(com.google.inject.TypeLiteral<?>)">get</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; typeLiteral)
         
         <div class="jd-descrdiv">Get all type arguments from a generic type, for example <code>[Foo,Bar]</code> from <code>Map&lt;Foo,Bar&gt;</code>.</div>
   
@@ -413,16 +416,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt;</nobr>
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#get(com.google.inject.TypeLiteral<?>, int)">get</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; typeLiteral, int index)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#get(com.google.inject.TypeLiteral<?>, int)">get</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; typeLiteral, int index)
         
         <div class="jd-descrdiv">Get an indexed type argument from a generic type, for example <code>Bar</code> from <code>Map&lt;Foo,Bar&gt;</code>.</div>
   
@@ -431,16 +434,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             &lt;T&gt;
-            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Key.html">Key</a>&lt;T&gt;</nobr>
+            <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Key.html">Key</a>&lt;T&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#implicitKey(java.lang.Class<T>)">implicitKey</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; clazz)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#implicitKey(java.lang.Class<T>)">implicitKey</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; clazz)
         
         <div class="jd-descrdiv">Creates a special binding key for the given implicit type.</div>
   
@@ -449,16 +452,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isAssignableFrom(com.google.inject.TypeLiteral<?>, com.google.inject.TypeLiteral<?>)">isAssignableFrom</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; superLiteral, <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; subLiteral)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isAssignableFrom(com.google.inject.TypeLiteral<?>, com.google.inject.TypeLiteral<?>)">isAssignableFrom</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; superLiteral, <a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; subLiteral)
         
         <div class="jd-descrdiv">Determines if the sub-type can be converted to the generic super-type via an identity or widening conversion.</div>
   
@@ -467,16 +470,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isConcrete(java.lang.Class<?>)">isConcrete</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; clazz)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isConcrete(java.lang.Class<?>)">isConcrete</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; clazz)
         
         <div class="jd-descrdiv">Determines if the given raw type represents a concrete type.</div>
   
@@ -485,16 +488,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isConcrete(com.google.inject.TypeLiteral<?>)">isConcrete</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; literal)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isConcrete(com.google.inject.TypeLiteral<?>)">isConcrete</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; literal)
         
         <div class="jd-descrdiv">Determines if the given generic type represents a concrete type.</div>
   
@@ -503,16 +506,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isImplicit(com.google.inject.TypeLiteral<?>)">isImplicit</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; literal)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isImplicit(com.google.inject.TypeLiteral<?>)">isImplicit</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/TypeLiteral.html">TypeLiteral</a>&lt;?&gt; literal)
         
         <div class="jd-descrdiv">Determines if the given generic type represents an implicit binding.</div>
   
@@ -521,16 +524,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isImplicit(java.lang.Class<?>)">isImplicit</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; clazz)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/inject/TypeArguments.html#isImplicit(java.lang.Class<?>)">isImplicit</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt; clazz)
         
         <div class="jd-descrdiv">Determines if the given raw type represents an implicit binding.</div>
   
@@ -573,176 +576,176 @@ From class
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clone</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">finalize</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getClass</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notify</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notifyAll</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
         
   </td></tr>
 
@@ -795,7 +798,7 @@ From class
 
 
 
-<A NAME="get(com.google.inject.TypeLiteral<?>)"></A>
+<a id="get(com.google.inject.TypeLiteral<?>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -825,7 +828,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>typeLiteral</td>
+          <th>typeLiteral</th>
           <td>The generic type</td>
         </tr>
       </table>
@@ -840,7 +843,7 @@ From class
 </div>
 
 
-<A NAME="get(com.google.inject.TypeLiteral<?>, int)"></A>
+<a id="get(com.google.inject.TypeLiteral<?>, int)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -870,11 +873,11 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>typeLiteral</td>
+          <th>typeLiteral</th>
           <td>The generic type</td>
         </tr>
         <tr>
-          <th>index</td>
+          <th>index</th>
           <td>The argument index</td>
         </tr>
       </table>
@@ -889,7 +892,7 @@ From class
 </div>
 
 
-<A NAME="implicitKey(java.lang.Class<T>)"></A>
+<a id="implicitKey(java.lang.Class<T>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -919,7 +922,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>clazz</td>
+          <th>clazz</th>
           <td>The implicit type</td>
         </tr>
       </table>
@@ -934,7 +937,7 @@ From class
 </div>
 
 
-<A NAME="isAssignableFrom(com.google.inject.TypeLiteral<?>, com.google.inject.TypeLiteral<?>)"></A>
+<a id="isAssignableFrom(com.google.inject.TypeLiteral<?>, com.google.inject.TypeLiteral<?>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -964,11 +967,11 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>superLiteral</td>
+          <th>superLiteral</th>
           <td>The generic super-type</td>
         </tr>
         <tr>
-          <th>subLiteral</td>
+          <th>subLiteral</th>
           <td>The generic sub-type</td>
         </tr>
       </table>
@@ -987,7 +990,7 @@ From class
 </div>
 
 
-<A NAME="isConcrete(java.lang.Class<?>)"></A>
+<a id="isConcrete(java.lang.Class<?>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1017,7 +1020,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>clazz</td>
+          <th>clazz</th>
           <td>The raw type</td>
         </tr>
       </table>
@@ -1032,7 +1035,7 @@ From class
 </div>
 
 
-<A NAME="isConcrete(com.google.inject.TypeLiteral<?>)"></A>
+<a id="isConcrete(com.google.inject.TypeLiteral<?>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1062,7 +1065,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>literal</td>
+          <th>literal</th>
           <td>The generic type</td>
         </tr>
       </table>
@@ -1077,7 +1080,7 @@ From class
 </div>
 
 
-<A NAME="isImplicit(com.google.inject.TypeLiteral<?>)"></A>
+<a id="isImplicit(com.google.inject.TypeLiteral<?>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1107,7 +1110,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>literal</td>
+          <th>literal</th>
           <td>The generic type</td>
         </tr>
       </table>
@@ -1122,7 +1125,7 @@ From class
 </div>
 
 
-<A NAME="isImplicit(java.lang.Class<?>)"></A>
+<a id="isImplicit(java.lang.Class<?>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1152,7 +1155,7 @@ From class
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>clazz</td>
+          <th>clazz</th>
           <td>The raw type</td>
         </tr>
       </table>
@@ -1175,7 +1178,7 @@ From class
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
+<a id="navbar_top"></a>
 
 <div id="footer">
 Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.

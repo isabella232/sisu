@@ -99,7 +99,29 @@
 <implements name="java.lang.annotation.Annotation">
 </implements>
 </class>
+<class name="Dynamic"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
 <class name="EagerSingleton"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="Hidden"
  extends="java.lang.Object"
  abstract="true"
  static="false"
@@ -175,6 +197,17 @@
 </implements>
 </class>
 <class name="Priority"
+ extends="java.lang.Object"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="java.lang.annotation.Annotation">
+</implements>
+</class>
+<class name="Typed"
  extends="java.lang.Object"
  abstract="true"
  static="false"
@@ -722,6 +755,29 @@
 </package>
 <package name="org.eclipse.sisu.inject"
 >
+<interface name="AnnotatedSource"
+ abstract="true"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="getAnnotation"
+ return="T"
+ abstract="true"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="binding" type="com.google.inject.Binding&lt;?&gt;">
+</parameter>
+<parameter name="annotationType" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+</interface>
 <interface name="BeanLocator"
  abstract="true"
  static="false"
@@ -892,8 +948,6 @@
  visibility="public"
 >
 <parameter name="publisher" type="org.eclipse.sisu.inject.BindingPublisher">
-</parameter>
-<parameter name="rank" type="int">
 </parameter>
 </method>
 <method name="add"
@@ -1107,34 +1161,55 @@
 >
 </method>
 </interface>
-<interface name="DescribedBinding"
- abstract="true"
+<class name="Guice4"
+ extends="java.lang.Object"
+ abstract="false"
  static="false"
- final="false"
+ final="true"
  deprecated="not deprecated"
  visibility="public"
 >
-<method name="getDescription"
- return="java.lang.String"
- abstract="true"
+<method name="getDeclaringSource"
+ return="java.lang.Object"
+ abstract="false"
  native="false"
  synchronized="false"
- static="false"
+ static="true"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
+<parameter name="binding" type="com.google.inject.Binding&lt;?&gt;">
+</parameter>
 </method>
-</interface>
-<interface name="HiddenBinding"
- abstract="true"
- static="false"
+<method name="getProviderInstance"
+ return="javax.inject.Provider&lt;?&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
  final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-</interface>
-<class name="InjectorPublisher"
+<parameter name="binding" type="com.google.inject.spi.ProviderInstanceBinding&lt;?&gt;">
+</parameter>
+</method>
+<method name="lazy"
+ return="javax.inject.Provider&lt;T&gt;"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="binding" type="com.google.inject.Binding&lt;T&gt;">
+</parameter>
+</method>
+</class>
+<class name="InjectorBindings"
  extends="java.lang.Object"
  abstract="false"
  static="false"
@@ -1144,8 +1219,8 @@
 >
 <implements name="org.eclipse.sisu.inject.BindingPublisher">
 </implements>
-<constructor name="InjectorPublisher"
- type="org.eclipse.sisu.inject.InjectorPublisher"
+<constructor name="InjectorBindings"
+ type="org.eclipse.sisu.inject.InjectorBindings"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -1156,8 +1231,8 @@
 <parameter name="function" type="org.eclipse.sisu.inject.RankingFunction">
 </parameter>
 </constructor>
-<constructor name="InjectorPublisher"
- type="org.eclipse.sisu.inject.InjectorPublisher"
+<constructor name="InjectorBindings"
+ type="org.eclipse.sisu.inject.InjectorBindings"
  static="false"
  final="false"
  deprecated="not deprecated"
@@ -1451,8 +1526,6 @@
 >
 <parameter name="publisher" type="org.eclipse.sisu.inject.BindingPublisher">
 </parameter>
-<parameter name="rank" type="int">
-</parameter>
 </method>
 <method name="add"
  return="void"
@@ -1680,6 +1753,110 @@
  visibility="public"
 >
 <parameter name="capacity" type="int">
+</parameter>
+</method>
+</class>
+<class name="Sources"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<method name="describe"
+ return="org.eclipse.sisu.Description"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="describe"
+ return="org.eclipse.sisu.Description"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="source" type="java.lang.Object">
+</parameter>
+<parameter name="value" type="java.lang.String">
+</parameter>
+</method>
+<method name="getAnnotation"
+ return="T"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="binding" type="com.google.inject.Binding&lt;?&gt;">
+</parameter>
+<parameter name="annotationType" type="java.lang.Class&lt;T&gt;">
+</parameter>
+</method>
+<method name="hide"
+ return="org.eclipse.sisu.Hidden"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="hide"
+ return="org.eclipse.sisu.Hidden"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="source" type="java.lang.Object">
+</parameter>
+</method>
+<method name="prioritize"
+ return="org.eclipse.sisu.Priority"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="value" type="int">
+</parameter>
+</method>
+<method name="prioritize"
+ return="org.eclipse.sisu.Priority"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="source" type="java.lang.Object">
+</parameter>
+<parameter name="value" type="int">
 </parameter>
 </method>
 </class>
@@ -2805,7 +2982,7 @@
 </method>
 </class>
 <class name="SisuTracker"
- extends="org.osgi.util.tracker.BundleTracker"
+ extends="<any>"
  abstract="false"
  static="false"
  final="false"
@@ -2949,6 +3126,105 @@
  visibility="protected"
 >
 </field>
+</class>
+</package>
+<package name="org.eclipse.sisu.osgi"
+>
+<class name="ServiceBindings"
+ extends="java.lang.Object"
+ abstract="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<implements name="org.eclipse.sisu.inject.BindingPublisher">
+</implements>
+<constructor name="ServiceBindings"
+ type="org.eclipse.sisu.osgi.ServiceBindings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="org.osgi.framework.BundleContext">
+</parameter>
+<parameter name="allow" type="java.lang.String">
+</parameter>
+<parameter name="ignore" type="java.lang.String">
+</parameter>
+<parameter name="maxRank" type="int">
+</parameter>
+</constructor>
+<constructor name="ServiceBindings"
+ type="org.eclipse.sisu.osgi.ServiceBindings"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="context" type="org.osgi.framework.BundleContext">
+</parameter>
+</constructor>
+<method name="defaultAllow"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="defaultIgnore"
+ return="java.lang.String"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="true"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="maxBindingRank"
+ return="int"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="subscribe"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="subscriber" type="org.eclipse.sisu.inject.BindingSubscriber&lt;T&gt;">
+</parameter>
+</method>
+<method name="unsubscribe"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="subscriber" type="org.eclipse.sisu.inject.BindingSubscriber&lt;T&gt;">
+</parameter>
+</method>
 </class>
 </package>
 <package name="org.eclipse.sisu.space"
@@ -3678,11 +3954,13 @@
  extends="org.eclipse.sisu.space.AbstractSisuIndex"
  abstract="false"
  static="false"
- final="true"
+ final="false"
  deprecated="not deprecated"
  visibility="public"
 >
-<implements name="org.eclipse.sisu.space.QualifiedTypeListener">
+<implements name="org.eclipse.sisu.space.ClassVisitor">
+</implements>
+<implements name="org.eclipse.sisu.space.SpaceVisitor">
 </implements>
 <constructor name="SisuIndex"
  type="org.eclipse.sisu.space.SisuIndex"
@@ -3694,6 +3972,38 @@
 <parameter name="targetDirectory" type="java.io.File">
 </parameter>
 </constructor>
+<method name="enterClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="modifiers" type="int">
+</parameter>
+<parameter name="name" type="java.lang.String">
+</parameter>
+<parameter name="_extends" type="java.lang.String">
+</parameter>
+<parameter name="_implements" type="java.lang.String[]">
+</parameter>
+</method>
+<method name="enterSpace"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="_space" type="org.eclipse.sisu.space.ClassSpace">
+</parameter>
+</method>
 <method name="getReader"
  return="java.io.Reader"
  abstract="false"
@@ -3724,32 +4034,17 @@
 <exception name="IOException" type="java.io.IOException">
 </exception>
 </method>
-<method name="hear"
- return="void"
- abstract="false"
- native="false"
- synchronized="false"
- static="false"
- final="false"
- deprecated="not deprecated"
- visibility="public"
->
-<parameter name="qualifiedType" type="java.lang.Class&lt;?&gt;">
-</parameter>
-<parameter name="source" type="java.lang.Object">
-</parameter>
-</method>
 <method name="index"
  return="void"
  abstract="false"
  native="false"
  synchronized="false"
  static="false"
- final="false"
+ final="true"
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="space" type="org.eclipse.sisu.space.ClassSpace">
+<parameter name="_space" type="org.eclipse.sisu.space.ClassSpace">
 </parameter>
 </method>
 <method name="info"
@@ -3765,6 +4060,28 @@
 <parameter name="message" type="java.lang.String">
 </parameter>
 </method>
+<method name="leaveClass"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
+<method name="leaveSpace"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+</method>
 <method name="main"
  return="void"
  abstract="false"
@@ -3776,6 +4093,32 @@
  visibility="public"
 >
 <parameter name="args" type="java.lang.String[]">
+</parameter>
+</method>
+<method name="visitAnnotation"
+ return="org.eclipse.sisu.space.AnnotationVisitor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="desc" type="java.lang.String">
+</parameter>
+</method>
+<method name="visitClass"
+ return="org.eclipse.sisu.space.ClassVisitor"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="true"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="url" type="java.net.URL">
 </parameter>
 </method>
 <method name="warn"
@@ -4480,7 +4823,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="iterable" type="java.lang.Iterable&lt;? extends java.util.Map.Entry&lt;K, V&gt;&gt;">
+<parameter name="iterable" type="java.lang.Iterable&lt;? extends java.util.Map.Entry&lt;?, V&gt;&gt;">
 </parameter>
 </constructor>
 <method name="listIterator"
@@ -4553,7 +4896,7 @@
  deprecated="not deprecated"
  visibility="public"
 >
-<parameter name="iterable" type="java.lang.Iterable&lt;? extends java.util.Map.Entry&lt;K, V&gt;&gt;">
+<parameter name="iterable" type="java.lang.Iterable&lt;? extends java.util.Map.Entry&lt;?, V&gt;&gt;">
 </parameter>
 </constructor>
 <method name="iterator"

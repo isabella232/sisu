@@ -22,6 +22,7 @@ ob_start();
 <div id="rightcolumn">
   <div class="sideitem">
     <h6>New and Noteworthy</h6>
+    <h7>2015-02-20</h7><p>Sisu 0.3.0 has been released!</p>
     <h7>2014-04-21</h7><p><a href="download/">0.2.1</a> maintenance release</p>
     <h7>2014-02-17</h7><p>Sisu 0.2.0 has been released!</p>
   </div>

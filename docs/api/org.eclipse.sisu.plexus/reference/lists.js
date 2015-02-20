@@ -1,6 +1,6 @@
 var DATA = [
       { id:0, label:"org.eclipse.sisu.plexus", link:"org/eclipse/sisu/plexus/package-summary.html", type:"package" },
-      { id:1, label:"org.eclipse.sisu.plexus.ClassRealmUtils", link:"org/eclipse/sisu/plexus/ClassRealmUtils.html", type:"class" },
+      { id:1, label:"org.eclipse.sisu.plexus.ClassRealmManager", link:"org/eclipse/sisu/plexus/ClassRealmManager.html", type:"class" },
       { id:2, label:"org.eclipse.sisu.plexus.ComponentDescriptorBeanModule", link:"org/eclipse/sisu/plexus/ComponentDescriptorBeanModule.html", type:"class" },
       { id:3, label:"org.eclipse.sisu.plexus.ComponentImpl", link:"org/eclipse/sisu/plexus/ComponentImpl.html", type:"class" },
       { id:4, label:"org.eclipse.sisu.plexus.CompositeBeanHelper", link:"org/eclipse/sisu/plexus/CompositeBeanHelper.html", type:"class" },

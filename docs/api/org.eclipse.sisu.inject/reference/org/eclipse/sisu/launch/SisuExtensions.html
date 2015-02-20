@@ -154,6 +154,8 @@
     <li class="selected api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -428,11 +430,11 @@ Summary:
 
     
       <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           public
           static
           final
-          <a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">SpaceModule.Strategy</a></nobr></td>
+          <a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html">SpaceModule.Strategy</a></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#DEFAULT">DEFAULT</a></td>
           <td class="jd-descrcol" width="100%">Default visitor strategy; scan and bind implementations with Qualifiers.</td>
       </tr>
@@ -463,11 +465,11 @@ Summary:
 
     
       <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           public
           static
           final
-          <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></nobr></td>
+          <a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html">WireModule.Strategy</a></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#DEFAULT">DEFAULT</a></td>
           <td class="jd-descrcol" width="100%">Default wiring strategy; route all unresolved dependencies to the <code><a href="../../../../org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.</td>
       </tr>
@@ -495,16 +497,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             &lt;T&gt;
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#create(java.lang.Class<T>)">create</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#create(java.lang.Class<T>)">create</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)
         
         <div class="jd-descrdiv">Creates instances of extensions listed under <code>META-INF/services/ fully-qualified-SPI-name</code> ;
  implementations must have a public no-arg constructor.</div>
@@ -514,16 +516,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             &lt;T,&nbsp;C&gt;
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;T&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#create(java.lang.Class<T>, java.lang.Class<C>, C)">create</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#create(java.lang.Class<T>, java.lang.Class<C>, C)">create</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)
         
         <div class="jd-descrdiv">Creates instances of extensions listed under <code>META-INF/services/ fully-qualified-SPI-name</code> ;
  implementations must either have a public no-arg constructor or one with the declared context type.</div>
@@ -533,16 +535,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></nobr>
+            <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#global(org.eclipse.sisu.space.ClassSpace)">global</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#global(org.eclipse.sisu.space.ClassSpace)">global</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)
         
         <div class="jd-descrdiv">Returns global <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the surrounding class space.</div>
   
@@ -551,16 +553,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             &lt;C&gt;
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder, java.lang.Class<C>, C)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder, java.lang.Class<C>, C)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;C&gt; contextType, C context)
         
         <div class="jd-descrdiv">Installs modules listed under <code>META-INF/services/com.google.inject.Module</code>; modules must either have a
  public no-arg constructor or one with the declared context type.</div>
@@ -570,16 +572,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#install(com.google.inject.Binder)">install</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)
         
         <div class="jd-descrdiv">Installs modules listed under <code>META-INF/services/com.google.inject.Module</code>; modules must have a public
  no-arg constructor.</div>
@@ -589,16 +591,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             &lt;T&gt;
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;T&gt;&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&nbsp;extends&nbsp;T&gt;&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#load(java.lang.Class<T>)">load</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#load(java.lang.Class<T>)">load</a></span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;T&gt; spi)
         
         <div class="jd-descrdiv">Loads extension types listed under <code>META-INF/services/ fully-qualified-SPI-name</code>.</div>
   
@@ -607,16 +609,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             static
             
-            <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></nobr>
+            <a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#local(org.eclipse.sisu.space.ClassSpace)">local</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#local(org.eclipse.sisu.space.ClassSpace)">local</a></span>(<a href="../../../../org/eclipse/sisu/space/ClassSpace.html">ClassSpace</a> space)
         
         <div class="jd-descrdiv">Returns local <code><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></code> from the containing class space.</div>
   
@@ -625,16 +627,16 @@ Summary:
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></nobr>
+            <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)
         
         <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/space/SpaceModule.html">SpaceModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.space.SpaceVisitor</code> extensions
  override the default scanning.</div>
@@ -644,16 +646,16 @@ Summary:
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></nobr>
+            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuExtensions.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)
         
         <div class="jd-descrdiv"><code><a href="../../../../org/eclipse/sisu/wire/WireModule.html">WireModule</a></code> strategy that lets <code>META-INF/services/org.eclipse.sisu.wire.Wiring</code> extensions override
  the default wiring.</div>
@@ -697,176 +699,176 @@ From class
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clone</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">finalize</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getClass</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notify</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notifyAll</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
         
   </td></tr>
 
@@ -899,16 +901,16 @@ From interface
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             abstract
             
             
             
             
-            <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></nobr>
+            <a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/space/SpaceModule.Strategy.html#visitor(com.google.inject.Binder)">visitor</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)
         
         <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/space/SpaceVisitor.html">SpaceVisitor</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
   
@@ -943,16 +945,16 @@ From interface
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             abstract
             
             
             
             
-            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></nobr>
+            <a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/wire/WireModule.Strategy.html#wiring(com.google.inject.Binder)">wiring</a></span>(<a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a> binder)
         
         <div class="jd-descrdiv">Selects the <code><a href="../../../../org/eclipse/sisu/wire/Wiring.html">Wiring</a></code> to be used for the given <code><a href="http://google-guice.googlecode.com/git-history/3.0/javadoc/com/google/inject/Binder.html">Binder</a></code>.</div>
   
@@ -1007,7 +1009,7 @@ From interface
 
 
 
-<A NAME="create(java.lang.Class<T>)"></A>
+<a id="create(java.lang.Class<T>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1038,7 +1040,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>spi</td>
+          <th>spi</th>
           <td>The extension SPI</td>
         </tr>
       </table>
@@ -1053,7 +1055,7 @@ From interface
 </div>
 
 
-<A NAME="create(java.lang.Class<T>, java.lang.Class<C>, C)"></A>
+<a id="create(java.lang.Class<T>, java.lang.Class<C>, C)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1084,15 +1086,15 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>spi</td>
+          <th>spi</th>
           <td>The extension SPI</td>
         </tr>
         <tr>
-          <th>contextType</td>
+          <th>contextType</th>
           <td>Optional context type</td>
         </tr>
         <tr>
-          <th>context</td>
+          <th>context</th>
           <td>Optional context instance</td>
         </tr>
       </table>
@@ -1107,7 +1109,7 @@ From interface
 </div>
 
 
-<A NAME="global(org.eclipse.sisu.space.ClassSpace)"></A>
+<a id="global(org.eclipse.sisu.space.ClassSpace)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1137,7 +1139,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>space</td>
+          <th>space</th>
           <td>The class space</td>
         </tr>
       </table>
@@ -1152,7 +1154,7 @@ From interface
 </div>
 
 
-<A NAME="install(com.google.inject.Binder, java.lang.Class<C>, C)"></A>
+<a id="install(com.google.inject.Binder, java.lang.Class<C>, C)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1183,15 +1185,15 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>binder</td>
+          <th>binder</th>
           <td>The current binder</td>
         </tr>
         <tr>
-          <th>contextType</td>
+          <th>contextType</th>
           <td>Optional context type</td>
         </tr>
         <tr>
-          <th>context</td>
+          <th>context</th>
           <td>Optional context instance
 </td>
         </tr>
@@ -1202,7 +1204,7 @@ From interface
 </div>
 
 
-<A NAME="install(com.google.inject.Binder)"></A>
+<a id="install(com.google.inject.Binder)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1233,7 +1235,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>binder</td>
+          <th>binder</th>
           <td>The current binder
 </td>
         </tr>
@@ -1244,7 +1246,7 @@ From interface
 </div>
 
 
-<A NAME="load(java.lang.Class<T>)"></A>
+<a id="load(java.lang.Class<T>)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1274,7 +1276,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>spi</td>
+          <th>spi</th>
           <td>The extension SPI</td>
         </tr>
       </table>
@@ -1289,7 +1291,7 @@ From interface
 </div>
 
 
-<A NAME="local(org.eclipse.sisu.space.ClassSpace)"></A>
+<a id="local(org.eclipse.sisu.space.ClassSpace)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1319,7 +1321,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>space</td>
+          <th>space</th>
           <td>The class space</td>
         </tr>
       </table>
@@ -1334,7 +1336,7 @@ From interface
 </div>
 
 
-<A NAME="visitor(com.google.inject.Binder)"></A>
+<a id="visitor(com.google.inject.Binder)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1365,7 +1367,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>binder</td>
+          <th>binder</th>
           <td>The binder</td>
         </tr>
       </table>
@@ -1380,7 +1382,7 @@ From interface
 </div>
 
 
-<A NAME="wiring(com.google.inject.Binder)"></A>
+<a id="wiring(com.google.inject.Binder)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1411,7 +1413,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>binder</td>
+          <th>binder</th>
           <td>The binder</td>
         </tr>
       </table>
@@ -1434,7 +1436,7 @@ From interface
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
+<a id="navbar_top"></a>
 
 <div id="footer">
 Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.

@@ -1,7 +1,7 @@
 <api>
 <package name="org.eclipse.sisu.plexus"
 >
-<class name="ClassRealmUtils"
+<class name="ClassRealmManager"
  extends="java.lang.Object"
  abstract="false"
  static="false"
@@ -9,6 +9,20 @@
  deprecated="not deprecated"
  visibility="public"
 >
+<implements name="org.codehaus.plexus.classworlds.ClassWorldListener">
+</implements>
+<constructor name="ClassRealmManager"
+ type="org.eclipse.sisu.plexus.ClassRealmManager"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="plexusContainer" type="org.codehaus.plexus.MutablePlexusContainer">
+</parameter>
+<parameter name="beanLocator" type="org.eclipse.sisu.inject.MutableBeanLocator">
+</parameter>
+</constructor>
 <method name="contextRealm"
  return="org.codehaus.plexus.classworlds.realm.ClassRealm"
  abstract="false"
@@ -19,6 +33,60 @@
  deprecated="not deprecated"
  visibility="public"
 >
+</method>
+<method name="isManaged"
+ return="boolean"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="realm" type="org.codehaus.plexus.classworlds.realm.ClassRealm">
+</parameter>
+</method>
+<method name="manage"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="realm" type="org.codehaus.plexus.classworlds.realm.ClassRealm">
+</parameter>
+<parameter name="injector" type="com.google.inject.Injector">
+</parameter>
+</method>
+<method name="realmCreated"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="realm" type="org.codehaus.plexus.classworlds.realm.ClassRealm">
+</parameter>
+</method>
+<method name="realmDisposed"
+ return="void"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="realm" type="org.codehaus.plexus.classworlds.realm.ClassRealm">
+</parameter>
 </method>
 <method name="visibleRealmNames"
  return="java.util.Set&lt;java.lang.String&gt;"
@@ -1141,6 +1209,19 @@
  visibility="public"
 >
 <parameter name="binder" type="com.google.inject.Binder">
+</parameter>
+</method>
+<method name="with"
+ return="org.eclipse.sisu.plexus.PlexusSpaceModule"
+ abstract="false"
+ native="false"
+ synchronized="false"
+ static="false"
+ final="false"
+ deprecated="not deprecated"
+ visibility="public"
+>
+<parameter name="manager" type="org.eclipse.sisu.bean.BeanManager">
 </parameter>
 </method>
 </class>

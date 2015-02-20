@@ -154,6 +154,8 @@
     <li class="selected api apilevel-">
   <a href="../../../../org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="../../../../org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="../../../../org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -225,17 +227,6 @@
 
 
   
-   
-  
-  
-  
-   
-  
-  
-
-  
-   
-  
   
   
   
@@ -269,9 +260,6 @@ Summary:
   <a href="#lfields">Fields</a>
   
 
-
-  &#124; <a href="#inhfields">Inherited Fields</a>
-  
 
 
   &#124; <a href="#pubctors">Ctors</a>
@@ -320,7 +308,7 @@ Summary:
   
 
   
-    extends <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/util/tracker/BundleTracker.html">BundleTracker</a><br/>
+    extends <any><br/>
   
   
   
@@ -353,7 +341,7 @@ Summary:
         
             <td class="jd-inheritance-space">&nbsp;&nbsp;&nbsp;&#x21b3;</td>
          	
-        <td colspan="2" class="jd-inheritance-class-cell"><a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/util/tracker/BundleTracker.html">org.osgi.util.tracker.BundleTracker</a></td>
+        <td colspan="2" class="jd-inheritance-class-cell"><any></td>
     </tr>
     
 
@@ -431,33 +419,33 @@ Summary:
 
     
       <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           protected
           
           final
-          <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></nobr></td>
+          <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#locator">locator</a></td>
           <td class="jd-descrcol" width="100%">Shared locator of bound components.</td>
       </tr>
       
     
       <tr class=" api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           protected
           
           final
-          <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;</nobr></td>
+          <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;</td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#plans">plans</a></td>
           <td class="jd-descrcol" width="100%">Custom plans; contributed by attaching fragments to the extender bundle.</td>
       </tr>
       
     
       <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
+          <td class="jd-typecol">
           protected
           
           final
-          int</nobr></td>
+          int</td>
           <td class="jd-linkcol"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#stateMask">stateMask</a></td>
           <td class="jd-descrcol" width="100%">Mask of bundle states being tracked.</td>
       </tr>
@@ -470,55 +458,6 @@ Summary:
 
 
 
-<!-- =========== FIELD SUMMARY =========== -->
-<table id="inhfields" class="jd-sumtable"><tr><th>
-  <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
-  <div style="clear:left;">Inherited Fields</div></th></tr>
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-fields-org.osgi.util.tracker.BundleTracker" class="jd-expando-trigger closed"
-          ><img id="inherited-fields-org.osgi.util.tracker.BundleTracker-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>From class
-org.osgi.util.tracker.BundleTracker
-<div id="inherited-fields-org.osgi.util.tracker.BundleTracker">
-  <div id="inherited-fields-org.osgi.util.tracker.BundleTracker-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-fields-org.osgi.util.tracker.BundleTracker-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-    
-      <tr class="alt-color api apilevel-" >
-          <td class="jd-typecol"><nobr>
-          protected
-          
-          final
-          <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a></nobr></td>
-          <td class="jd-linkcol">context</td>
-          <td class="jd-descrcol" width="100%"></td>
-      </tr>
-      
-    
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-
-
-
-
-
-</table>
-
-
 
 
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -528,16 +467,16 @@ org.osgi.util.tracker.BundleTracker
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            </nobr>
+            
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#SisuTracker(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)">SisuTracker</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context, int stateMask, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#SisuTracker(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)">SisuTracker</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleContext.html">BundleContext</a> context, int stateMask, <a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a> locator)
         
   </td></tr>
 
@@ -557,48 +496,48 @@ org.osgi.util.tracker.BundleTracker
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#addingBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent)">addingBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#addingBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent)">addingBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event)
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#open()">open</a></span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#open()">open</a></span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></nobr>
+            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)
         
         <div class="jd-descrdiv">Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</div>
   
@@ -607,16 +546,16 @@ org.osgi.util.tracker.BundleTracker
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#purgeBundles()">purgeBundles</a></span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#purgeBundles()">purgeBundles</a></span>()
         
         <div class="jd-descrdiv">Purges any bundles that are no longer valid.</div>
   
@@ -625,16 +564,16 @@ org.osgi.util.tracker.BundleTracker
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#removedBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent, java.lang.Object)">removedBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#removedBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent, java.lang.Object)">removedBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> event, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> object)
         
   </td></tr>
 
@@ -652,16 +591,16 @@ org.osgi.util.tracker.BundleTracker
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/util/List.html">List</a>&lt;<a href="../../../../org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a>&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#discoverPlans()">discoverPlans</a></span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#discoverPlans()">discoverPlans</a></span>()
         
         <div class="jd-descrdiv">Discovers plans listed locally under <code>META-INF/services/org.eclipse.sisu.launch.BundlePlan</code> ;
  implementations must have a public no-arg constructor or one that accepts a <code><a href="../../../../org/eclipse/sisu/inject/MutableBeanLocator.html">MutableBeanLocator</a></code>.</div>
@@ -671,16 +610,16 @@ org.osgi.util.tracker.BundleTracker
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#evictBundle(org.osgi.framework.Bundle)">evictBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/SisuTracker.html#evictBundle(org.osgi.framework.Bundle)">evictBundle</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)
         
         <div class="jd-descrdiv">Determines whether we should remove the <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> associated with the given bundle.</div>
   
@@ -699,190 +638,6 @@ org.osgi.util.tracker.BundleTracker
   <a href="#" class="toggle-all" onclick="return toggleAllInherited(this, null)">[Expand]</a>
   <div style="clear:left;">Inherited Methods</div></th></tr>
 
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.osgi.util.tracker.BundleTracker" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.osgi.util.tracker.BundleTracker-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From class
-
-  <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/util/tracker/BundleTracker.html">org.osgi.util.tracker.BundleTracker</a>
-
-<div id="inherited-methods-org.osgi.util.tracker.BundleTracker">
-  <div id="inherited-methods-org.osgi.util.tracker.BundleTracker-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.osgi.util.tracker.BundleTracker-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addingBundle</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> arg1)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">close</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle[]</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getBundles</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getObject</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getTrackingCount</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">modifiedBundle</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">open</span>()</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">remove</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">removedBundle</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            
-            
-            
-            
-            
-            int</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">size</span>()</nobr>
-        
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
 
 
 
@@ -907,176 +662,176 @@ From class
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">clone</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">clone</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            boolean</nobr>
+            boolean
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">equals</span>(<a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg0)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">finalize</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">finalize</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;</nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Class.html">Class</a>&lt;?&gt;
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">getClass</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">getClass</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            int</nobr>
+            int
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">hashCode</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">hashCode</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notify</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notify</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">notifyAll</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">notifyAll</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             
             
             
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a></nobr>
+            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/String.html">String</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">toString</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">toString</span>()
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>()</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>()
         
   </td></tr>
 
 
 	 
     <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0, int arg1)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0, int arg1)
         
   </td></tr>
 
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             
             
             final
             
             
-            void</nobr>
+            void
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">wait</span>(long arg0)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad">wait</span>(long arg0)
         
   </td></tr>
 
@@ -1109,93 +864,19 @@ From interface
 
 	 
     <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
+        <td class="jd-typecol">
             abstract
             
             
             
             
-            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></nobr>
+            <a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a>
         </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)</nobr>
+        <td class="jd-linkcol" width="100%">
+        <span class="sympad"><a href="../../../../org/eclipse/sisu/launch/BundlePlan.html#prepare(org.osgi.framework.Bundle)">prepare</a></span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> bundle)
         
         <div class="jd-descrdiv">Prepares a <code><a href="../../../../org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code> of components for the given bundle.</div>
   
-  </td></tr>
-
-
-</table>
-  </div>
-</div>
-</td></tr>
-
-
-
-<tr class="api apilevel-" >
-<td colspan="12">
-  <a href="#" onclick="return toggleInherited(this, null)" id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer" class="jd-expando-trigger closed"
-          ><img id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer-trigger"
-          src="../../../../../assets/images/triangle-closed.png"
-          class="jd-expando-trigger-img" /></a>
-From interface
-
-  <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/util/tracker/BundleTrackerCustomizer.html">org.osgi.util.tracker.BundleTrackerCustomizer</a>
-
-<div id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer">
-  <div id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer-list"
-        class="jd-inheritedlinks">
-  </div>
-  <div id="inherited-methods-org.osgi.util.tracker.BundleTrackerCustomizer-summary" style="display: none;">
-    <table class="jd-sumtable-expando">
-    
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a></nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">addingBundle</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> arg1)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class=" api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">modifiedBundle</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)</nobr>
-        
-  </td></tr>
-
-
-	 
-    <tr class="alt-color api apilevel-" >
-        <td class="jd-typecol"><nobr>
-            abstract
-            
-            
-            
-            
-            void</nobr>
-        </td>
-        <td class="jd-linkcol" width="100%"><nobr>
-        <span class="sympad">removedBundle</span>(<a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/Bundle.html">Bundle</a> arg0, <a href="http://www.osgi.org/javadoc/r4v42/index.html?org/osgi/framework/BundleEvent.html">BundleEvent</a> arg1, <a href="http://docs.oracle.com/javase/6/docs/api/index.html?java/lang/Object.html">Object</a> arg2)</nobr>
-        
   </td></tr>
 
 
@@ -1237,7 +918,7 @@ From interface
 
 
 
-<A NAME="locator"></A>
+<a id="locator"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1268,7 +949,7 @@ From interface
 
 
 
-<A NAME="plans"></A>
+<a id="plans"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1299,7 +980,7 @@ From interface
 
 
 
-<A NAME="stateMask"></A>
+<a id="stateMask"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1339,7 +1020,7 @@ From interface
 
 
 
-<A NAME="SisuTracker(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)"></A>
+<a id="SisuTracker(org.osgi.framework.BundleContext, int, org.eclipse.sisu.inject.MutableBeanLocator)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1385,7 +1066,7 @@ From interface
 
 
 
-<A NAME="addingBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent)"></A>
+<a id="addingBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1416,7 +1097,7 @@ From interface
 </div>
 
 
-<A NAME="open()"></A>
+<a id="open()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1447,7 +1128,7 @@ From interface
 </div>
 
 
-<A NAME="prepare(org.osgi.framework.Bundle)"></A>
+<a id="prepare(org.osgi.framework.Bundle)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1477,7 +1158,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>bundle</td>
+          <th>bundle</th>
           <td>The bundle</td>
         </tr>
       </table>
@@ -1492,7 +1173,7 @@ From interface
 </div>
 
 
-<A NAME="purgeBundles()"></A>
+<a id="purgeBundles()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1524,7 +1205,7 @@ From interface
 </div>
 
 
-<A NAME="removedBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent, java.lang.Object)"></A>
+<a id="removedBundle(org.osgi.framework.Bundle, org.osgi.framework.BundleEvent, java.lang.Object)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1564,7 +1245,7 @@ From interface
 
 
 
-<A NAME="discoverPlans()"></A>
+<a id="discoverPlans()"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1601,7 +1282,7 @@ From interface
 </div>
 
 
-<A NAME="evictBundle(org.osgi.framework.Bundle)"></A>
+<a id="evictBundle(org.osgi.framework.Bundle)"></a>
 
 <div class="jd-details api apilevel-"> 
     <h4 class="jd-details-title">
@@ -1631,7 +1312,7 @@ From interface
       <h5 class="jd-tagtitle">Parameters</h5>
       <table class="jd-tagtable">
         <tr>
-          <th>bundle</td>
+          <th>bundle</th>
           <td>The bundle</td>
         </tr>
       </table>
@@ -1650,7 +1331,7 @@ From interface
 
 
 <!-- ========= END OF CLASS DATA ========= -->
-<A NAME="navbar_top"></A>
+<a id="navbar_top"></a>
 
 <div id="footer">
 Generated by <a href="http://code.google.com/p/doclava/">Doclava</a>.

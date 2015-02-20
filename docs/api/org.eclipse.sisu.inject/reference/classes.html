@@ -153,6 +153,8 @@
     <li class="api apilevel-">
   <a href="./org/eclipse/sisu/launch/package-summary.html">org.eclipse.sisu.launch</a></li>
     <li class="api apilevel-">
+  <a href="./org/eclipse/sisu/osgi/package-summary.html">org.eclipse.sisu.osgi</a></li>
+    <li class="api apilevel-">
   <a href="./org/eclipse/sisu/space/package-summary.html">org.eclipse.sisu.space</a></li>
     <li class="api apilevel-">
   <a href="./org/eclipse/sisu/wire/package-summary.html">org.eclipse.sisu.wire</a></li>
@@ -210,6 +212,7 @@
     <a href="#letter_C">C</a>
     <a href="#letter_D">D</a>
     <a href="#letter_E">E</a>
+    <a href="#letter_G">G</a>
     <a href="#letter_H">H</a>
     <a href="#letter_I">I</a>
     <a href="#letter_L">L</a>
@@ -237,6 +240,12 @@
     
     
         <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/AnnotatedSource.html">AnnotatedSource</a></td>
+            <td class="jd-descrcol" width="100%">Binding source locations can implement this interface to supply annotations to the <code><a href="./org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/AnnotationVisitor.html">AnnotationVisitor</a></td>
             <td class="jd-descrcol" width="100%">Something that can visit annotation declarations.&nbsp;</td>
         </tr>
@@ -448,12 +457,6 @@
     
     
         <tr class=" api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/DescribedBinding.html">DescribedBinding</a></td>
-            <td class="jd-descrcol" width="100%">Binding source locations should implement this interface to supply descriptions to the <code><a href="./org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
-        </tr>
-    
-    
-        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/Description.html">Description</a></td>
             <td class="jd-descrcol" width="100%">Describes a bean:<br>
  <br>
@@ -469,13 +472,27 @@
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/sonatype/inject/Description.html">Description</a></td>
             <td class="jd-descrcol" width="100%">
       <em>
   This @interface is deprecated.
       Replaced by <code><a href="./org/eclipse/sisu/Description.html">org.eclipse.sisu.Description</a></code>
 </em>&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/Dynamic.html">Dynamic</a></td>
+            <td class="jd-descrcol" width="100%">Marks dependencies that should be dynamic proxies:<br>
+ <br>
+ 
+ <pre>
+ &#064;Inject
+ &#064;Dynamic
+ Component proxy;
+ </pre>
+&nbsp;</td>
         </tr>
     
     
@@ -514,7 +531,7 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/wire/EntryListAdapter.html">EntryListAdapter</a>&lt;K,&nbsp;V&gt;</td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/wire/EntryListAdapter.html">EntryListAdapter</a>&lt;V&gt;</td>
             <td class="jd-descrcol" width="100%">List backed by an Iterable sequence of map entries.&nbsp;</td>
         </tr>
     
@@ -526,8 +543,21 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/wire/EntrySetAdapter.html">EntrySetAdapter</a>&lt;K,&nbsp;V&gt;</td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/wire/EntrySetAdapter.html">EntrySetAdapter</a>&lt;V&gt;</td>
             <td class="jd-descrcol" width="100%">Set backed by an Iterable sequence of map entries.&nbsp;</td>
+        </tr>
+    
+    
+</table>
+
+
+<h2 id="letter_G">G</h2>
+<table class="jd-sumtable">
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/Guice4.html">Guice4</a></td>
+            <td class="jd-descrcol" width="100%">Utility methods for dealing with changes in the Guice 4.0 SPI.&nbsp;</td>
         </tr>
     
     
@@ -539,8 +569,18 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/HiddenBinding.html">HiddenBinding</a></td>
-            <td class="jd-descrcol" width="100%">Binding source locations should implement this interface to hide bindings from the <code><a href="./org/eclipse/sisu/inject/BeanLocator.html">BeanLocator</a></code>.&nbsp;</td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/Hidden.html">Hidden</a></td>
+            <td class="jd-descrcol" width="100%">Hides a bean from being located or watched:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Hidden
+ public class InternalComponent
+ {
+     //
+ }
+ </pre>&nbsp;</td>
         </tr>
     
     
@@ -576,7 +616,7 @@
     
     
         <tr class="alt-color api apilevel-" >
-            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/InjectorPublisher.html">InjectorPublisher</a></td>
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/InjectorBindings.html">InjectorBindings</a></td>
             <td class="jd-descrcol" width="100%">Publisher of Bindings from a single Injector; ranked according to a given <code><a href="./org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code>.&nbsp;</td>
         </tr>
     
@@ -842,44 +882,56 @@
     
     
         <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/osgi/ServiceBindings.html">ServiceBindings</a></td>
+            <td class="jd-descrcol" width="100%">On-demand publisher of Bindings from the OSGi service registry.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuBundlePlan.html">SisuBundlePlan</a></td>
             <td class="jd-descrcol" width="100%"><code><a href="./org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code> that prepares <code><a href="./org/eclipse/sisu/inject/BindingPublisher.html">BindingPublisher</a></code>s for JSR330 bundles.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuExtender.html">SisuExtender</a></td>
             <td class="jd-descrcol" width="100%">OSGi extender that uses Sisu and Guice to wire up applications from one or more component bundles.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuExtensions.html">SisuExtensions</a></td>
             <td class="jd-descrcol" width="100%">SPI mechanism for discovering Module and <code>Strategy</code> extensions.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/SisuIndex.html">SisuIndex</a></td>
             <td class="jd-descrcol" width="100%">Command-line utility that generates a qualified class index for a space-separated list of JARs.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/space/SisuIndexAPT6.html">SisuIndexAPT6</a></td>
             <td class="jd-descrcol" width="100%">Java 6 Annotation Processor that generates a qualified class index for the current build.&nbsp;</td>
         </tr>
     
     
-        <tr class=" api apilevel-" >
+        <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/launch/SisuTracker.html">SisuTracker</a></td>
             <td class="jd-descrcol" width="100%">OSGi BundleTracker that tracks component bundles and uses <code><a href="./org/eclipse/sisu/launch/BundlePlan.html">BundlePlan</a></code>s to publish them.&nbsp;</td>
         </tr>
     
     
-        <tr class="alt-color api apilevel-" >
+        <tr class=" api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/Soft.html">Soft</a></td>
             <td class="jd-descrcol" width="100%">Utility methods for dealing with SoftReference collections.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class="alt-color api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/Sources.html">Sources</a></td>
+            <td class="jd-descrcol" width="100%">Utility methods for dealing with annotated sources.&nbsp;</td>
         </tr>
     
     
@@ -923,6 +975,25 @@
         <tr class="alt-color api apilevel-" >
             <td class="jd-linkcol"><a href="./org/eclipse/sisu/inject/TypeArguments.html">TypeArguments</a></td>
             <td class="jd-descrcol" width="100%">Utility methods for dealing with generic type arguments.&nbsp;</td>
+        </tr>
+    
+    
+        <tr class=" api apilevel-" >
+            <td class="jd-linkcol"><a href="./org/eclipse/sisu/Typed.html">Typed</a></td>
+            <td class="jd-descrcol" width="100%">Restricts the visible types of a bean:<br>
+ <br>
+ 
+ <pre>
+ &#064;Named
+ &#064;Typed( Widget.class, Service.class )
+ public class PrinterWidget
+     extends AbstractWidget
+     implements Service
+ {
+     //
+ }
+ </pre>
+&nbsp;</td>
         </tr>
     
     
