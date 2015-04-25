@@ -51,7 +51,7 @@ unless otherwise specified.</i></p>
   &lt;plugin&gt;
     &lt;groupId&gt;org.eclipse.sisu&lt;/groupId&gt;
     &lt;artifactId&gt;sisu-maven-plugin&lt;/artifactId&gt;
-    &lt;version&gt;0.3.0&lt;/version&gt;
+    &lt;version&gt;<?php print $release;?>&lt;/version&gt;
   &lt;/plugin&gt;
 </pre>
 
