@@ -27,7 +27,7 @@ $ci = "https://hudson.eclipse.org/sisu/";
 $about = "/projects/project.php?id=$projectId";
 $iplog = "/projects/ip_log.php?projectid=$projectId";
 $incubation = $summary->getIncubationSideItem();
-$release = "0.3.1";
+$release = "0.3.2";
 
 # Set the theme for your project's web pages.
 # See the Committer Tools "Phoenix" secion in the How Do I? for list of themes

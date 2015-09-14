@@ -316,7 +316,7 @@ Summary:
 
 
 <h2>Class Overview</h2>
-<p>Defines the priority ordering of a bean:<br>
+<p>Defines the priority ordering of a bean, higher values have higher priority:<br>
  <br>
  
  <pre>
@@ -327,10 +327,16 @@ Summary:
      //
  }
  </pre>
-</p>
+ 
+ Implicit priorities start at zero for default beans, negative for non-default.</p>
 
 
 
+  <div class="jd-tagdata">
+      <h5 class="jd-tagtitle">See Also</h5>
+      <ul class="nolist"><li><code><a href="../../../org/eclipse/sisu/inject/RankingFunction.html">RankingFunction</a></code></li><li><code><a href="../../../org/eclipse/sisu/BeanEntry.html#getRank()">getRank()</a></code></li>
+      </ul>
+  </div>
 
 
 </div><!-- jd-descr -->

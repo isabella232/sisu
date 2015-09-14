@@ -22,9 +22,9 @@ ob_start();
 <div id="rightcolumn">
   <div class="sideitem">
     <h6>New and Noteworthy</h6>
-    <h7>2015-04-25</h7><p><a href="download/">0.3.1</a> maintenance release</p>
+    <h7>2015-09-14</h7><p><a href="download/">0.3.2</a> Java9+Jigsaw support</p>
+    <h7>2015-04-25</h7><p>0.3.1 maintenance release</p>
     <h7>2015-02-20</h7><p>Sisu 0.3.0 has been released!</p>
-    <h7>2014-04-21</h7><p>0.2.1 maintenance release</p>
   </div>
   <?php print $incubation;?>
 </div>
