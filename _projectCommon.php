@@ -63,11 +63,10 @@ $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self",
 # $Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
 
 # incubation side item
-global $images;
 $incubation = "<div class=\"sideitem\">
-  <h6><img src=\"$images->incubation_conforming_small\" align=\"right\"/>Incubation</h6>
+  <h6><img src=\"/projects/images/egg.gif\" align=\"right\"/>Incubation</h6>
   <div style=\"text-align:center\"><a href=\"/projects/what-is-incubation.php\"><img
-    align=\"center\" src=\"$images->incubation_large\"
+    align=\"center\" src=\"/images/egg-incubation.png\"
     border=\"0\" alt=\"Incubation\" /></a></div>
   </div>";
 
