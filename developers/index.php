@@ -65,6 +65,12 @@ ob_start();
 </p>
 
 <h3 id="mail">Mailing Lists</h3>
+<p>
+  <a href="http://dev.eclipse.org/mailman/listinfo/sisu-dev/">developer mailing list</a>
+</p>
+<p>
+  <a href="http://dev.eclipse.org/mailman/listinfo/sisu-users/">user mailing list</a>
+</p>
 
 <h3 id="ci">Continuous Integration</h3>
 <p>
