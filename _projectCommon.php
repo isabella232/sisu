@@ -11,11 +11,9 @@
  *******************************************************************************/
 
 require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/classes/Project.class.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/projects/classes/ProjectSummary.class.php");
 
 $projectId = "technology.sisu";
 $project = getProject($projectId);
-$summary = new ProjectSummary($project);
 $projectName = $project->getName();
 $projectShortName = $project->getShortName();
 $projectDescription = $project->getDescription();
@@ -26,7 +24,6 @@ $sources = "http://git.eclipse.org/c/sisu/";
 $ci = "https://hudson.eclipse.org/sisu/";
 $about = "/projects/project.php?id=$projectId";
 $iplog = "/projects/ip_log.php?projectid=$projectId";
-$incubation = $summary->getIncubationSideItem();
 $release = "0.3.3";
 
 # Set the theme for your project's web pages.
@@ -64,6 +61,14 @@ $Nav->addCustomNav("About Sisu", "/projects/project.php?id=$projectId", "_self",
 # $Menu->addMenuItem("Downloads", $projectUrl . "download/", "_self");
 # $Menu->addMenuItem("Get Involved", $projectUrl . "developers/", "_self");
 # $Menu->addMenuItem("Support", $projectUrl . "support/", "_self");
+
+# incubation side item
+$incubation = "<div class=\"sideitem\">
+  <h6><img src=\"$images->incubation_conforming_small\" align=\"right\"/>Incubation</h6>
+  <div style=\"text-align:center\"><a href=\"/projects/what-is-incubation.php\"><img
+    align=\"center\" src=\"$images->incubation_large\"
+    border=\"0\" alt=\"Incubation\" /></a></div>
+  </div>";
 
 # To define additional CSS or other pre-body headers
 

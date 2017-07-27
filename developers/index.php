@@ -11,8 +11,6 @@
  *******************************************************************************/
 
 $pageTitle = "Get Involved";
-$mailingLists = $summary->getMailingListsHtml();
-$committers = $summary->getCommittersSideItem();
 
 ob_start();
 ?>
@@ -67,7 +65,6 @@ ob_start();
 </p>
 
 <h3 id="mail">Mailing Lists</h3>
-<?php print $mailingLists;?>
 
 <h3 id="ci">Continuous Integration</h3>
 <p>
@@ -107,7 +104,6 @@ ob_start();
 
 <div id="rightcolumn">
 <?php print $incubation;?>
-<?php print $committers;?>
 </div>
 
 <?php
