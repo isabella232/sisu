@@ -11,7 +11,6 @@
  *******************************************************************************/
 
 $pageTitle = "Support";
-$issueTracker = normalizeHttpUrl($project->getBugzillaUrl()); 
 
 ob_start();
 ?>
