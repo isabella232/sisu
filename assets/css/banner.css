@@ -12,8 +12,11 @@
 .sisu-8{left:57px;top:27px;background:#000;}
 .sisu-dot{width:8px;height:8px;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}
 
-@media (min-width:400px){
+@media (min-width:768px){
 div.sisu{position:relative;top:-192px;left:220px;}}
 
-@media (min-width:0px) and (max-width:399px){
+@media (min-width:438px) and (max-width:767px){
+div.sisu{position:relative;top:-148px;left:220px;}}
+
+@media (min-width:0px) and (max-width:437px){
 div.sisu{display:none;}}
