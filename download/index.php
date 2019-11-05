@@ -24,7 +24,7 @@ unless otherwise specified.</i></p>
 <h3 id="dist">Distribution</h3>
 <ul>
 <li><a href="https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject.site/<?php print $release;?>/org.eclipse.sisu.inject.site-<?php print $release;?>.zip">Sisu-Inject <?php print $release;?> bundles</a></li>
-<li><a href="https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus.site/<?php print $release;?>/org.eclipse.sisu.plexus.site-<?php print $release;?>.zip">Sisu-Inject <?php print $release;?> bundles</a></li>
+<li><a href="https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.plexus.site/<?php print $release;?>/org.eclipse.sisu.plexus.site-<?php print $release;?>.zip">Sisu-Plexus <?php print $release;?> bundles</a></li>
 <!--
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/releases/org.eclipse.sisu.inject.site-<?php print $release;?>.zip">Sisu-Inject <?php print $release;?> bundles</a></li>
 <li><a href="http://www.eclipse.org/downloads/download.php?file=/sisu/releases/org.eclipse.sisu.plexus.site-<?php print $release;?>.zip">Sisu-Plexus <?php print $release;?> bundles</a></li>
