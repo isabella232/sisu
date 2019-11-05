@@ -24,7 +24,7 @@ $sources = "http://git.eclipse.org/c/sisu/";
 $ci = "https://hudson.eclipse.org/sisu/";
 $about = "/projects/project.php?id=$projectId";
 $iplog = "/projects/ip_log.php?projectid=$projectId";
-$release = "0.3.3";
+$release = "0.3.4";
 
 # Set the theme for your project's web pages.
 # See the Committer Tools "Phoenix" secion in the How Do I? for list of themes
