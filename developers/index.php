@@ -1,17 +1,16 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
-/*******************************************************************************
- * Copyright (c) 2015 Eclipse Foundation and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+<?php $pageTitle = "Get Involved"; require_once ('../_projectCommon.php');
+/**
+ * Copyright (c) 2015-present Eclipse Foundation.
+ *
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
  *
  * Contributors:
- *    Stuart McCulloch (Sonatype, Inc.) - Custom content for Sisu
- *******************************************************************************/
-
-$pageTitle = "Get Involved";
-
+ *   Stuart McCulloch - Custom content for Sisu
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
 ob_start();
 ?>
 
@@ -19,12 +18,12 @@ ob_start();
 
 <h3 id="wiki">Wiki</h3>
 <p>
-  Information about building, testing and debugging <?php print $projectName;?> can be found in our <a href="<?php print $wiki;?>">wiki space</a>.
+  Information about building, testing and debugging Sisu can be found in our <a href="<?php print $projectWiki;?>">wiki space</a>.
 </p>
 
 <h3 id="sources">Source Code</h3>
 <p>
-  The source files of the project are stored in <a href="<?php print $sources;?>">Git repositories</a>. Please
+  The source files of the project are stored in <a href="<?php print $projectSource;?>">Git repositories</a>. Please
   see the summary tab of a repository for details about the URL required to clone a repository to your local machine. 
 </p>
 <p>
@@ -55,13 +54,12 @@ ob_start();
 </p>
 <p>
   We use the <a href="http://wiki.eclipse.org/Development_Resources/Automatic_IP_Log">automatic IP log tool</a>
-  to track code contributions and third-party dependencies. See <a href="<?php print $iplog;?>"><?php print $projectName;?>'s tentative IP log</a>
-  for the list of currently approved dependencies. 
+  to track code contributions and third-party dependencies.
 </p>
 
 <h3 id="issues">Bug Tracker</h3>
 <p>
-  The project uses Bugzilla to manage <a href="<?php print $issueTracker;?>">bugs and feature requests</a>.
+  The project uses Bugzilla to manage <a href="<?php print $projectBugs;?>">bugs and feature requests</a>.
 </p>
 
 <h3 id="mail">Mailing Lists</h3>
@@ -72,9 +70,9 @@ ob_start();
 
 <h3 id="ci">Continuous Integration</h3>
 <p>
-  We use <a href="<?php print $ci;?>">Hudson</a> for our continuous integration
-  builds. Hudson is configured to periodically poll our Git repositories for changes and automatically starts a new
-  build when required. We also have a daily <a href="https://hudson.eclipse.org/sisu/job/sisu-sonar/">Sonar job</a>
+  We use <a href="<?php print $projectCi;?>">Jenkins</a> for our continuous integration
+  builds. Jenkins is configured to periodically poll our Git repositories for changes and automatically starts a new
+  build when required. We also have a daily <a href="https://ci.eclipse.org/sisu/job/sisu-sonar/">Sonar job</a>
   to track <a href="https://dev.eclipse.org/sonar/dashboard/index/org.eclipse.sisu:sisu-inject">code quality</a>.
 </p>
 <p>
@@ -91,7 +89,7 @@ ob_start();
   &lt;/repository&gt;
 </pre>
 <p>
-  Note: This repository contains snapshots of many projects, not just those produced by <?php print $projectName;?>.
+  Note: This repository contains snapshots of many projects, not just those produced by Sisu.
 </p>
 
 <h3 id="website">Website</h3>
@@ -104,14 +102,11 @@ ob_start();
   <li><a href="http://wiki.eclipse.org/Using_Phoenix">Using Phoenix</a></li>
   <li><a href="http://wiki.eclipse.org/Configuring_Eclipse_to_Edit_your_eclipse.org_Website">Configuring Eclipse to Edit your eclipse.org Website</a></li>
 </ul>
-</div>
 
-<div id="rightcolumn">
-<?php print $incubation;?>
 </div>
 
 <?php
 $html = ob_get_clean();
-# Generate the web page
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$Theme->setHtml($html);
+$Theme->generatePage();
 ?>

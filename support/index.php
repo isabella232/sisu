@@ -1,17 +1,16 @@
-<?php  																														require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/app.class.php");	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/nav.class.php"); 	require_once($_SERVER['DOCUMENT_ROOT'] . "/eclipse.org-common/system/menu.class.php"); 	$App 	= new App();	$Nav	= new Nav();	$Menu 	= new Menu();		include($App->getProjectCommon());    # All on the same line to unclutter the user's desktop'
-/*******************************************************************************
- * Copyright (c) 2015 Eclipse Foundation and others.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
+<?php $pageTitle = "Support"; require_once ('../_projectCommon.php');
+/**
+ * Copyright (c) 2015-present Eclipse Foundation.
+ *
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
  *
  * Contributors:
- *    Stuart McCulloch (Sonatype, Inc.) - Custom content for Sisu
- *******************************************************************************/
-
-$pageTitle = "Support";
-
+ *   Stuart McCulloch - Custom content for Sisu
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ */
 ob_start();
 ?>
 
@@ -20,7 +19,7 @@ ob_start();
 <h3 id="bugs">Bug Tracker</h3>
 <p>
   If you encounter a bug or have a feature request, please enter a sufficiently detailed issue in our
-  <a href="<?php print $issueTracker;?>">bug tracker</a>.
+  <a href="<?php print $projectBugs;?>">bug tracker</a>.
   We especially appreciate issues that come with suggested patches or enough information to be recreated locally.
 </p>
 <p>
@@ -44,12 +43,8 @@ ob_start();
 
 </div>
 
-<div id="rightcolumn">
-<?php print $incubation;?>
-</div>
-
 <?php
 $html = ob_get_clean();
-# Generate the web page
-$App->generatePage($theme, $Menu, $Nav, $pageAuthor, $pageKeywords, $pageTitle, $html);
+$Theme->setHtml($html);
+$Theme->generatePage();
 ?>
